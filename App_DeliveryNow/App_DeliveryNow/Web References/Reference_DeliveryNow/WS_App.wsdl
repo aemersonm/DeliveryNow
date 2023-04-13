@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="send_error">
+        <s:complexType />
+      </s:element>
+      <s:element name="send_errorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="send_errorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="send_register_sucess">
+        <s:complexType />
+      </s:element>
+      <s:element name="send_register_sucessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="send_register_sucessResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="send_login_success">
+        <s:complexType />
+      </s:element>
+      <s:element name="send_login_successResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="send_login_successResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="hash_password">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="hash_passwordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hash_passwordResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="seed" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verify_hash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hashDB" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verify_hashResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="verify_hashResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="is_logged_in">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="is_logged_inResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="is_logged_inResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insert_data">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="seed" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="phoneNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pay_method" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insert_dataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insert_dataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="login_verify">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="login_verifyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="login_verifyResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="send_errorSoapIn">
+    <wsdl:part name="parameters" element="tns:send_error" />
+  </wsdl:message>
+  <wsdl:message name="send_errorSoapOut">
+    <wsdl:part name="parameters" element="tns:send_errorResponse" />
+  </wsdl:message>
+  <wsdl:message name="send_register_sucessSoapIn">
+    <wsdl:part name="parameters" element="tns:send_register_sucess" />
+  </wsdl:message>
+  <wsdl:message name="send_register_sucessSoapOut">
+    <wsdl:part name="parameters" element="tns:send_register_sucessResponse" />
+  </wsdl:message>
+  <wsdl:message name="send_login_successSoapIn">
+    <wsdl:part name="parameters" element="tns:send_login_success" />
+  </wsdl:message>
+  <wsdl:message name="send_login_successSoapOut">
+    <wsdl:part name="parameters" element="tns:send_login_successResponse" />
+  </wsdl:message>
+  <wsdl:message name="hash_passwordSoapIn">
+    <wsdl:part name="parameters" element="tns:hash_password" />
+  </wsdl:message>
+  <wsdl:message name="hash_passwordSoapOut">
+    <wsdl:part name="parameters" element="tns:hash_passwordResponse" />
+  </wsdl:message>
+  <wsdl:message name="verify_hashSoapIn">
+    <wsdl:part name="parameters" element="tns:verify_hash" />
+  </wsdl:message>
+  <wsdl:message name="verify_hashSoapOut">
+    <wsdl:part name="parameters" element="tns:verify_hashResponse" />
+  </wsdl:message>
+  <wsdl:message name="is_logged_inSoapIn">
+    <wsdl:part name="parameters" element="tns:is_logged_in" />
+  </wsdl:message>
+  <wsdl:message name="is_logged_inSoapOut">
+    <wsdl:part name="parameters" element="tns:is_logged_inResponse" />
+  </wsdl:message>
+  <wsdl:message name="insert_dataSoapIn">
+    <wsdl:part name="parameters" element="tns:insert_data" />
+  </wsdl:message>
+  <wsdl:message name="insert_dataSoapOut">
+    <wsdl:part name="parameters" element="tns:insert_dataResponse" />
+  </wsdl:message>
+  <wsdl:message name="login_verifySoapIn">
+    <wsdl:part name="parameters" element="tns:login_verify" />
+  </wsdl:message>
+  <wsdl:message name="login_verifySoapOut">
+    <wsdl:part name="parameters" element="tns:login_verifyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS_AppSoap">
+    <wsdl:operation name="send_error">
+      <wsdl:input message="tns:send_errorSoapIn" />
+      <wsdl:output message="tns:send_errorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="send_register_sucess">
+      <wsdl:input message="tns:send_register_sucessSoapIn" />
+      <wsdl:output message="tns:send_register_sucessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="send_login_success">
+      <wsdl:input message="tns:send_login_successSoapIn" />
+      <wsdl:output message="tns:send_login_successSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="hash_password">
+      <wsdl:input message="tns:hash_passwordSoapIn" />
+      <wsdl:output message="tns:hash_passwordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="verify_hash">
+      <wsdl:input message="tns:verify_hashSoapIn" />
+      <wsdl:output message="tns:verify_hashSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="is_logged_in">
+      <wsdl:input message="tns:is_logged_inSoapIn" />
+      <wsdl:output message="tns:is_logged_inSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insert_data">
+      <wsdl:input message="tns:insert_dataSoapIn" />
+      <wsdl:output message="tns:insert_dataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="login_verify">
+      <wsdl:input message="tns:login_verifySoapIn" />
+      <wsdl:output message="tns:login_verifySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_AppSoap" type="tns:WS_AppSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="send_error">
+      <soap:operation soapAction="http://tempuri.org/send_error" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="send_register_sucess">
+      <soap:operation soapAction="http://tempuri.org/send_register_sucess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="send_login_success">
+      <soap:operation soapAction="http://tempuri.org/send_login_success" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hash_password">
+      <soap:operation soapAction="http://tempuri.org/hash_password" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verify_hash">
+      <soap:operation soapAction="http://tempuri.org/verify_hash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="is_logged_in">
+      <soap:operation soapAction="http://tempuri.org/is_logged_in" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_data">
+      <soap:operation soapAction="http://tempuri.org/insert_data" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login_verify">
+      <soap:operation soapAction="http://tempuri.org/login_verify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_AppSoap12" type="tns:WS_AppSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="send_error">
+      <soap12:operation soapAction="http://tempuri.org/send_error" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="send_register_sucess">
+      <soap12:operation soapAction="http://tempuri.org/send_register_sucess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="send_login_success">
+      <soap12:operation soapAction="http://tempuri.org/send_login_success" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hash_password">
+      <soap12:operation soapAction="http://tempuri.org/hash_password" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verify_hash">
+      <soap12:operation soapAction="http://tempuri.org/verify_hash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="is_logged_in">
+      <soap12:operation soapAction="http://tempuri.org/is_logged_in" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_data">
+      <soap12:operation soapAction="http://tempuri.org/insert_data" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login_verify">
+      <soap12:operation soapAction="http://tempuri.org/login_verify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_App">
+    <wsdl:port name="WS_AppSoap" binding="tns:WS_AppSoap">
+      <soap:address location="https://localhost:44341/WS_App.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_AppSoap12" binding="tns:WS_AppSoap12">
+      <soap12:address location="https://localhost:44341/WS_App.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

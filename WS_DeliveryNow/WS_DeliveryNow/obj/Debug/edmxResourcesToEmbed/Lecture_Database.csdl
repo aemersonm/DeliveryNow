@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DeliveryNowDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Companies">
+    <Key>
+      <PropertyRef Name="company_id" />
+    </Key>
+    <Property Name="company_id" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="company_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="company_ph_number" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="company_address" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="company_description" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Orders" Relationship="Self.order_company_fk" FromRole="Companies" ToRole="Orders" />
+    <NavigationProperty Name="Payments" Relationship="Self.payment_company_fk" FromRole="Companies" ToRole="Payments" />
+    <NavigationProperty Name="Products" Relationship="Self.product_company_fk" FromRole="Companies" ToRole="Products" />
+    <NavigationProperty Name="Reports" Relationship="Self.report_company_fk" FromRole="Companies" ToRole="Reports" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="customer_username" />
+    </Key>
+    <Property Name="customer_username" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="customer_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="customer_lastname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="customer_password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="customer_ph_number" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="customer_address" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="customer_pay_method" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Orders" Relationship="Self.order_customer_fk" FromRole="Customers" ToRole="Orders" />
+    <NavigationProperty Name="Payments" Relationship="Self.payment_customer_fk" FromRole="Customers" ToRole="Payments" />
+    <NavigationProperty Name="Reports" Relationship="Self.report_customer_fk" FromRole="Customers" ToRole="Reports" />
+  </EntityType>
+  <EntityType Name="Order_Details">
+    <Key>
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="order_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="product_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="product_units" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="product_price" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.orderD_product_fk" FromRole="Order_Details" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="order_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="customer_username" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="company_id" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="product_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="product_units" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="order_time" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Companies" Relationship="Self.order_company_fk" FromRole="Orders" ToRole="Companies" />
+    <NavigationProperty Name="Customers" Relationship="Self.order_customer_fk" FromRole="Orders" ToRole="Customers" />
+    <NavigationProperty Name="Products" Relationship="Self.order_product_fk" FromRole="Orders" ToRole="Products" />
+    <NavigationProperty Name="Reports" Relationship="Self.report_order_fk" FromRole="Orders" ToRole="Reports" />
+  </EntityType>
+  <EntityType Name="Payments">
+    <Key>
+      <PropertyRef Name="pay_id" />
+    </Key>
+    <Property Name="pay_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="customer_username" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="company_id" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="total_amount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <NavigationProperty Name="Companies" Relationship="Self.payment_company_fk" FromRole="Payments" ToRole="Companies" />
+    <NavigationProperty Name="Customers" Relationship="Self.payment_customer_fk" FromRole="Payments" ToRole="Customers" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="product_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="company_id" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="product_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="product_category" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="product_price" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="product_description" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Companies" Relationship="Self.product_company_fk" FromRole="Products" ToRole="Companies" />
+    <NavigationProperty Name="Order_Details" Relationship="Self.orderD_product_fk" FromRole="Products" ToRole="Order_Details" />
+    <NavigationProperty Name="Orders" Relationship="Self.order_product_fk" FromRole="Products" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Reports">
+    <Key>
+      <PropertyRef Name="report_id" />
+    </Key>
+    <Property Name="report_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="order_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="customer_username" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="company_id" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="report_subject" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="report_description" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Companies" Relationship="Self.report_company_fk" FromRole="Reports" ToRole="Companies" />
+    <NavigationProperty Name="Customers" Relationship="Self.report_customer_fk" FromRole="Reports" ToRole="Customers" />
+    <NavigationProperty Name="Orders" Relationship="Self.report_order_fk" FromRole="Reports" ToRole="Orders" />
+  </EntityType>
+  <Association Name="order_company_fk">
+    <End Role="Companies" Type="Self.Companies" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="company_id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="company_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="payment_company_fk">
+    <End Role="Companies" Type="Self.Companies" Multiplicity="1" />
+    <End Role="Payments" Type="Self.Payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="company_id" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="company_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="product_company_fk">
+    <End Role="Companies" Type="Self.Companies" Multiplicity="1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="company_id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="company_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="report_company_fk">
+    <End Role="Companies" Type="Self.Companies" Multiplicity="1" />
+    <End Role="Reports" Type="Self.Reports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="company_id" />
+      </Principal>
+      <Dependent Role="Reports">
+        <PropertyRef Name="company_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="order_customer_fk">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="customer_username" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="customer_username" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="payment_customer_fk">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="Payments" Type="Self.Payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="customer_username" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="customer_username" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="report_customer_fk">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="Reports" Type="Self.Reports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="customer_username" />
+      </Principal>
+      <Dependent Role="Reports">
+        <PropertyRef Name="customer_username" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="orderD_product_fk">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="Order_Details" Type="Self.Order_Details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="Order_Details">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="order_product_fk">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="report_order_fk">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+    <End Role="Reports" Type="Self.Reports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="order_id" />
+      </Principal>
+      <Dependent Role="Reports">
+        <PropertyRef Name="order_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DeliveryNowDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Companies" EntityType="Self.Companies" />
+    <EntitySet Name="Customers" EntityType="Self.Customers" />
+    <EntitySet Name="Order_Details" EntityType="Self.Order_Details" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" />
+    <EntitySet Name="Payments" EntityType="Self.Payments" />
+    <EntitySet Name="Products" EntityType="Self.Products" />
+    <EntitySet Name="Reports" EntityType="Self.Reports" />
+    <AssociationSet Name="order_company_fk" Association="Self.order_company_fk">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="payment_company_fk" Association="Self.payment_company_fk">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="Payments" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="product_company_fk" Association="Self.product_company_fk">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="report_company_fk" Association="Self.report_company_fk">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="Reports" EntitySet="Reports" />
+    </AssociationSet>
+    <AssociationSet Name="order_customer_fk" Association="Self.order_customer_fk">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="payment_customer_fk" Association="Self.payment_customer_fk">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Payments" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="report_customer_fk" Association="Self.report_customer_fk">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Reports" EntitySet="Reports" />
+    </AssociationSet>
+    <AssociationSet Name="orderD_product_fk" Association="Self.orderD_product_fk">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Order_Details" EntitySet="Order_Details" />
+    </AssociationSet>
+    <AssociationSet Name="order_product_fk" Association="Self.order_product_fk">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="report_order_fk" Association="Self.report_order_fk">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="Reports" EntitySet="Reports" />
+    </AssociationSet>
+    <FunctionImport Name="Insert_Customers_sp">
+      <Parameter Name="customer_username" Mode="In" Type="String" />
+      <Parameter Name="customer_name" Mode="In" Type="String" />
+      <Parameter Name="customer_lastname" Mode="In" Type="String" />
+      <Parameter Name="customer_password" Mode="In" Type="String" />
+      <Parameter Name="customer_ph_number" Mode="In" Type="String" />
+      <Parameter Name="customer_address" Mode="In" Type="String" />
+      <Parameter Name="customer_pay_method" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,95 @@
+﻿/* STYLESHEET - MainPage.aspx */
+root {
+    /* COLORES / SETTINGS */
+    --water: #ECFFFA;
+    --blackBlueTransparency: rgba(17, 34, 50, 0.3);
+    --greenTransparency: rgba(28, 59, 0, 0.3);
+    --green: rgba(28, 59, 0, 0.9);
+    --gray: #333;
+    --blue: #0367a6;
+    --lightblue: #008997;
+    --background: #D8D8D8;
+    --details: #586F7C;
+}
+/* SE ESTABLECEN LAS FAMILIAS DE LOS FONTS UTILIZADOS. */
+@font-face {
+    font-family: font_Megante;
+    src: url(../fonts/Megante.ttf);
+}
+
+@font-face {
+    font-family: font_Prototype;
+    src: url(../fonts/Prototype.ttf);
+}
+
+/*ID pMain: Representa a los páneles principales de la aplicación. */
+#pMain {
+    border-block: double;
+    text-align: center;
+    font-family: font_Prototype;
+}
+
+/*Clase .btn: Representa a los botones principales de la aplicación. */
+.btn {
+    border-style: double;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: font_Megante;
+}
+
+.btn_panel {
+    border-style: none;
+    background-color: var(--water);
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: font_Megante;
+}
+
+/* STYLESHEET - Register.aspx */
+
+/*ID pBody: Representa a los páneles que se encuentran en el cuerpo de las páginas de la aplicación. */
+#pBody {
+    border-block: double;
+    text-align: center;
+    align-content: center;
+    font-family: font_Prototype;
+}
+
+/*ID lblMain: Representa a las etiquetas principales de la aplicación. */
+#lblMain {
+    font-size: x-large;
+    font-weight: bold;
+    font-family: font_Prototype;
+}
+
+/*Clase lbl: Representa a las etiquetas de la aplicación. */
+.lbl {
+    font-size: large;
+    font-weight: bold;
+    font-family: font_Prototype;
+}
+
+/* ESTABLECE EL PADDING A #texto */
+.txt {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    background-color: #ECFFFA;
+    border-radius: 10%;
+    font-family:font_Prototype;
+    font-size:large;
+}
+
+/*ID lblMain: Representa a las etiquetas de nombre de la aplicación. */
+#lblName {
+    
+}
+
+#btnLoginOpt {
+    border: none;
+    font-family: font_Prototype;
+}

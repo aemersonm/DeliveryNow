@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DeliveryNowDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Companies">
+    <Key>
+      <PropertyRef Name="company_id" />
+    </Key>
+    <Property Name="company_id" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="company_name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="company_ph_number" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="company_address" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="company_description" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="customer_username" />
+    </Key>
+    <Property Name="customer_username" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="customer_name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="customer_lastname" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="customer_password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="customer_ph_number" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="customer_address" Type="varchar" MaxLength="150" />
+    <Property Name="customer_pay_method" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Order_Details">
+    <Key>
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="order_id" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="product_id" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="product_units" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="product_price" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="order_id" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="customer_username" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="company_id" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="product_id" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="product_units" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="order_time" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Payments">
+    <Key>
+      <PropertyRef Name="pay_id" />
+    </Key>
+    <Property Name="pay_id" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="customer_username" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="company_id" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="total_amount" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="product_id" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="company_id" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="product_name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="product_category" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="product_price" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="product_description" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Reports">
+    <Key>
+      <PropertyRef Name="report_id" />
+    </Key>
+    <Property Name="report_id" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="order_id" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="customer_username" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="company_id" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="report_subject" Type="varchar" MaxLength="50" />
+    <Property Name="report_description" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <Association Name="order_company_fk">
+    <End Role="Companies" Type="Self.Companies" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="company_id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="company_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="order_customer_fk">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="customer_username" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="customer_username" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="order_product_fk">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="orderD_product_fk">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="Order_Details" Type="Self.Order_Details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="Order_Details">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="payment_company_fk">
+    <End Role="Companies" Type="Self.Companies" Multiplicity="1" />
+    <End Role="Payments" Type="Self.Payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="company_id" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="company_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="payment_customer_fk">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="Payments" Type="Self.Payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="customer_username" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="customer_username" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="product_company_fk">
+    <End Role="Companies" Type="Self.Companies" Multiplicity="1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="company_id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="company_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="report_company_fk">
+    <End Role="Companies" Type="Self.Companies" Multiplicity="1" />
+    <End Role="Reports" Type="Self.Reports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="company_id" />
+      </Principal>
+      <Dependent Role="Reports">
+        <PropertyRef Name="company_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="report_customer_fk">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="Reports" Type="Self.Reports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="customer_username" />
+      </Principal>
+      <Dependent Role="Reports">
+        <PropertyRef Name="customer_username" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="report_order_fk">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+    <End Role="Reports" Type="Self.Reports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="order_id" />
+      </Principal>
+      <Dependent Role="Reports">
+        <PropertyRef Name="order_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="Insert_Customers_sp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="customer_username" Type="varchar" Mode="In" />
+    <Parameter Name="customer_name" Type="varchar" Mode="In" />
+    <Parameter Name="customer_lastname" Type="varchar" Mode="In" />
+    <Parameter Name="customer_password" Type="varchar" Mode="In" />
+    <Parameter Name="customer_ph_number" Type="varchar" Mode="In" />
+    <Parameter Name="customer_address" Type="varchar" Mode="In" />
+    <Parameter Name="customer_pay_method" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="DeliveryNowDBModelStoreContainer">
+    <EntitySet Name="Companies" EntityType="Self.Companies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order_Details" EntityType="Self.Order_Details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payments" EntityType="Self.Payments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reports" EntityType="Self.Reports" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="order_company_fk" Association="Self.order_company_fk">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="order_customer_fk" Association="Self.order_customer_fk">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="order_product_fk" Association="Self.order_product_fk">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="orderD_product_fk" Association="Self.orderD_product_fk">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Order_Details" EntitySet="Order_Details" />
+    </AssociationSet>
+    <AssociationSet Name="payment_company_fk" Association="Self.payment_company_fk">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="Payments" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="payment_customer_fk" Association="Self.payment_customer_fk">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Payments" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="product_company_fk" Association="Self.product_company_fk">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="report_company_fk" Association="Self.report_company_fk">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="Reports" EntitySet="Reports" />
+    </AssociationSet>
+    <AssociationSet Name="report_customer_fk" Association="Self.report_customer_fk">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Reports" EntitySet="Reports" />
+    </AssociationSet>
+    <AssociationSet Name="report_order_fk" Association="Self.report_order_fk">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="Reports" EntitySet="Reports" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

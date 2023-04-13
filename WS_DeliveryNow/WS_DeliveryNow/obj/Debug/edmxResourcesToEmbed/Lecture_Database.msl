@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DeliveryNowDBModelStoreContainer" CdmEntityContainer="DeliveryNowDBEntities">
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="DeliveryNowDBModel.Companies">
+        <MappingFragment StoreEntitySet="Companies">
+          <ScalarProperty Name="company_id" ColumnName="company_id" />
+          <ScalarProperty Name="company_name" ColumnName="company_name" />
+          <ScalarProperty Name="company_ph_number" ColumnName="company_ph_number" />
+          <ScalarProperty Name="company_address" ColumnName="company_address" />
+          <ScalarProperty Name="company_description" ColumnName="company_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="DeliveryNowDBModel.Customers">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="customer_username" ColumnName="customer_username" />
+          <ScalarProperty Name="customer_name" ColumnName="customer_name" />
+          <ScalarProperty Name="customer_lastname" ColumnName="customer_lastname" />
+          <ScalarProperty Name="customer_password" ColumnName="customer_password" />
+          <ScalarProperty Name="customer_ph_number" ColumnName="customer_ph_number" />
+          <ScalarProperty Name="customer_address" ColumnName="customer_address" />
+          <ScalarProperty Name="customer_pay_method" ColumnName="customer_pay_method" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order_Details">
+      <EntityTypeMapping TypeName="DeliveryNowDBModel.Order_Details">
+        <MappingFragment StoreEntitySet="Order_Details">
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="product_units" ColumnName="product_units" />
+          <ScalarProperty Name="product_price" ColumnName="product_price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="DeliveryNowDBModel.Orders">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="customer_username" ColumnName="customer_username" />
+          <ScalarProperty Name="company_id" ColumnName="company_id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="product_units" ColumnName="product_units" />
+          <ScalarProperty Name="order_time" ColumnName="order_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payments">
+      <EntityTypeMapping TypeName="DeliveryNowDBModel.Payments">
+        <MappingFragment StoreEntitySet="Payments">
+          <ScalarProperty Name="pay_id" ColumnName="pay_id" />
+          <ScalarProperty Name="customer_username" ColumnName="customer_username" />
+          <ScalarProperty Name="company_id" ColumnName="company_id" />
+          <ScalarProperty Name="total_amount" ColumnName="total_amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="DeliveryNowDBModel.Products">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="company_id" ColumnName="company_id" />
+          <ScalarProperty Name="product_name" ColumnName="product_name" />
+          <ScalarProperty Name="product_category" ColumnName="product_category" />
+          <ScalarProperty Name="product_price" ColumnName="product_price" />
+          <ScalarProperty Name="product_description" ColumnName="product_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reports">
+      <EntityTypeMapping TypeName="DeliveryNowDBModel.Reports">
+        <MappingFragment StoreEntitySet="Reports">
+          <ScalarProperty Name="report_id" ColumnName="report_id" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="customer_username" ColumnName="customer_username" />
+          <ScalarProperty Name="company_id" ColumnName="company_id" />
+          <ScalarProperty Name="report_subject" ColumnName="report_subject" />
+          <ScalarProperty Name="report_description" ColumnName="report_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Insert_Customers_sp" FunctionName="DeliveryNowDBModel.Store.Insert_Customers_sp" />
+  </EntityContainerMapping>
+</Mapping>
