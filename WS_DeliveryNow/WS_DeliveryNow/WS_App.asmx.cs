@@ -224,10 +224,10 @@ namespace WS_DeliveryNow
         {
             int result = 0;
             string seedString = null;
-            // Obtener el salt y el hash de la contraseña del usuario desde la base de datos
+            // Se obtiene el salt y el hash de la contraseña del usuario desde la base de datos
             byte[] seed = null;
             string hashDB = null;
-            using (SqlConnection connection = new SqlConnection("Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;")) // Reemplazar con tu cadena de conexión a la base de datos
+            using (SqlConnection connection = new SqlConnection("Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;"))
             {
                 connection.Open();
                 SqlCommand cmd = new SqlCommand("sp_CustomerLogin", connection);
@@ -250,10 +250,10 @@ namespace WS_DeliveryNow
             {
                 bool valid = false;
                 valid = verify_hash(password, hashDB);
-                // Comparar el hash calculado con el hash almacenado en la base de datos
+                // Se compara el hash calculado con el hash almacenado en la base de datos
                 if (valid)
                 {
-                    // Llamar al stored procedure para actualizar el estado de inicio de sesión del usuario en la base de datos.
+                    // Se llama al stored procedure para actualizar el estado de inicio de sesión del usuario en la base de datos.
                     using (SqlConnection connection = new SqlConnection("Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;"))
                     {
                         connection.Open();
@@ -264,7 +264,7 @@ namespace WS_DeliveryNow
                         {
                             if (reader.Read())
                             {
-                                result = Convert.ToInt32(reader["login_status"]); // Obtener el estado de inicio de sesión actualizado desde la base de datos
+                                result = Convert.ToInt32(reader["login_status"]); // Se obtiene el estado de inicio de sesión actualizado desde la base de datos
                             }
                         }
                     }
