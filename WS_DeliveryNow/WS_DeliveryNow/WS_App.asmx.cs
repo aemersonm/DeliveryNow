@@ -12,6 +12,7 @@ using System.Text;
 using System.Web;
 using System.Web.Services;
 using System.Web.Services.Description;
+using System.Web.UI.WebControls;
 
 /*
  *         SERVICIOS WEB - ULACIT
@@ -116,7 +117,7 @@ namespace WS_DeliveryNow
         public bool is_logged_in(string username)
         {
             bool login = false;
-            int result = 0;
+            bool result = false;
             SqlConnection conn = new SqlConnection(); // Objeto de Conexión a la BD.
 
             try
@@ -143,10 +144,10 @@ namespace WS_DeliveryNow
 
                     if (object_result != null)
                     {
-                        result = int.Parse(object_result.ToString());
+                        result = bool.Parse(object_result.ToString());
                     }
 
-                    if (result == 1)
+                    if (result)
                     {
                         login = true;
                     }
@@ -272,8 +273,52 @@ namespace WS_DeliveryNow
             }
             return result;
         }
+
+        [WebMethod]
+        public string show_customer_name(string username)
+        {
+            SqlConnection conn = new SqlConnection(); // Objeto de Conexión a la BD.
+            string name = " ";
+            try
+            {
+                if (string.IsNullOrEmpty(username))
+                {
+                    send_error();
+                }
+                else
+                {
+                    conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+                    conn.Open();
+
+                    SqlCommand cmd = new SqlCommand();
+
+                    cmd.Connection = conn;
+                    cmd.CommandText = "sp_showCustomerName";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@Username", username);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                name = reader["name"].ToString();
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                send_error();
+            }
+            return name;
+        }
     }
 }
+
 
 
       

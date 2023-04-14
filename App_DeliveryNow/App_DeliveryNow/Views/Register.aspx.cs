@@ -1,4 +1,5 @@
-﻿using App_DeliveryNow.Reference_DeliveryNow;
+﻿using App_DeliveryNow.Class;
+using App_DeliveryNow.Reference_DeliveryNow;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -22,10 +23,12 @@ namespace App_DeliveryNow.Views
 {
     public partial class Register : System.Web.UI.Page
     {
+        public Customer currentCustomer;
         protected void Page_Load(object sender, EventArgs e)
         {
             design_management();
             hide_elements();
+
         }
         public void design_management()
         {
@@ -85,28 +88,6 @@ namespace App_DeliveryNow.Views
             }
         }
 
-        //Antes de llamar a este método, se debe instalar el paquete de NuGet: BCrypt.Net-Next
-        public string hash_password(string password, out byte[] seed)
-        {
-            
-            //Se genera un seed o salto aleatorio.
-            seed = new byte[16];
-            new RNGCryptoServiceProvider().GetBytes(seed);
-
-            //Se genera el hash con PBKDF2
-            var pbkdf2 = new Rfc2898DeriveBytes(password, seed, 10000);
-            byte[] hash = pbkdf2.GetBytes(20);
-
-            //Se crea la combinación del seed y el hash. 
-            byte[] hashBytes = new byte[36];
-            Array.Copy(seed, 0, hashBytes, 0, 16);
-            Array.Copy(hash, 0, hashBytes, 16, 20);
-
-            //Se convierte el hash en cadena y se devuelve. 
-            return Convert.ToBase64String(hashBytes);
-
-        }
-
         protected void btnRegister_Click(object sender, EventArgs e)
         {
             Reference_DeliveryNow.WS_App refWS = new Reference_DeliveryNow.WS_App();
@@ -132,10 +113,11 @@ namespace App_DeliveryNow.Views
                 txtPhNumber.Text = string.Empty;
                 txtAddress.Text = string.Empty;
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "AVISO", "window.alert('¡FELICITACIONES! SU CUENTA SE HA CREADO CORRECTAMENTE.')", true);
-                refWS.is_logged_in(txtUsername.Text);
-                //Response.Redirect("MainPage.aspx");
+                //refWS.is_logged_in(txtUsername.Text);
+                
             }
-            
+                currentCustomer = new Customer(txtUsername.Text);
+
         }
 
         protected void btnLoginOpt_Click(object sender, EventArgs e)

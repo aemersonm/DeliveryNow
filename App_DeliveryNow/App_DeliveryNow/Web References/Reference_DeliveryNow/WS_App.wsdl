@@ -119,6 +119,20 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="show_customer_name">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="show_customer_nameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="show_customer_nameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="send_errorSoapIn">
@@ -169,6 +183,12 @@
   <wsdl:message name="login_verifySoapOut">
     <wsdl:part name="parameters" element="tns:login_verifyResponse" />
   </wsdl:message>
+  <wsdl:message name="show_customer_nameSoapIn">
+    <wsdl:part name="parameters" element="tns:show_customer_name" />
+  </wsdl:message>
+  <wsdl:message name="show_customer_nameSoapOut">
+    <wsdl:part name="parameters" element="tns:show_customer_nameResponse" />
+  </wsdl:message>
   <wsdl:portType name="WS_AppSoap">
     <wsdl:operation name="send_error">
       <wsdl:input message="tns:send_errorSoapIn" />
@@ -201,6 +221,10 @@
     <wsdl:operation name="login_verify">
       <wsdl:input message="tns:login_verifySoapIn" />
       <wsdl:output message="tns:login_verifySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="show_customer_name">
+      <wsdl:input message="tns:show_customer_nameSoapIn" />
+      <wsdl:output message="tns:show_customer_nameSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WS_AppSoap" type="tns:WS_AppSoap">
@@ -277,6 +301,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="show_customer_name">
+      <soap:operation soapAction="http://tempuri.org/show_customer_name" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="WS_AppSoap12" type="tns:WS_AppSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -345,6 +378,15 @@
     </wsdl:operation>
     <wsdl:operation name="login_verify">
       <soap12:operation soapAction="http://tempuri.org/login_verify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="show_customer_name">
+      <soap12:operation soapAction="http://tempuri.org/show_customer_name" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
