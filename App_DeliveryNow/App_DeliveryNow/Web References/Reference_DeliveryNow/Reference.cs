@@ -46,6 +46,8 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
         
         private System.Threading.SendOrPostCallback login_verifyOperationCompleted;
         
+        private System.Threading.SendOrPostCallback show_customer_nameOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -107,6 +109,9 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
         
         /// <remarks/>
         public event login_verifyCompletedEventHandler login_verifyCompleted;
+        
+        /// <remarks/>
+        public event show_customer_nameCompletedEventHandler show_customer_nameCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/send_error", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -354,6 +359,35 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/show_customer_name", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string show_customer_name(string username) {
+            object[] results = this.Invoke("show_customer_name", new object[] {
+                        username});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void show_customer_nameAsync(string username) {
+            this.show_customer_nameAsync(username, null);
+        }
+        
+        /// <remarks/>
+        public void show_customer_nameAsync(string username, object userState) {
+            if ((this.show_customer_nameOperationCompleted == null)) {
+                this.show_customer_nameOperationCompleted = new System.Threading.SendOrPostCallback(this.Onshow_customer_nameOperationCompleted);
+            }
+            this.InvokeAsync("show_customer_name", new object[] {
+                        username}, this.show_customer_nameOperationCompleted, userState);
+        }
+        
+        private void Onshow_customer_nameOperationCompleted(object arg) {
+            if ((this.show_customer_nameCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.show_customer_nameCompleted(this, new show_customer_nameCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -584,6 +618,32 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void show_customer_nameCompletedEventHandler(object sender, show_customer_nameCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class show_customer_nameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal show_customer_nameCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
             }
         }
     }
