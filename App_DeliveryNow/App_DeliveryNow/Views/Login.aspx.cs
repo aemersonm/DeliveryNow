@@ -7,6 +7,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Reflection;
 using System.Threading;
+using System.Xml.Linq;
+using System.Collections.Concurrent;
+using App_DeliveryNow.Class;
 /*
 *         SERVICIOS WEB - ULACIT
 * Login - Proyecto Final - GRUPO N.2
@@ -25,6 +28,7 @@ namespace App_DeliveryNow.Views
 
     public partial class Login : System.Web.UI.Page
     {
+        public Customer currentCustomer;
         public void Page_Load(object sender, EventArgs e)
         {
             design_management();
@@ -35,24 +39,6 @@ namespace App_DeliveryNow.Views
             pMain.BackColor = Design.ColorPalette.Water;
             pBody.BackColor = Design.ColorPalette.LightTeal;
             btnLogin.BackColor = Design.ColorPalette.Water;
-        }
-
-        public void user_login_status()
-        {
-            MainPage mainPage = new MainPage();
-            Reference_DeliveryNow.WS_App refWS = new Reference_DeliveryNow.WS_App();
-            string username = txtUsername.Text;
-            bool isLoggedIn = refWS.is_logged_in(username);
-
-            if (isLoggedIn)
-            {
-                Console.WriteLine("Funciona");
-                mainPage.welcome_status((username));
-            }
-            else
-            {
-                Console.WriteLine("No funciona");
-            }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -66,18 +52,24 @@ namespace App_DeliveryNow.Views
             {
                 Reference_DeliveryNow.WS_App refWS = new Reference_DeliveryNow.WS_App();
                 int controller = refWS.login_verify(txtUsername.Text, txtPassword.Text);
-                if(controller == 1)
+                if (controller == 1)
                 {
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "AVISO", "window.alert('SESIÓN INICIADA CORRECTAMENTE.')", true);
-                    user_login_status();
-                    //Thread.Sleep(3000);
-                } 
+
+                }
                 else
                 {
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "AVISO", "window.alert('SE HA PRESENTADO UN ERROR DURANTE EL INICIO DE SESIÓN.')", true);
                 }
-               // Response.Redirect("MainPage.aspx");
+               // Thread.Sleep(3000);
+               currentCustomer = new Customer(txtUsername.Text);
+                Response.Redirect("MainPage.aspx");
             }
+        }
+
+        public bool login_customer()
+        {
+            return true;
         }
 
         protected void txtPassword_TextChanged(object sender, EventArgs e)
