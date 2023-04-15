@@ -67,10 +67,7 @@ namespace App_DeliveryNow.Views
             }
         }
 
-        public bool login_customer()
-        {
-            return true;
-        }
+
 
         protected void txtPassword_TextChanged(object sender, EventArgs e)
         {
