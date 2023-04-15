@@ -11,6 +11,7 @@ root {
     --background: #D8D8D8;
     --details: #586F7C;
 }
+
 /* SE ESTABLECEN LAS FAMILIAS DE LOS FONTS UTILIZADOS. */
 @font-face {
     font-family: font_Megante;
@@ -25,7 +26,6 @@ root {
 /*ID pMain: Representa a los páneles principales de la aplicación. */
 #pMain {
     border-block: double;
-    text-align: center;
     font-family: font_Prototype;
 }
 
@@ -80,16 +80,31 @@ root {
     border-width: medium;
     background-color: #ECFFFA;
     border-radius: 10%;
-    font-family:font_Prototype;
-    font-size:large;
+    font-family: font_Prototype;
+    font-size: large;
 }
 
 /*ID lblMain: Representa a las etiquetas de nombre de la aplicación. */
 #lblName {
-    
 }
 
 #btnLoginOpt {
     border: none;
     font-family: font_Prototype;
+}
+
+
+/*---------------------------------------------------------------------------------------*/
+
+#imgLogo {
+    margin-left: 40px;
+}
+
+#lblWelcome {
+    margin-left: 70px;
+}
+
+#btnStartRegister {
+    margin-left: 15px;
+    margin-bottom: 5px;
 }

@@ -10,6 +10,7 @@ using Microsoft.SqlServer.Server;
 using System.Configuration;
 using System.Xml.Linq;
 using App_DeliveryNow.Class;
+using App_DeliveryNow.Design;
 /*
 *         SERVICIOS WEB - ULACIT
 * MainPage - Proyecto Final - GRUPO N.2
@@ -26,23 +27,47 @@ namespace App_DeliveryNow.Views
 
     public partial class MainPage : System.Web.UI.Page
     {
-       
+        Reference_DeliveryNow.WS_App refWS = new Reference_DeliveryNow.WS_App();
+        int counter = 0;
         public void Page_Load(object sender, EventArgs e)
         {
             design_management();
-        }
+            if(!IsPostBack)
+            {
+                btnLogin.Click += btnLogin_Click;
+                counter++;
+                welcome_label();   
+            }
 
+        }
         public void design_management()
         {
             btnStartRegister.BackColor = Design.ColorPalette.LightTeal;
             btnStartLogin.BackColor = Design.ColorPalette.LightTeal;
             pMain.BackColor = Design.ColorPalette.Water;
+            pBody.BackColor = Design.ColorPalette.LightTeal;
         }
 
-        public void welcome_label(string name)
+        public void welcome_label()
         {
-            Reference_DeliveryNow.WS_App refWS = new Reference_DeliveryNow.WS_App();
-            lblWelcome.Text = "¡Bienvenido, " + name + "!";
+            if(string.IsNullOrEmpty(txtUsername.Text))
+            {
+                lblWelcome.Text = "¡Bienvenido!";
+            } else
+            {
+                string name = get_customer_name(txtUsername.Text);
+                string username = txtUsername.Text;
+                bool login = false;
+                login = refWS.is_logged_in(username);
+                if (login)
+                {
+                    lblWelcome.Text = "¡Bienvenido, " + name + "!";
+                }
+                else
+                {
+                    lblWelcome.Text = "¡Bienvenido!";
+                }
+            }
         }
 
         public string get_customer_name(string username)
@@ -54,7 +79,6 @@ namespace App_DeliveryNow.Views
             }
             else
             {
-                Reference_DeliveryNow.WS_App refWS = new Reference_DeliveryNow.WS_App();
                 name = refWS.show_customer_name(username);
             }
             return name;
@@ -109,48 +133,15 @@ namespace App_DeliveryNow.Views
             lbPay.Visible = true;
             btnLogin.Visible = false;
             btnRegister.Visible = true;
-        }
-
-        protected void btnStartLogin_Click(object sender, EventArgs e)
-        {
-            change_login_page();
-        }
-        protected void btnLogin_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtUsername.Text) ||
-                string.IsNullOrEmpty(txtPassword.Text))
-            {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "ALERTA", "window.alert('¡ERROR! POR FAVOR INGRESE LOS DATOS SOLICITADOS.')", true);
-            }
-            else
-            {
-                Reference_DeliveryNow.WS_App refWS = new Reference_DeliveryNow.WS_App();
-                int controller = refWS.login_verify(txtUsername.Text, txtPassword.Text);
-                if (controller == 1)
-                {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "AVISO", "window.alert('SESIÓN INICIADA CORRECTAMENTE.')", true);
-
-                }
-                else
-                {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "AVISO", "window.alert('SE HA PRESENTADO UN ERROR DURANTE EL INICIO DE SESIÓN.')", true);
-                }
-                // Thread.Sleep(3000);
-                string name = get_customer_name(txtUsername.Text);
-                welcome_label(name);
-
-
-            }
+            btnLoginOpt.Visible = true;
         }
 
         protected void btnStartRegister_Click(object sender, EventArgs e)
         {
             change_register_page();
         }
-
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            Reference_DeliveryNow.WS_App refWS = new Reference_DeliveryNow.WS_App();
             byte[] seed;
             string hashedPassword = refWS.hash_password(txtPassword.Text, out seed);
             if (!cbTC.Checked)
@@ -173,15 +164,44 @@ namespace App_DeliveryNow.Views
                 txtAddress.Text = string.Empty;
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "AVISO", "window.alert('¡FELICITACIONES! SU CUENTA SE HA CREADO CORRECTAMENTE.')", true);
                 refWS.is_logged_in(txtUsername.Text);
+            }
+        }
 
+        protected void btnStartLogin_Click(object sender, EventArgs e)
+        {
+            change_login_page();
+        }
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtUsername.Text) ||
+                string.IsNullOrEmpty(txtPassword.Text))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "ALERTA", "window.alert('¡ERROR! POR FAVOR INGRESE LOS DATOS SOLICITADOS.')", true);
+            }
+            else
+            {
+                int controller = refWS.login_verify(txtUsername.Text, txtPassword.Text);
+                if (controller == 1)
+                {
+                    if(counter == 0)
+                    {
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "AVISO", "window.alert('SESIÓN INICIADA CORRECTAMENTE.')", true);
+                    }
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "AVISO", "window.alert('SE HA PRESENTADO UN ERROR DURANTE EL INICIO DE SESIÓN.')", true);
+                }
+                // Thread.Sleep(3000);
+                string name = get_customer_name(txtUsername.Text);
+                welcome_label();
             }
         }
 
         protected void btnLoginOpt_Click(object sender, EventArgs e)
         {
-
+            change_login_page();
         }
-
 
         //Este evento controla que el contenido de txtPassword se muestre en asteriscos. 
         protected void txtPassword_OnTextChanged(object sender, EventArgs e)
