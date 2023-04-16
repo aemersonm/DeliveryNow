@@ -98,14 +98,26 @@ header nav a {
     text-align: center;
     align-content: center;
     font-family: 'Poppins', sans-serif;
-    margin-bottom: -130%;
-    max-height: 700px;
+    min-height: 73.6vh;
     margin-left: -8px;
     width: 100.5%;
 }
 
-/*ID lblMain: Representa a las etiquetas principales de la aplicación. */
-#lblMain {
+#body1 {
+    margin-right: 70%;
+}
+
+#body2 {
+    margin-left: 70%;
+    margin-top: -10%;
+}
+
+#body3 {
+    margin-top: -10%;
+}
+
+    /*ID lblMain: Representa a las etiquetas principales de la aplicación. */
+    #lblMain {
     font-size: x-large;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
