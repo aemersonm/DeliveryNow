@@ -6,17 +6,31 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link rel="stylesheet" href="../Design/style.css" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"/>
     <title>DeliveryNow</title>
 </head>
 <body aria-sort="none">
+     <header>
+      <asp:Image ID="Image1" runat="server" ImageUrl="~/Resources/logonobg.png" Height="150px" Width="150px"></asp:Image>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
     <form id="MainPage" runat="server">
         <asp:Panel ID="pMain" runat="server" BorderStyle="Solid">
+            <div id="logid">
             <asp:Image ID="imgLogo" runat="server" ImageUrl="~/Resources/logo.png" Height="150px" Width="150px"></asp:Image>
             <br />
             <asp:Label ID="lblWelcome" runat="server" CssClass="lbl" Text="" Visible="True" Font-Bold="True"></asp:Label>
             <br /> <br />
             <asp:Button ID="btnStartRegister" CssClass="btn" runat="server" Text="REGÍSTRATE" OnClick="btnStartRegister_Click"/>
             <asp:Button ID="btnStartLogin" CssClass="btn" runat="server" Text="INICIAR SESIÓN" OnClick="btnStartLogin_Click" />
+             </div>
         </asp:Panel>
 
         <asp:Panel ID="pBody" runat="server" BorderStyle="Solid" Visible="False">
@@ -69,11 +83,18 @@
             </div>
         </asp:Panel>
 
-        <asp:Panel ID="pBot" runat="server" BorderStyle="Solid">
-            
-
-        </asp:Panel>
-
     </form>
+    <footer>
+      <nav>
+        <div>
+        <ul>
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+        </ul>
+        </div>
+      </nav>
+      <p>&copy; 2023 DeliveryNow. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

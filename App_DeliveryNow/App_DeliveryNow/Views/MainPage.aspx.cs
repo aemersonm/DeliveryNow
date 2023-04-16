@@ -86,6 +86,7 @@ namespace App_DeliveryNow.Views
 
         public void change_login_page()
         {
+            pMain.Visible= false;
             pBody.Visible = true;
             lblMain.Text = "INICIA SESIÓN EN TU CUENTA";
             lblMain.Visible = true;
@@ -112,6 +113,7 @@ namespace App_DeliveryNow.Views
 
         public void change_register_page()
         {
+            pMain.Visible = false;
             pBody.Visible = true;
             lblMain.Text = "CREA TU CUENTA";
             lblMain.Visible = true;
