@@ -6,17 +6,31 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link rel="stylesheet" href="../Design/style.css" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"/>
     <title>DeliveryNow</title>
 </head>
 <body aria-sort="none">
+     <header>
+      <asp:Image ID="Image1" runat="server" ImageUrl="~/Resources/logonobg.png" Height="150px" Width="150px"></asp:Image>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
     <form id="MainPage" runat="server">
         <asp:Panel ID="pMain" runat="server" BorderStyle="Solid">
+            <div id="logid">
             <asp:Image ID="imgLogo" runat="server" ImageUrl="~/Resources/logo.png" Height="150px" Width="150px"></asp:Image>
             <br />
             <asp:Label ID="lblWelcome" runat="server" CssClass="lbl" Text="" Visible="True" Font-Bold="True"></asp:Label>
             <br /> <br />
             <asp:Button ID="btnStartRegister" CssClass="btn" runat="server" Text="REGÍSTRATE" OnClick="btnStartRegister_Click"/>
             <asp:Button ID="btnStartLogin" CssClass="btn" runat="server" Text="INICIAR SESIÓN" OnClick="btnStartLogin_Click" />
+             </div>
         </asp:Panel>
 
         <asp:Panel ID="pBody" runat="server" BorderStyle="Solid" Visible="False">
@@ -34,6 +48,7 @@
                 <br /> <br />
                 <asp:Button ID="btnLogin" Text="INICIAR SESIÓN" runat="server" CssClass="btn" OnClick="btnLogin_Click" Visible="False" />
                 <br /> <br />
+                <div id="body1">
                 <asp:Label ID="lblName" runat="server" cssClass="lbl" Text="NOMBRE:" Visible="False"></asp:Label>
                 <br />
                 <asp:TextBox ID="txtName" runat="server" CssClass="txt" Visible="False"></asp:TextBox>
@@ -42,6 +57,8 @@
                 <br />
                 <asp:TextBox ID="txtLastName" runat="server" CssClass="txt" Visible="False"></asp:TextBox>
                 <br /> <br />
+                </div>
+                <div id="body2">
                 <asp:Label ID="lblPhNumber" runat="server" CssClass="lbl" Text="TELÉFONO:" Visible="False"></asp:Label>
                 <br />
                 <asp:TextBox ID="txtPhNumber" runat="server" CssClass="txt" Visible="False"></asp:TextBox>
@@ -50,6 +67,8 @@
                 <br />
                 <asp:TextBox ID="txtAddress" runat="server" CssClass="txt" Height="90px" Visible="False"></asp:TextBox>
                 <br /> <br />
+                </div>
+                <div id="body3">
                 <asp:Label ID="lblPay" runat="server" CssClass="lbl" Text="MÉTODO DE PAGO PREFERIDO:" Visible="False"></asp:Label>
                 <br />
                 <asp:ListBox ID="lbPay" runat="server" Visible="False">
@@ -61,19 +80,29 @@
                 <br /> <br />
                 <asp:CheckBox ID="cbTC" runat="server" Text="He leído y acepto los Términos y Condiciones." Visible="False" />
                 <br /> <br />
+                </div>
+                <div id="body4">
                 <asp:Button ID="btnRegister" runat="server" CssClass="btn" Text="CREAR CUENTA" OnClick="btnRegister_Click" Visible="False" />
                 <br /> 
                 <br />
                 <asp:Label ID="lblQuestion" runat="server" Text="¿Ya tienes una cuenta?" Visible="False"></asp:Label>
+                </div>
                 <asp:Button ID="btnLoginOpt" runat="server" Text="Inicia Sesión" OnClick="btnLoginOpt_Click" Visible="False" />
             </div>
         </asp:Panel>
 
-        <asp:Panel ID="pBot" runat="server" BorderStyle="Solid">
-            
-
-        </asp:Panel>
-
     </form>
+    <footer>
+      <nav>
+        <div>
+        <ul>
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+        </ul>
+        </div>
+      </nav>
+      <p>&copy; 2023 DeliveryNow. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

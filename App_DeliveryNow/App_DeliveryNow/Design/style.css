@@ -12,31 +12,72 @@ root {
     --details: #586F7C;
 }
 
-/* SE ESTABLECEN LAS FAMILIAS DE LOS FONTS UTILIZADOS. */
-@font-face {
-    font-family: font_Megante;
-    src: url(../fonts/Megante.ttf);
+/*----------------------------------------HEADER-----------------------------------------*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position:static;
+    padding: 40px 20px;
+    background-color: rgba(14, 131, 136, 0.6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 70px;
+    width: 98.75%;
+    margin-top: -15px;
+    margin-left: -8.0px;
 }
 
-@font-face {
-    font-family: font_Prototype;
-    src: url(../fonts/Prototype.ttf);
+    header img {
+        height: 50px;
+    }
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
 }
+
+header nav li {
+    margin: 0 10px;
+}
+
+header nav a {
+    color: #ECFFFA;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+    header nav a:hover {
+        color: #fbb03b;
+    }
 
 /*ID pMain: Representa a los páneles principales de la aplicación. */
 #pMain {
     border-block: double;
-    font-family: font_Prototype;
+    font-family: 'Poppins', sans-serif;
+    min-height: 73.6vh;
+    margin-left: -8px;
+    width: 100.5%;
 }
 
-/*Clase .btn: Representa a los botones principales de la aplicación. */
+#logid {
+    margin-left: 43%;
+    margin-top: 10%;
+}
+
+    /*Clase .btn: Representa a los botones principales de la aplicación. */
 .btn {
     border-style: double;
     color: black;
     font-weight: bold;
     padding: 5px;
     border-radius: 10px;
-    font-family: font_Megante;
+    font-family: 'Poppins', sans-serif;
 }
 
 .btn_panel {
@@ -46,7 +87,7 @@ root {
     font-weight: bold;
     padding: 5px;
     border-radius: 10px;
-    font-family: font_Megante;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* STYLESHEET - Register.aspx */
@@ -56,21 +97,37 @@ root {
     border-block: double;
     text-align: center;
     align-content: center;
-    font-family: font_Prototype;
+    font-family: 'Poppins', sans-serif;
+    min-height: 73.6vh;
+    margin-left: -8px;
+    width: 100.5%;
 }
 
-/*ID lblMain: Representa a las etiquetas principales de la aplicación. */
-#lblMain {
+#body1 {
+    margin-right: 70%;
+}
+
+#body2 {
+    margin-left: 70%;
+    margin-top: -10%;
+}
+
+#body3 {
+    margin-top: -10%;
+}
+
+    /*ID lblMain: Representa a las etiquetas principales de la aplicación. */
+    #lblMain {
     font-size: x-large;
     font-weight: bold;
-    font-family: font_Prototype;
+    font-family: 'Poppins', sans-serif;
 }
 
 /*Clase lbl: Representa a las etiquetas de la aplicación. */
 .lbl {
     font-size: large;
     font-weight: bold;
-    font-family: font_Prototype;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* ESTABLECE EL PADDING A #texto */
@@ -80,7 +137,7 @@ root {
     border-width: medium;
     background-color: #ECFFFA;
     border-radius: 10%;
-    font-family: font_Prototype;
+    font-family: 'Poppins', sans-serif;
     font-size: large;
 }
 
@@ -90,7 +147,7 @@ root {
 
 #btnLoginOpt {
     border: none;
-    font-family: font_Prototype;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -101,10 +158,61 @@ root {
 }
 
 #lblWelcome {
-    margin-left: 70px;
+    margin-left: 60px;
 }
 
 #btnStartRegister {
     margin-left: 15px;
     margin-bottom: 5px;
+}
+
+
+/*--------------------------------------FOOTER------------------------------------------*/
+
+footer {
+    background-color: #0E8388;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    margin-left: -8.0px;
+}
+
+    footer nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    footer nav li {
+        margin: 0 15px 0 0;
+        display: inline-block;
+    }
+
+    footer nav a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+    }
+
+        footer nav a:hover {
+            color: #fbb03b;
+        }
+
+@media screen and (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+        footer nav {
+            margin-bottom: 20px;
+        }
 }
