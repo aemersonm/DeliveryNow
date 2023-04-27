@@ -84,6 +84,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Design\style.css" />
+    <Content Include="Resources\AboutUs.png" />
+    <Content Include="Resources\Contact.png" />
+    <Content Include="Views\AboutUs.aspx" />
+    <Content Include="Views\Contact.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\MainPage.aspx" />
     <Content Include="Fonts\Megante.ttf" />
@@ -105,6 +109,20 @@
   <ItemGroup>
     <Compile Include="Class\Customer.cs" />
     <Compile Include="Design\ColorPalette.cs" />
+    <Compile Include="Views\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

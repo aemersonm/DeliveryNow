@@ -13,64 +13,69 @@ root {
 }
 
 /*----------------------------------------HEADER-----------------------------------------*/
+#MainPage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#pHead {
+    position: relative;
+    width: 100%;
+}
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position:static;
     padding: 40px 20px;
     background-color: rgba(14, 131, 136, 0.6);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: 70px;
-    width: 98.75%;
-    margin-top: -15px;
-    margin-left: -8.0px;
+    margin-top: -10px;
 }
 
     header img {
         height: 50px;
     }
 
-header nav ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-}
-
-header nav li {
-    margin: 0 10px;
-}
-
-header nav a {
-    color: #ECFFFA;
-    text-decoration: none;
-    transition: color 0.2s ease-in-out;
-}
-
-    header nav a:hover {
-        color: #fbb03b;
+    header nav ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
     }
+
+    header nav li {
+        margin: 0 10px;
+    }
+
+    header nav a {
+        color: #ECFFFA;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+    }
+
+        header nav a:hover {
+            color: #fbb03b;
+        }
 
 /*ID pMain: Representa a los páneles principales de la aplicación. */
 #pMain {
-    border-block: double;
     font-family: 'Poppins', sans-serif;
-    min-height: 73.6vh;
-    margin-left: -8px;
-    width: 100.5%;
+    position: relative;
 }
 
 #logid {
     margin-left: 43%;
-    margin-top: 10%;
+    padding-top: 10%;
+    padding-bottom: 14%;
 }
 
-    /*Clase .btn: Representa a los botones principales de la aplicación. */
+/*Clase .btn: Representa a los botones principales de la aplicación. */
 .btn {
     border-style: double;
     color: black;
@@ -94,30 +99,37 @@ header nav a {
 
 /*ID pBody: Representa a los páneles que se encuentran en el cuerpo de las páginas de la aplicación. */
 #pBody {
-    border-block: double;
     text-align: center;
     align-content: center;
     font-family: 'Poppins', sans-serif;
-    min-height: 73.6vh;
-    margin-left: -8px;
-    width: 100.5%;
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#loginPage {
+    padding-top: 10%;
+    padding-bottom: 14%;
+    text-align: center;
+    align-content: center;
 }
 
 #body1 {
     margin-right: 70%;
+
 }
 
 #body2 {
     margin-left: 70%;
-    margin-top: -10%;
+    margin-top: -5%;
 }
 
 #body3 {
-    margin-top: -10%;
+    margin-top: -18%;
 }
 
-    /*ID lblMain: Representa a las etiquetas principales de la aplicación. */
-    #lblMain {
+/*ID lblMain: Representa a las etiquetas principales de la aplicación. */
+#lblMain {
     font-size: x-large;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
@@ -169,6 +181,10 @@ header nav a {
 
 /*--------------------------------------FOOTER------------------------------------------*/
 
+#pBot {
+    position: relative;
+}
+
 footer {
     background-color: #0E8388;
     display: flex;
@@ -180,14 +196,11 @@ footer {
     color: #fff;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
-    position: absolute;
-    bottom: 0;
-    margin-left: -8.0px;
 }
 
     footer nav ul {
         list-style: none;
-        margin: 0;
+        margin-left: 10px;
         padding: 0;
     }
 
@@ -215,4 +228,83 @@ footer {
         footer nav {
             margin-bottom: 20px;
         }
+}
+
+/*--------------------------------------ABOUT US------------------------------------------*/
+
+#pAbout {
+    position: relative;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.imageAbout {
+    background-image: url(../Resources/AboutUs.png);
+    background-size: cover;
+    height: 630px;
+    padding-top: 10%;
+}
+
+.infoAbout {
+    font-size: 18px;
+    height: 610px;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 30%;
+}
+
+.btnContact {
+    position: relative;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 30px;
+    color: #ffffff;
+    padding: 10px 30px;
+    font-weight: 600;
+    overflow: hidden;
+    letter-spacing: 0.02em;
+    background-color: #1c3334;
+}
+
+.btnContact:hover {
+        background-color: #6eb4b7;
+        color: #ffffff;
+}
+
+/*--------------------------------------CONTACT------------------------------------------*/
+
+#containerCont {
+    background-image: url(../Resources/Contact.png);
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    width: 100%;
+}
+#formContact {
+    background-color: #6eb4b79F;
+    padding: 2%;
+    left: 5%;
+    position: absolute;
+    margin-top: 30px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+
+    font: bold 14px arial;
+}
+
+#nameContact {
+    margin-left: 2px;
+}
+
+#emailContact{
+    margin-left:8px;
+}
+
+#messageContact {
+    width: 338px;
+    height: 86px;
 }
