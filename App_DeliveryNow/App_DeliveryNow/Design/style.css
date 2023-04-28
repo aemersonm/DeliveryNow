@@ -79,11 +79,17 @@ header {
 /*Clase .btn: Representa a los botones principales de la aplicación. */
 .btn {
     border-style: double;
-    color: black;
+    color: white;
     font-weight: bold;
     padding: 5px;
     border-radius: 10px;
     font-family: 'Poppins', sans-serif;
+    background-color: #1c3334;
+}
+
+.btn:hover {
+        background-color: #6eb4b7;
+        color: black;
 }
 
 .btn_panel {
@@ -121,7 +127,9 @@ header {
     text-align: center;
     align-content: center;
 }
-
+.mainlblContainer {
+    background-color: rgba(0, 137, 151, 0.5);
+}
 #body0 {
     padding-top: 10%;
 }
@@ -144,8 +152,8 @@ header {
     padding-bottom: 4%;
 }
 
-/*ID lblMain: Representa a las etiquetas principales de la aplicación. */
-#lblMain {
+/*Class lblMain: Representa a las etiquetas principales de la aplicación. */
+.lblMain {
     font-size: x-large;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
@@ -176,7 +184,13 @@ header {
 #btnLoginOpt {
     border: none;
     font-family: 'Poppins', sans-serif;
+    background-color: rgba(0, 137, 151, 0.5);
 }
+
+    #btnLoginOpt:hover {
+        background-color: #6eb4b7;
+        color: white;
+    }
 
 
 /*---------------------------------------------------------------------------------------*/
@@ -283,6 +297,7 @@ footer {
     overflow: hidden;
     letter-spacing: 0.02em;
     background-color: #1c3334;
+    font-family: 'Poppins', sans-serif;
 }
 
 .btnContact:hover {
@@ -292,6 +307,11 @@ footer {
 
 /*--------------------------------------CONTACT------------------------------------------*/
 
+#pContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #containerCont {
     background-image: url(../Resources/Contact.png);
     background-size: cover;
@@ -302,14 +322,16 @@ footer {
 #formContact {
     background-color: #6eb4b79F;
     padding: 2%;
-    left: 5%;
+    left: 40%;
     position: absolute;
     margin-top: 30px;
     border-radius: 7px;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
-
     font: bold 14px arial;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 #nameContact {

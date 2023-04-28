@@ -30,22 +30,22 @@
             <div id="containerCont">
                 <div id="formContact">
                     <div>
-                        <label for="name">
+                        <label for="name" class="lbl">
                             <span class="required">Nombre: *</span>
-                            <input type="text" id="nameContact" name="name" placeholder="Nombre Completo" required="required" tabindex="1" autofocus="autofocus" />
+                            <input class="txt" type="text" id="nameContact" name="name" placeholder="Nombre Completo" required="required" tabindex="1" autofocus="autofocus" />
                         </label>
                     </div>
                     <br />
                     <div>
-                        <label for="email">
+                        <label for="email" class="lbl">
                             <span class="required">Correo: *</span>
-                            <input type="email" id="emailContact" name="email" placeholder="Correo Electrónico" tabindex="2" required="required" />
+                            <input class="txt" type="email" id="emailContact" name="email" placeholder="Correo Electrónico" tabindex="2" required="required" />
                         </label>
                     </div>
                     <br />
                     <div>
-                        <span>Categoría: </span>
-                        <select id="subject" name="subject" tabindex="3">
+                        <span class="lbl">Categoría: </span>
+                        <select id="subject" class="txt" name="subject" tabindex="3">
                             <option>Necesito...</option>
                             <option>Localizar mi pedido</option>
                             <option>Solicitar reembolso</option>
@@ -55,12 +55,12 @@
                     </div>
                     <br />
                     <div>
-                        <p class="required"><b>Mensaje: *</b></p>
-                        <textarea id="messageContact" name="message" placeholder="Ingrese su mensaje aquí." tabindex="4" required="required"></textarea>
+                        <p class="lbl"><b>Mensaje: *</b></p>
+                        <textarea class="txt" id="messageContact" name="message" placeholder="Ingrese su mensaje aquí." tabindex="4" required="required"></textarea>
                     </div>
                     <br />
                     <div>
-                        <button name="submit" type="submit" id="submit">Enviar</button>
+                        <button name="submit" class="btn" type="submit" id="submit">Enviar</button>
                     </div>
                 </div>
             </div>
