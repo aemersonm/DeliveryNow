@@ -93,6 +93,8 @@ namespace App_DeliveryNow.Views
             lblMain.Visible = true;
             lblUsername.Visible = true;
             LblPassword.Visible = true;
+            LabelUsername.Visible = false;
+            LabelPassword.Visible = false;
             lblName.Visible = false;
             lblLastName.Visible = false;
             lblPhNumber.Visible = false;
@@ -102,6 +104,8 @@ namespace App_DeliveryNow.Views
             lblQuestion.Visible = false;
             txtUsername.Visible = true;
             txtPassword.Visible = true;
+            TextBoxUsername.Visible = false;
+            TextBoxPassword.Visible = false;
             txtName.Visible = false;
             txtLastName.Visible = false;
             txtPhNumber.Visible = false;
@@ -118,8 +122,10 @@ namespace App_DeliveryNow.Views
             pBody.Visible = true;
             lblMain.Text = "CREA TU CUENTA";
             lblMain.Visible = true;
-            lblUsername.Visible = true;
-            LblPassword.Visible = true;
+            lblUsername.Visible = false;
+            LblPassword.Visible = false;
+            LabelUsername.Visible = true;
+            LabelPassword.Visible = true;
             lblName.Visible = true;
             lblLastName.Visible = true;
             lblPhNumber.Visible = true;
@@ -127,8 +133,10 @@ namespace App_DeliveryNow.Views
             lblPay.Visible = true;
             cbTC.Visible = true;
             lblQuestion.Visible = true;
-            txtUsername.Visible = true;
-            txtPassword.Visible = true;
+            txtUsername.Visible = false;
+            txtPassword.Visible = false;
+            TextBoxUsername.Visible = true;
+            TextBoxPassword.Visible = true;
             txtName.Visible = true;
             txtLastName.Visible = true;
             txtPhNumber.Visible = true;
