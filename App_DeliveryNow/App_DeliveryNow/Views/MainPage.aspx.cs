@@ -32,11 +32,11 @@ namespace App_DeliveryNow.Views
         public void Page_Load(object sender, EventArgs e)
         {
             design_management();
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
                 btnLogin.Click += btnLogin_Click;
                 counter++;
-                welcome_label();   
+                welcome_label();
             }
 
         }
@@ -50,10 +50,11 @@ namespace App_DeliveryNow.Views
 
         public void welcome_label()
         {
-            if(string.IsNullOrEmpty(txtUsername.Text))
+            if (string.IsNullOrEmpty(txtUsername.Text))
             {
                 lblWelcome.Text = "¡Bienvenido!";
-            } else
+            }
+            else
             {
                 string name = get_customer_name(txtUsername.Text);
                 string username = txtUsername.Text;
@@ -86,7 +87,7 @@ namespace App_DeliveryNow.Views
 
         public void change_login_page()
         {
-            pMain.Visible= false;
+            pMain.Visible = false;
             pBody.Visible = true;
             lblMain.Text = "INICIA SESIÓN EN TU CUENTA";
             lblMain.Visible = true;
@@ -185,7 +186,7 @@ namespace App_DeliveryNow.Views
                 int controller = refWS.login_verify(txtUsername.Text, txtPassword.Text);
                 if (controller == 1)
                 {
-                    if(counter == 0)
+                    if (counter == 0)
                     {
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "AVISO", "window.alert('SESIÓN INICIADA CORRECTAMENTE.')", true);
                     }
