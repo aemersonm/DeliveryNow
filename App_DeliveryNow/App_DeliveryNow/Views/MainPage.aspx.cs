@@ -157,16 +157,6 @@ namespace App_DeliveryNow.Views
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "ALERTA", "window.alert('¡ERROR! SI DESEA CONTINUAR, POR FAVOR ACEPTE NUESTROS TÉRMINOS Y CONDICIONES.')", true);
             }
-            if (string.IsNullOrEmpty(TextBoxUsername.Text) ||
-                string.IsNullOrEmpty(txtPassword.Text) ||
-                string.IsNullOrEmpty(txtName.Text) ||
-                string.IsNullOrEmpty(txtLastName.Text) ||
-                string.IsNullOrEmpty(txtPhNumber.Text) ||
-                string.IsNullOrEmpty(txtAddress.Text))
-
-            {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "ALERTA", "window.alert('¡ERROR! POR FAVOR INGRESE LOS DATOS SOLICITADOS.')", true);
-            }
             else if (!string.IsNullOrEmpty(txtUsername.Text) ||
                      !string.IsNullOrEmpty(txtName.Text) ||
                      !string.IsNullOrEmpty(txtLastName.Text) ||
