@@ -9,7 +9,6 @@ using System.Reflection;
 using System.Threading;
 using System.Xml.Linq;
 using System.Collections.Concurrent;
-using App_DeliveryNow.Class;
 /*
 *         SERVICIOS WEB - ULACIT
 * Login - Proyecto Final - GRUPO N.2
@@ -28,7 +27,6 @@ namespace App_DeliveryNow.Views
 
     public partial class Login : System.Web.UI.Page
     {
-        public Customer currentCustomer;
         public void Page_Load(object sender, EventArgs e)
         {
             design_management();
@@ -62,7 +60,6 @@ namespace App_DeliveryNow.Views
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "AVISO", "window.alert('SE HA PRESENTADO UN ERROR DURANTE EL INICIO DE SESIÓN.')", true);
                 }
                // Thread.Sleep(3000);
-               currentCustomer = new Customer(txtUsername.Text);
                 Response.Redirect("MainPage.aspx");
             }
         }

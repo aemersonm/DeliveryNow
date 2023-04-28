@@ -1,5 +1,4 @@
-﻿using App_DeliveryNow.Class;
-using App_DeliveryNow.Reference_DeliveryNow;
+﻿using App_DeliveryNow.Reference_DeliveryNow;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -23,7 +22,6 @@ namespace App_DeliveryNow.Views
 {
     public partial class Register : System.Web.UI.Page
     {
-        public Customer currentCustomer;
         protected void Page_Load(object sender, EventArgs e)
         {
             design_management();
@@ -116,8 +114,6 @@ namespace App_DeliveryNow.Views
                 //refWS.is_logged_in(txtUsername.Text);
                 
             }
-                currentCustomer = new Customer(txtUsername.Text);
-
         }
 
         protected void btnLoginOpt_Click(object sender, EventArgs e)
