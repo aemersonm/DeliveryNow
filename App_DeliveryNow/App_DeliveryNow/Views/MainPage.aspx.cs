@@ -9,7 +9,6 @@ using System.Reflection;
 using Microsoft.SqlServer.Server;
 using System.Configuration;
 using System.Xml.Linq;
-using App_DeliveryNow.Class;
 using App_DeliveryNow.Design;
 /*
 *         SERVICIOS WEB - ULACIT
@@ -38,12 +37,12 @@ namespace App_DeliveryNow.Views
                 counter++;
                 welcome_label();
             }
-
         }
+
         public void design_management()
         {
-            btnStartRegister.BackColor = Design.ColorPalette.LightTeal;
-            btnStartLogin.BackColor = Design.ColorPalette.LightTeal;
+          //  btnStartRegister.BackColor = Design.ColorPalette.LightTeal;
+          //  btnStartLogin.BackColor = Design.ColorPalette.LightTeal;
             pMain.BackColor = Design.ColorPalette.Water;
             pBody.BackColor = Design.ColorPalette.LightTeal;
         }
@@ -89,8 +88,7 @@ namespace App_DeliveryNow.Views
         {
             pMain.Visible = false;
             pBody.Visible = true;
-            lblMain.Text = "INICIA SESIÓN EN TU CUENTA";
-            lblMain.Visible = true;
+            lblMainLogin.Visible = true;
             lblUsername.Visible = true;
             LblPassword.Visible = true;
             LabelUsername.Visible = false;
@@ -159,13 +157,23 @@ namespace App_DeliveryNow.Views
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "ALERTA", "window.alert('¡ERROR! SI DESEA CONTINUAR, POR FAVOR ACEPTE NUESTROS TÉRMINOS Y CONDICIONES.')", true);
             }
+            if (string.IsNullOrEmpty(TextBoxUsername.Text) ||
+                string.IsNullOrEmpty(txtPassword.Text) ||
+                string.IsNullOrEmpty(txtName.Text) ||
+                string.IsNullOrEmpty(txtLastName.Text) ||
+                string.IsNullOrEmpty(txtPhNumber.Text) ||
+                string.IsNullOrEmpty(txtAddress.Text))
+
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "ALERTA", "window.alert('¡ERROR! POR FAVOR INGRESE LOS DATOS SOLICITADOS.')", true);
+            }
             else if (!string.IsNullOrEmpty(txtUsername.Text) ||
                      !string.IsNullOrEmpty(txtName.Text) ||
                      !string.IsNullOrEmpty(txtLastName.Text) ||
                      !string.IsNullOrEmpty(txtPassword.Text) ||
                      !string.IsNullOrEmpty(txtPhNumber.Text))
             {
-                refWS.insert_data(txtUsername.Text, txtName.Text, txtLastName.Text, hashedPassword, seed,
+                refWS.insert_data(TextBoxUsername.Text, txtName.Text, txtLastName.Text, hashedPassword, seed,
                                   txtPhNumber.Text, txtAddress.Text, lbPay.Text); ;
                 txtUsername.Text = string.Empty;
                 txtName.Text = string.Empty;
@@ -174,7 +182,7 @@ namespace App_DeliveryNow.Views
                 txtPhNumber.Text = string.Empty;
                 txtAddress.Text = string.Empty;
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "AVISO", "window.alert('¡FELICITACIONES! SU CUENTA SE HA CREADO CORRECTAMENTE.')", true);
-                refWS.is_logged_in(txtUsername.Text);
+                refWS.is_logged_in(TextBoxUsername.Text);
             }
         }
 

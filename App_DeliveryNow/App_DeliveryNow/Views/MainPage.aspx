@@ -22,7 +22,7 @@
                         <li><a href="MainPage.aspx">Inicio</a></li>
                         <li><a href="#">Productos</a></li>
                         <li><a href="AboutUs.aspx">Nosotros</a></li>
-                        <li><a href="#">Contacto</a></li>
+                        <li><a href="Contact.aspx">Contacto</a></li>
                     </ul>
                 </nav>
             </header>
@@ -41,10 +41,12 @@
         </asp:Panel>
 
         <asp:Panel ID="pBody" runat="server" Visible="False">
+            <div class="mainlblContainer">
+                    <asp:Label ID="lblMain" class="lblMain" runat="server" Text="CREA TU CUENTA" Visible="False"></asp:Label>
+            </div>
             <div id="bgSquare">
                 <div id="body0">
-                    <asp:Label ID="lblMain" runat="server" Text="CREA TU CUENTA" Visible="False"></asp:Label>
-                    <br />
+                    <asp:Label ID="lblMainLogin" class="lblMain" runat="server" Text="INICIA SESIÓN EN TU CUENTA" Visible="False"></asp:Label>
                     <br />
                     <asp:Label ID="lblUsername" runat="server" CssClass="lbl" Text="USUARIO:" Visible="False"></asp:Label>
                     <br />
@@ -57,15 +59,6 @@
                     <br />
                     <br />
                     <asp:Button ID="btnLogin" Text="INICIAR SESIÓN" runat="server" CssClass="btn" OnClick="btnLogin_Click" Visible="False" />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
                 </div>
                 <div id="body1">
                     <asp:Label ID="lblName" runat="server" CssClass="lbl" Text="NOMBRE:" Visible="False"></asp:Label>
@@ -86,6 +79,7 @@
                     <br />
                 </div>
                 <div id="body2">
+                    <br />
                     <asp:Label ID="lblLastName" runat="server" CssClass="lbl" Text="APELLIDO:" Visible="False"></asp:Label>
                     <br />
                     <asp:TextBox ID="txtLastName" runat="server" CssClass="txt" Visible="False"></asp:TextBox>

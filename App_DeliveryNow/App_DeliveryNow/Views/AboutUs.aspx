@@ -32,7 +32,6 @@
                 <div class="infoAbout">
                     <h1>Sobre Nosotros
                     </h1>
-
                     <h3>Nuestro Servicio</h3>
                     <p>
                         Ofrecemos servicios de envío de alta calidad nuestros clientes en cualquier rincón del país. Nos esforzamos por proporcionar una experiencia de envío excepcional, desde la facilidad de uso de nuestro sitio web hasta la rapidez y eficiencia de nuestras operaciones. 
