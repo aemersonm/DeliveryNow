@@ -17,6 +17,7 @@ root {
     width: 100%;
     height: 100%;
     position: absolute;
+    margin-left: -0.4%;
 }
 
 #pHead {
@@ -105,6 +106,13 @@ header {
     position: relative;
     padding-top: 5%;
     padding-bottom: 5%;
+    background-image: url(../Resources/ContactBlur.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#bgSquare {
+    background-color: rgba(0, 137, 151, 0.5);
 }
 
 #loginPage {
@@ -114,18 +122,26 @@ header {
     align-content: center;
 }
 
-#body1 {
-    margin-right: 70%;
+#body0 {
+    padding-top: 10%;
+}
 
+#body1 {
+    margin-right: 20%;
+    margin-top: -17%;
 }
 
 #body2 {
-    margin-left: 70%;
-    margin-top: -5%;
+    margin-left: 20%;
+    margin-top: -14%;
 }
 
 #body3 {
-    margin-top: -18%;
+    margin-top: 2%;
+}
+
+#body4 {
+    padding-bottom: 4%;
 }
 
 /*ID lblMain: Representa a las etiquetas principales de la aplicación. */
