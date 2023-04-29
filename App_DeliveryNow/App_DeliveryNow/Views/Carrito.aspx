@@ -8,25 +8,65 @@
     <title>DeliveryNow</title>
     <link rel="stylesheet" href="../Design/style.css" type="text/css" />
     <link rel="stylesheet" href="../Design/estilospopup.css" type="text/css" />
+    <link rel="stylesheet" href="../Design/Carrito.css" type="text/css" />
 </head>
 <body>
     <form id="MainPage" runat="server">
         <asp:Panel ID="pHead" runat="server">
             <header>
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/Resources/logonobg.png" Height="150px" Width="150px"></asp:Image>
                 <nav>
                     <ul>
-                        <li><a href="MainPage.aspx">Inicio</a></li>
+                        <li><a href="Tienda.aspx">Tiendas</a></li>
                         <li><a href="AboutUs.aspx">Nosotros</a></li>
                         <li><a href="Contact.aspx">Contacto</a></li>
                         <li><a href="Carrito.aspx">Carrito</a></li>
+                        <li><a style="color: #2e4f4f;" href="MainPage.aspx"><b>Cerrar Sesión</b></a></li>
                     </ul>
                 </nav>
             </header>
-            <div class="shop-header">
-                <img class="logo3" src="../Resources/ExtremetechLogo.png" alt="Extremetech" />
-                <h2>Tienda oficial de Extremetech</h2>
+        </asp:Panel>
+
+        <asp:Panel ID="pCarrito" runat="server" Visible="true">
+
+            <div class="containercarrito">
+                <h2>Información de envío</h2>
+                <asp:Label runat="server" for="username">Nombre de Usuario:</asp:Label>
+                <asp:TextBox runat="server" type="text" ID="usertxt" name="username" />
+                <asp:Button ID="btnValidateUsr" runat="server" Text="Aceptar" OnClick="btnValidateUsr_Click"></asp:Button>
+
+
+                <label for="direccion">Dirección:</label>
+                <asp:TextBox runat="server" type="text" ID="direcciontxt" name="direccion" Enabled="false" />
+
+                <h2>Resumen de compras</h2>
+                <div class="cart">
+                    <asp:GridView ID="GdProducts" runat="server" Height="120px" Width="346px">
+                    </asp:GridView>
+                    <div class="total">Total:
+                        <asp:Label ID="lblTotal" runat="server" Text=""></asp:Label>
+                    </div>
+                </div>
+
+                <h2>Método de pago</h2>
+                <asp:Label runat="server" for="metodo-pago">Método de pago:</asp:Label>
+                <asp:TextBox runat="server" type="text" ID="paymentTxt" name="paymentMethod" Enabled="false" />
+
+                <div>
+                    <h2>Información de pago</h2>
+                    <asp:Label runat="server" for="tarjeta">Número de tarjeta:</asp:Label>
+                    <asp:TextBox runat="server" type="text" ID="tarjetaTxt" name="tarjeta" Enabled="false" />
+
+                    <asp:Label runat="server" for="vencimiento">Fecha de vencimiento:</asp:Label>
+                    <asp:TextBox runat="server" type="text" ID="vencimientoTxt" name="vencimiento" Enabled="false" />
+
+                    <asp:Label runat="server" for="cvv">CVV:</asp:Label>
+                    <asp:TextBox runat="server" type="text" ID="cvvTxt" name="cvv" Enabled="false" />
+                </div>
+
+
+                <asp:Button ID="btnConfirm" class="cart-btn" runat="server" type="submit" value="Confirmar" Text="Confirmar" OnClick="btnConfirm_Click" />
             </div>
-            <hr class="separator" />
         </asp:Panel>
 
         <asp:Panel ID="pBot" runat="server">

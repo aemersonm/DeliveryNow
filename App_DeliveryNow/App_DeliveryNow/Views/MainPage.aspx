@@ -183,6 +183,7 @@
 
                                         <a href="#" class="btn-close-popup">X</a>
                                     </div>
+                                    </div>
                             </li>
 
                             <li><a href="#modal2" class="btn-open-popup">Política de privacidad</a>

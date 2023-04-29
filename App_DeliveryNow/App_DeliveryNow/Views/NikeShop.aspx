@@ -40,7 +40,8 @@
                     <h3>Nike Air Force 1 '07 LV8</h3>
                     <p>Zapatillas de estilo clásico confeccionadas con cuero de primera calidad y detalles elegantes en la parte superior.</p>
                     <p>Precio: $99.99</p>
-                    <button>Agregar al carrito</button>
+                    <asp:Button ID="btnProd1" runat="server" Text="Agregar al carrito" OnClick="btnProd1_Click"></asp:Button>
+
                 </div>
                 <div class="product">
                     <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/4669ffe9-07f3-4105-ac83-bfea897bb1dd/calzado-de-running-pegasus-38-nfl-pittsburgh-steelers-884pG1.png" alt="Nike Air Zoom Pegasus 38" />

@@ -1,0 +1,86 @@
+﻿.containercarrito {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+.cart-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cart {
+    margin-top: 2rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+    .cart h2 {
+        margin-top: 0;
+    }
+
+    .cart ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cart li {
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #ccc;
+    }
+
+        .cart li:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+    .cart .total {
+        margin-top: 1rem;
+        font-weight: bold;
+    }

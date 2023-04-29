@@ -52,3 +52,13 @@
     text-decoration: none;
     color:white;
 }
+
+.btnStyle-1 {
+    background-color: #2E4F4F;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
