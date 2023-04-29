@@ -93,7 +93,7 @@
 
                 <div class="tienda">
                     <img src="../Resources/huawei.png" alt="Tienda" />
-                    <h2>Apple</h2>
+                    <h2>Huawei</h2>
                     <p><b>Tecnología</b></p>
                     <button href="">Ver productos</button>
                 </div>

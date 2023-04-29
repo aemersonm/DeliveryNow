@@ -16,7 +16,7 @@
 
         <asp:Panel ID="pHead" runat="server">
             <header>
-                <asp:Image ID="Image1" runat="server" ImageUrl="~/Resources/logonobg.png" Height="150px" Width="150px"></asp:Image>
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/Resources/logonobg.png" Height="150px" Width="150px">  </asp:Image>
                 <nav>
                     <ul>
                         <li><a href="MainPage.aspx">Inicio</a></li>
@@ -34,7 +34,7 @@
                 <asp:Label ID="lblWelcome" runat="server" CssClass="lbl" Text="" Visible="True" Font-Bold="True"></asp:Label>
                 <br />
                 <br />
-                <asp:Button ID="btnStartRegister" CssClass="btn" runat="server" Text="REGÍSTRATE" OnClick="btnStartRegister_Click" />
+                <asp:Button ID="btnStartRegister" CssClass="btn" runat="server" Text="REGÍSTRATE" OnClick="btnStartRegister_Click"/>
                 <asp:Button ID="btnStartLogin" CssClass="btn" runat="server" Text="INICIAR SESIÓN" OnClick="btnStartLogin_Click" />
             </div>
         </asp:Panel>
@@ -54,7 +54,7 @@
                     <br />
                     <asp:Label ID="LblPassword" runat="server" CssClass="lbl" Text="CONTRASEÑA:" Visible="False"></asp:Label>
                     <br />
-                    <asp:TextBox ID="txtPassword" runat="server" CssClass="txt" onkeyup="this.value=this.value.replace(/[^\*]/g,'*')" OnTextChanged="txtPassword_OnTextChanged" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" runat="server" CssClass="txt" TextMode="Password" Visible="False"></asp:TextBox>
                     <br />
                     <br />
                     <asp:Button ID="btnLogin" Text="INICIAR SESIÓN" runat="server" CssClass="btn" OnClick="btnLogin_Click" Visible="False" />
@@ -73,9 +73,13 @@
                     <asp:Label ID="LabelPassword" runat="server" CssClass="lbl" Text="CONTRASEÑA:" Visible="False"></asp:Label>
                     <br />
                     <br />
-                    <asp:TextBox ID="TextBoxPassword" runat="server" CssClass="txt" onkeyup="this.value=this.value.replace(/[^\*]/g,'*')" OnTextChanged="txtPassword_OnTextChanged" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxPassword" runat="server" CssClass="txt" onkeyup="this.value=this.value.replace(/[^*]/g,'*')" OnTextChanged="txtPassword_OnTextChanged" Visible="False"></asp:TextBox>
                     <br />
                     <br />
+                    <asp:Label ID="LblConfirmPassword" runat="server" CssClass="lbl" Text="CONFIRMAR CONTRASEÑA:" Visible="False"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:TextBox ID="txtConfirmPassword" runat="server" CssClass="txt" Visible="False"></asp:TextBox>
                 </div>
                 <div id="body2">
                     <br />
@@ -92,8 +96,6 @@
                     <asp:Label ID="lblAddress" runat="server" CssClass="lbl" Text="DIRECCIÓN:" Visible="False"></asp:Label>
                     <br />
                     <asp:TextBox ID="txtAddress" runat="server" CssClass="txt" Height="90px" Visible="False"></asp:TextBox>
-                    <br />
-                    <br />
                 </div>
                 <div id="body3">
                     <asp:Label ID="lblPay" runat="server" CssClass="lbl" Text="MÉTODO DE PAGO PREFERIDO:" Visible="False"></asp:Label>

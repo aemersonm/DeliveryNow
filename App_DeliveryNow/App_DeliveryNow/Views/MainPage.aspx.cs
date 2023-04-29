@@ -88,11 +88,13 @@ namespace App_DeliveryNow.Views
         {
             pMain.Visible = false;
             pBody.Visible = true;
+            lblMain.Visible = false;
             lblMainLogin.Visible = true;
             lblUsername.Visible = true;
             LblPassword.Visible = true;
             LabelUsername.Visible = false;
             LabelPassword.Visible = false;
+            LblConfirmPassword.Visible = false;
             lblName.Visible = false;
             lblLastName.Visible = false;
             lblPhNumber.Visible = false;
@@ -104,6 +106,7 @@ namespace App_DeliveryNow.Views
             txtPassword.Visible = true;
             TextBoxUsername.Visible = false;
             TextBoxPassword.Visible = false;
+            txtConfirmPassword.Visible = false;
             txtName.Visible = false;
             txtLastName.Visible = false;
             txtPhNumber.Visible = false;
@@ -124,6 +127,7 @@ namespace App_DeliveryNow.Views
             LblPassword.Visible = false;
             LabelUsername.Visible = true;
             LabelPassword.Visible = true;
+            LblConfirmPassword.Visible = true;
             lblName.Visible = true;
             lblLastName.Visible = true;
             lblPhNumber.Visible = true;
@@ -135,6 +139,7 @@ namespace App_DeliveryNow.Views
             txtPassword.Visible = false;
             TextBoxUsername.Visible = true;
             TextBoxPassword.Visible = true;
+            txtConfirmPassword.Visible = true;
             txtName.Visible = true;
             txtLastName.Visible = true;
             txtPhNumber.Visible = true;
@@ -152,10 +157,13 @@ namespace App_DeliveryNow.Views
         protected void btnRegister_Click(object sender, EventArgs e)
         {
             byte[] seed;
-            string hashedPassword = refWS.hash_password(txtPassword.Text, out seed);
+            string hashedPassword = refWS.hash_password(txtConfirmPassword.Text, out seed);
             if (!cbTC.Checked)
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "ALERTA", "window.alert('¡ERROR! SI DESEA CONTINUAR, POR FAVOR ACEPTE NUESTROS TÉRMINOS Y CONDICIONES.')", true);
+            } 
+            else if (txtConfirmPassword.Text.Length != TextBoxPassword.Text.Length){
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "ALERTA", "window.alert('¡ERROR! LAS CONTRASEÑAS INGRESADAS NO COINCIDEN.')", true);
             }
             else if (!string.IsNullOrEmpty(txtUsername.Text) ||
                      !string.IsNullOrEmpty(txtName.Text) ||
@@ -173,6 +181,7 @@ namespace App_DeliveryNow.Views
                 txtAddress.Text = string.Empty;
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "AVISO", "window.alert('¡FELICITACIONES! SU CUENTA SE HA CREADO CORRECTAMENTE.')", true);
                 refWS.is_logged_in(TextBoxUsername.Text);
+                change_login_page();
             }
         }
 
@@ -201,18 +210,16 @@ namespace App_DeliveryNow.Views
                 {
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "AVISO", "window.alert('SE HA PRESENTADO UN ERROR DURANTE EL INICIO DE SESIÓN.')", true);
                 }
-                // Thread.Sleep(3000);
+                
                 string name = get_customer_name(txtUsername.Text);
                 welcome_label();
+                Response.Redirect("Tienda.aspx");
             }
         }
-
         protected void btnLoginOpt_Click(object sender, EventArgs e)
         {
             change_login_page();
         }
-
-        //Este evento controla que el contenido de txtPassword se muestre en asteriscos. 
         protected void txtPassword_OnTextChanged(object sender, EventArgs e)
         {
             // Se obtiene el texto ingresado por el usuario.
