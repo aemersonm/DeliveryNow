@@ -17,7 +17,7 @@ namespace App_DeliveryNow.Views
 
         }
 
-        protected void btnProd1_Click(object sender, EventArgs e)
+        protected void btnStore1_Click(object sender, EventArgs e)
         {
             Response.Redirect("NikeShop.aspx");
         }
