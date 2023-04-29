@@ -57,6 +57,7 @@
     .container-text p {
         margin-top: 20px;
         font-size: 16px;
+        text-align: justify;
     }
 
 .container-text2 {
@@ -68,11 +69,13 @@
 
     .container-text2 h1 {
         font-size: 30px;
+        text-align: center;
     }
 
     .container-text2 p {
         margin-top: 20px;
         font-size: 16px;
+        text-align: justify;
     }
 
 .container-text3 {
@@ -84,11 +87,13 @@
 
     .container-text3 h1 {
         font-size: 30px;
+        text-align: center;
     }
 
     .container-text3 p {
         margin-top: 20px;
         font-size: 16px;
+        text-align: justify;
     }
 
 .btn-close-popup {
