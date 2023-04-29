@@ -85,17 +85,32 @@
   <ItemGroup>
     <Content Include="Design\estilospopup.css" />
     <Content Include="Design\style.css" />
+    <Content Include="Design\Tienda.css" />
     <Content Include="Resources\AboutUs.png" />
+    <Content Include="Resources\adidas.png" />
+    <Content Include="Resources\apple.png" />
+    <Content Include="Resources\automercado.png" />
     <Content Include="Resources\AutomercadoLogo.png" />
     <Content Include="Resources\Contact.png" />
     <Content Include="Resources\ContactBlur.png" />
     <Content Include="Resources\ExtremetechLogo.png" />
+    <Content Include="Resources\freshmarket.png" />
+    <Content Include="Resources\huawei.png" />
+    <Content Include="Resources\newbalance.png" />
     <Content Include="Resources\NewBalanceLogo.png" />
+    <Content Include="Resources\nike.png" />
     <Content Include="Resources\NikeLogo.png" />
+    <Content Include="Resources\pali.png" />
+    <Content Include="Resources\puma.png" />
+    <Content Include="Resources\walmart.png" />
     <Content Include="Resources\WalmartLogo.png" />
+    <Content Include="Resources\xiaomi.png" />
     <Content Include="Resources\XiaomiLogo.png" />
+    <Content Include="Resources\xtremetch.png" />
+    <Content Include="Views\Carrito.aspx" />
     <Content Include="Views\NewBalanceShop.aspx" />
     <Content Include="Views\ExtremetechShop.aspx" />
+    <Content Include="Views\Tienda.aspx" />
     <Content Include="Views\XiaomiShop.aspx" />
     <Content Include="Views\WalmartShop.aspx" />
     <Content Include="Views\AutomercadoShop.aspx" />
@@ -122,6 +137,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Design\ColorPalette.cs" />
+    <Compile Include="Views\Carrito.aspx.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Carrito.aspx.designer.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\NewBalanceShop.aspx.cs">
       <DependentUpon>NewBalanceShop.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -129,6 +151,13 @@
     <Compile Include="Views\ExtremetechShop.aspx.cs">
       <DependentUpon>ExtremetechShop.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Tienda.aspx.cs">
+      <DependentUpon>Tienda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Tienda.aspx.designer.cs">
+      <DependentUpon>Tienda.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\XiaomiShop.aspx.cs">
       <DependentUpon>XiaomiShop.aspx</DependentUpon>

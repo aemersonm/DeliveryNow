@@ -20,7 +20,6 @@
                 <nav>
                     <ul>
                         <li><a href="MainPage.aspx">Inicio</a></li>
-                        <li><a href="#">Productos</a></li>
                         <li><a href="AboutUs.aspx">Nosotros</a></li>
                         <li><a href="Contact.aspx">Contacto</a></li>
                     </ul>
