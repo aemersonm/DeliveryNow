@@ -6,6 +6,8 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="../Design/style.css" type="text/css" />
+    <link rel="stylesheet" href="../Design/estilospopup.css" type="text/css" />
+
 
     <title>DeliveryNow</title>
 </head>

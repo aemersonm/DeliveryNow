@@ -7,6 +7,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>DeliveryNow</title>
     <link rel="stylesheet" href="../Design/style.css" type="text/css" />
+    <link rel="stylesheet" href="../Design/estilospopup.css" type="text/css" />
+
 
 </head>
 <body aria-sort="none">
