@@ -204,6 +204,24 @@ namespace App_DeliveryNow.Views
         protected global::System.Web.UI.WebControls.TextBox TextBoxPassword;
 
         /// <summary>
+        /// Control LblConfirmPassword.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblConfirmPassword;
+
+        /// <summary>
+        /// Control txtConfirmPassword.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtConfirmPassword;
+
+        /// <summary>
         /// Control lblLastName.
         /// </summary>
         /// <remarks>

@@ -41,7 +41,7 @@
 
         <asp:Panel ID="pBody" runat="server" Visible="False">
             <div class="mainlblContainer">
-                    <asp:Label ID="lblMain" class="lblMain" runat="server" Text="CREA TU CUENTA" Visible="False"></asp:Label>
+                <asp:Label ID="lblMain" class="lblMain" runat="server" Text="CREA TU CUENTA" Visible="False"></asp:Label>
             </div>
             <div id="bgSquare">
                 <div id="body0">
@@ -73,9 +73,13 @@
                     <asp:Label ID="LabelPassword" runat="server" CssClass="lbl" Text="CONTRASEÑA:" Visible="False"></asp:Label>
                     <br />
                     <br />
-                    <asp:TextBox ID="TextBoxPassword" runat="server" CssClass="txt" onkeyup="this.value=this.value.replace(/[^\*]/g,'*')" OnTextChanged="txtPassword_OnTextChanged" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxPassword" runat="server" CssClass="txt" onkeyup="this.value=this.value.replace(/[^*]/g,'*')" OnTextChanged="txtPassword_OnTextChanged" Visible="False"></asp:TextBox>
                     <br />
                     <br />
+                    <asp:Label ID="LblConfirmPassword" runat="server" CssClass="lbl" Text="CONFIRMAR CONTRASEÑA:" Visible="False"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:TextBox ID="txtConfirmPassword" runat="server" CssClass="txt" Visible="False"></asp:TextBox>
                 </div>
                 <div id="body2">
                     <br />
