@@ -42,13 +42,13 @@ namespace App_DeliveryNow.Views
         protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
-        /// Control pAbout.
+        /// Control Panel1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pAbout;
+        protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
         /// Control pBot.

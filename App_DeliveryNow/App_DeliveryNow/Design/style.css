@@ -87,10 +87,10 @@ header {
     background-color: #1c3334;
 }
 
-.btn:hover {
+    .btn:hover {
         background-color: #6eb4b7;
         color: black;
-}
+    }
 
 .btn_panel {
     border-style: none;
@@ -127,9 +127,11 @@ header {
     text-align: center;
     align-content: center;
 }
+
 .mainlblContainer {
     background-color: rgba(0, 137, 151, 0.5);
 }
+
 #body0 {
     padding-top: 10%;
 }
@@ -300,10 +302,10 @@ footer {
     font-family: 'Poppins', sans-serif;
 }
 
-.btnContact:hover {
+    .btnContact:hover {
         background-color: #6eb4b7;
         color: #ffffff;
-}
+    }
 
 /*--------------------------------------CONTACT------------------------------------------*/
 
@@ -312,6 +314,7 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
 #containerCont {
     background-image: url(../Resources/Contact.png);
     background-size: cover;
@@ -319,6 +322,7 @@ footer {
     height: 700px;
     width: 100%;
 }
+
 #formContact {
     background-color: #6eb4b79F;
     padding: 2%;
@@ -338,11 +342,138 @@ footer {
     margin-left: 2px;
 }
 
-#emailContact{
-    margin-left:8px;
+#emailContact {
+    margin-left: 8px;
 }
 
 #messageContact {
     width: 338px;
     height: 86px;
 }
+
+/*--------------------------------------PRODUCTOS------------------------------------------*/
+
+.shop-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo1 {
+    height: 90px;
+    width: 100px;
+    margin-right: 20px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo2 {
+    height: 90px;
+    width: 120px;
+    margin-right: 20px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo3 {
+    height: 100px;
+    width: 170px;
+    margin-right: 20px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo4 {
+    height: 90px;
+    width: 90px;
+    margin-right: 20px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo5 {
+    height: 100px;
+    width: 220px;
+    margin-right: 20px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo6 {
+    height: 100px;
+    width: 170px;
+    margin-right: 20px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.shop-header h2 {
+    font-size: 32px;
+    margin: 0;
+    color: #333;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+}
+
+.shop-header span {
+    font-size: 14px;
+    color: #777;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.separator {
+    height: 2px;
+    background-color: #ccc;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.product {
+    width: 300px;
+    margin: 20px;
+}
+
+    .product img {
+        width: 100%;
+    }
+
+    .product h3 {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    .product p {
+        margin-top: 5px;
+        font-size: 16px;
+    }
+
+    .product button {
+        margin-top: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+

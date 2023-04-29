@@ -6,6 +6,8 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="../Design/style.css" type="text/css" />
+    <link rel="stylesheet" href="../Design/estilospopup.css" type="text/css" />
+
 
     <title>DeliveryNow</title>
 </head>
@@ -18,7 +20,7 @@
                 <nav>
                     <ul>
                         <li><a href="MainPage.aspx">Inicio</a></li>
-                        <li><a href="#">Productos</a></li>
+                        <li><a href="Tienda.aspx">Tiendas</a></li>
                         <li><a href="AboutUs.aspx">Nosotros</a></li>
                         <li><a href="Contact.aspx">Contacto</a></li>
                     </ul>
@@ -26,7 +28,7 @@
             </header>
         </asp:Panel>
 
-        <asp:Panel ID="pAbout" runat="server">
+        <asp:Panel ID="Panel1" runat="server">
             <div class="container">
                 <div class="imageAbout"></div>
                 <div class="infoAbout">
@@ -35,16 +37,19 @@
                     <h3>Nuestro Servicio</h3>
                     <p>
                         Ofrecemos servicios de envío de alta calidad nuestros clientes en cualquier rincón del país. Nos esforzamos por proporcionar una experiencia de envío excepcional, desde la facilidad de uso de nuestro sitio web hasta la rapidez y eficiencia de nuestras operaciones. 
+                   
                     </p>
 
                     <h3>Misión y valores</h3>
                     <p>
                         Nuestra misión es proporcionar a nuestros clientes un servicio de envío confiable y eficiente a precios asequibles. Creemos en la honestidad, la transparencia y la responsabilidad en todo lo que hacemos. Nos esforzamos por superar las expectativas de nuestros clientes en cada oportunidad.
+                   
                     </p>
 
                     <h3>Contacto</h3>
                     <p>
                         Si necesita ponerse en contacto con nosotros, puede hacerlo a través de nuestro sitio web, por correo electrónico o por teléfono. Estamos siempre disponibles para responder preguntas y ayudar a nuestros clientes en todo lo que necesiten.                   
+                   
                     </p>
                     <br />
                     <br>
@@ -111,9 +116,9 @@
                      
                                             </p>
                                         </div>
-
-                                        <a href="#" class="btn-close-popup">X</a>
                                     </div>
+                                    <a href="#" class="btn-close-popup">X</a>
+                                </div>
                             </li>
 
                             <li><a href="#modal2" class="btn-open-popup">Política de privacidad</a>
