@@ -107,6 +107,7 @@
     <Content Include="Resources\xiaomi.png" />
     <Content Include="Resources\XiaomiLogo.png" />
     <Content Include="Resources\xtremetch.png" />
+    <Content Include="Views\Carrito.aspx" />
     <Content Include="Views\NewBalanceShop.aspx" />
     <Content Include="Views\ExtremetechShop.aspx" />
     <Content Include="Views\Tienda.aspx" />
@@ -136,6 +137,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Design\ColorPalette.cs" />
+    <Compile Include="Views\Carrito.aspx.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Carrito.aspx.designer.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\NewBalanceShop.aspx.cs">
       <DependentUpon>NewBalanceShop.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
