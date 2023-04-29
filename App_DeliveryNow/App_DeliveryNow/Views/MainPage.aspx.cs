@@ -41,8 +41,8 @@ namespace App_DeliveryNow.Views
 
         public void design_management()
         {
-          //  btnStartRegister.BackColor = Design.ColorPalette.LightTeal;
-          //  btnStartLogin.BackColor = Design.ColorPalette.LightTeal;
+            //  btnStartRegister.BackColor = Design.ColorPalette.LightTeal;
+            //  btnStartLogin.BackColor = Design.ColorPalette.LightTeal;
             pMain.BackColor = Design.ColorPalette.Water;
             pBody.BackColor = Design.ColorPalette.LightTeal;
         }
@@ -182,6 +182,8 @@ namespace App_DeliveryNow.Views
         }
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+
+
             if (string.IsNullOrEmpty(txtUsername.Text) ||
                 string.IsNullOrEmpty(txtPassword.Text))
             {
@@ -195,6 +197,7 @@ namespace App_DeliveryNow.Views
                     if (counter == 0)
                     {
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "AVISO", "window.alert('SESIÓN INICIADA CORRECTAMENTE.')", true);
+                        Response.Redirect("Tienda.aspx");
                     }
                 }
                 else

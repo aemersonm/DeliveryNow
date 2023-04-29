@@ -19,10 +19,11 @@
                 <asp:Image ID="Image1" runat="server" ImageUrl="~/Resources/logonobg.png" Height="150px" Width="150px"></asp:Image>
                 <nav>
                     <ul>
-                        <li><a href="MainPage.aspx">Inicio</a></li>
                         <li><a href="Tienda.aspx">Tiendas</a></li>
                         <li><a href="AboutUs.aspx">Nosotros</a></li>
                         <li><a href="Contact.aspx">Contacto</a></li>
+                        <li><a style="color: #2e4f4f;" href="MainPage.aspx"><b>Cerrar Sesión</b></a></li>
+
                     </ul>
                 </nav>
             </header>

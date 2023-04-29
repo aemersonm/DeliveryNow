@@ -22,6 +22,7 @@
                         <li><a href="AboutUs.aspx">Nosotros</a></li>
                         <li><a href="Contact.aspx">Contacto</a></li>
                         <li><a href="Carrito.aspx">Carrito</a></li>
+                        <li><a style="color: #2e4f4f;" href="MainPage.aspx"><b>Cerrar Sesión</b></a></li>
                     </ul>
                 </nav>
             </header>
