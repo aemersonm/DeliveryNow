@@ -83,6 +83,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Design\Carrito.css" />
     <Content Include="Design\estilospopup.css" />
     <Content Include="Design\style.css" />
     <Content Include="Design\Tienda.css" />

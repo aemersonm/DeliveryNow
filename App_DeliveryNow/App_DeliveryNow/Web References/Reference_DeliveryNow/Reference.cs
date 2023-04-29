@@ -24,7 +24,7 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="WS_AppSoap", Namespace="http://tempuri.org/")]
@@ -47,6 +47,16 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
         private System.Threading.SendOrPostCallback login_verifyOperationCompleted;
         
         private System.Threading.SendOrPostCallback show_customer_nameOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getUserAddOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getUserPMOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback displayProdOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback displayPriceOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback displayPrice2OperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -112,6 +122,21 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
         
         /// <remarks/>
         public event show_customer_nameCompletedEventHandler show_customer_nameCompleted;
+        
+        /// <remarks/>
+        public event getUserAddCompletedEventHandler getUserAddCompleted;
+        
+        /// <remarks/>
+        public event getUserPMCompletedEventHandler getUserPMCompleted;
+        
+        /// <remarks/>
+        public event displayProdCompletedEventHandler displayProdCompleted;
+        
+        /// <remarks/>
+        public event displayPriceCompletedEventHandler displayPriceCompleted;
+        
+        /// <remarks/>
+        public event displayPrice2CompletedEventHandler displayPrice2Completed;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/send_error", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -388,6 +413,153 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getUserAdd", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string getUserAdd(string username) {
+            object[] results = this.Invoke("getUserAdd", new object[] {
+                        username});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getUserAddAsync(string username) {
+            this.getUserAddAsync(username, null);
+        }
+        
+        /// <remarks/>
+        public void getUserAddAsync(string username, object userState) {
+            if ((this.getUserAddOperationCompleted == null)) {
+                this.getUserAddOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetUserAddOperationCompleted);
+            }
+            this.InvokeAsync("getUserAdd", new object[] {
+                        username}, this.getUserAddOperationCompleted, userState);
+        }
+        
+        private void OngetUserAddOperationCompleted(object arg) {
+            if ((this.getUserAddCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getUserAddCompleted(this, new getUserAddCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getUserPM", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string getUserPM(string payMeth) {
+            object[] results = this.Invoke("getUserPM", new object[] {
+                        payMeth});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getUserPMAsync(string payMeth) {
+            this.getUserPMAsync(payMeth, null);
+        }
+        
+        /// <remarks/>
+        public void getUserPMAsync(string payMeth, object userState) {
+            if ((this.getUserPMOperationCompleted == null)) {
+                this.getUserPMOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetUserPMOperationCompleted);
+            }
+            this.InvokeAsync("getUserPM", new object[] {
+                        payMeth}, this.getUserPMOperationCompleted, userState);
+        }
+        
+        private void OngetUserPMOperationCompleted(object arg) {
+            if ((this.getUserPMCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getUserPMCompleted(this, new getUserPMCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/displayProd", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet displayProd(string prodID, string prodID2) {
+            object[] results = this.Invoke("displayProd", new object[] {
+                        prodID,
+                        prodID2});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void displayProdAsync(string prodID, string prodID2) {
+            this.displayProdAsync(prodID, prodID2, null);
+        }
+        
+        /// <remarks/>
+        public void displayProdAsync(string prodID, string prodID2, object userState) {
+            if ((this.displayProdOperationCompleted == null)) {
+                this.displayProdOperationCompleted = new System.Threading.SendOrPostCallback(this.OndisplayProdOperationCompleted);
+            }
+            this.InvokeAsync("displayProd", new object[] {
+                        prodID,
+                        prodID2}, this.displayProdOperationCompleted, userState);
+        }
+        
+        private void OndisplayProdOperationCompleted(object arg) {
+            if ((this.displayProdCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.displayProdCompleted(this, new displayProdCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/displayPrice", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int displayPrice(string prodID) {
+            object[] results = this.Invoke("displayPrice", new object[] {
+                        prodID});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void displayPriceAsync(string prodID) {
+            this.displayPriceAsync(prodID, null);
+        }
+        
+        /// <remarks/>
+        public void displayPriceAsync(string prodID, object userState) {
+            if ((this.displayPriceOperationCompleted == null)) {
+                this.displayPriceOperationCompleted = new System.Threading.SendOrPostCallback(this.OndisplayPriceOperationCompleted);
+            }
+            this.InvokeAsync("displayPrice", new object[] {
+                        prodID}, this.displayPriceOperationCompleted, userState);
+        }
+        
+        private void OndisplayPriceOperationCompleted(object arg) {
+            if ((this.displayPriceCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.displayPriceCompleted(this, new displayPriceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/displayPrice2", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int displayPrice2(string prodID2) {
+            object[] results = this.Invoke("displayPrice2", new object[] {
+                        prodID2});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void displayPrice2Async(string prodID2) {
+            this.displayPrice2Async(prodID2, null);
+        }
+        
+        /// <remarks/>
+        public void displayPrice2Async(string prodID2, object userState) {
+            if ((this.displayPrice2OperationCompleted == null)) {
+                this.displayPrice2OperationCompleted = new System.Threading.SendOrPostCallback(this.OndisplayPrice2OperationCompleted);
+            }
+            this.InvokeAsync("displayPrice2", new object[] {
+                        prodID2}, this.displayPrice2OperationCompleted, userState);
+        }
+        
+        private void OndisplayPrice2OperationCompleted(object arg) {
+            if ((this.displayPrice2Completed != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.displayPrice2Completed(this, new displayPrice2CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -407,11 +579,11 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void send_errorCompletedEventHandler(object sender, send_errorCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class send_errorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -433,11 +605,11 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void send_register_sucessCompletedEventHandler(object sender, send_register_sucessCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class send_register_sucessCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -459,11 +631,11 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void send_login_successCompletedEventHandler(object sender, send_login_successCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class send_login_successCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -485,11 +657,11 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void hash_passwordCompletedEventHandler(object sender, hash_passwordCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class hash_passwordCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -519,11 +691,11 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void verify_hashCompletedEventHandler(object sender, verify_hashCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class verify_hashCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -545,11 +717,11 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void is_logged_inCompletedEventHandler(object sender, is_logged_inCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class is_logged_inCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -571,11 +743,11 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void insert_dataCompletedEventHandler(object sender, insert_dataCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class insert_dataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -597,11 +769,11 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void login_verifyCompletedEventHandler(object sender, login_verifyCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class login_verifyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -623,11 +795,11 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void show_customer_nameCompletedEventHandler(object sender, show_customer_nameCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class show_customer_nameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -644,6 +816,136 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    public delegate void getUserAddCompletedEventHandler(object sender, getUserAddCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getUserAddCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getUserAddCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    public delegate void getUserPMCompletedEventHandler(object sender, getUserPMCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getUserPMCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getUserPMCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    public delegate void displayProdCompletedEventHandler(object sender, displayProdCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class displayProdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal displayProdCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    public delegate void displayPriceCompletedEventHandler(object sender, displayPriceCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class displayPriceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal displayPriceCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    public delegate void displayPrice2CompletedEventHandler(object sender, displayPrice2CompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class displayPrice2CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal displayPrice2CompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
             }
         }
     }

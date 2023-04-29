@@ -316,6 +316,146 @@ namespace WS_DeliveryNow
             }
             return name;
         }
+
+        [WebMethod]
+        public String getUserAdd(string username)
+        {
+            string address = "";
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+
+            cmd.CommandText = "SELECT customer_address FROM Customers WHERE customer_username = '" + username + "'";
+            cmd.CommandType = CommandType.Text;
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        address = reader["customer_address"].ToString();
+                    }
+                }
+            }
+            conn.Close();
+            return address;
+        }
+
+        [WebMethod]
+        public String getUserPM(string payMeth)
+        {
+            string payMethod = "";
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+
+            cmd.CommandText = "SELECT customer_pay_method FROM Customers WHERE customer_username = '" + payMeth + "'";
+            cmd.CommandType = CommandType.Text;
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        payMethod = reader["customer_pay_method"].ToString();
+                    }
+                }
+            }
+            conn.Close();
+            return payMethod;  
+        }
+
+        [WebMethod]
+        public DataSet displayProd(string prodID, string prodID2)
+        {
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT product_id AS ID, product_name AS Nombre, product_price AS Precio$ FROM Products WHERE product_id = '" + prodID + "'OR product_id ='"+ prodID2 +"'", conn);
+
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            conn.Close();
+
+            return ds;
+        }
+
+        [WebMethod]
+        public int displayPrice(string prodID)
+        {
+            int total = 0;
+            string tot = "";
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "SELECT product_price FROM Products WHERE product_id = '" + prodID + "'";
+            cmd.CommandType = CommandType.Text;
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        tot = reader["product_price"].ToString();
+                        total = int.Parse(tot);
+                    }
+                }
+            }
+            conn.Close();
+
+            return total;
+        }
+
+        [WebMethod]
+        public int displayPrice2(string prodID2)
+        {
+            int total = 0;
+            string tot = "";
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "SELECT product_price FROM Products WHERE product_id = '" + prodID2 + "'";
+            cmd.CommandType = CommandType.Text;
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        tot = reader["product_price"].ToString();
+                        total = int.Parse(tot);
+                    }
+                }
+            }
+            conn.Close();
+
+            return total;
+        }
     }
 }
 

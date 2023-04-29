@@ -34,7 +34,7 @@
                     <img src="../Resources/nike.png" alt="Tienda" />
                     <h2>Nike </h2>
                     <p><b>Ropa/Calzado</b></p>
-                    <button class="btnStyle"> <a href="NikeShop.aspx">Ver productos</a></button>
+                    <asp:Button CssClass="btnStyle-1" ID="btnProd1" runat="server" Text="Ver productos" OnClick="btnProd1_Click"></asp:Button>
                 </div>
 
                 <div class="tienda">

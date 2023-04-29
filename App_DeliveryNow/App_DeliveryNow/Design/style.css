@@ -476,4 +476,15 @@ footer {
         cursor: pointer;
     }
 
+.prod-btn {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 
