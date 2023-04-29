@@ -11,7 +11,7 @@ namespace App_DeliveryNow.Views
 {
 
 
-    public partial class AboutUs
+    public partial class Tienda
     {
 
         /// <summary>
@@ -42,13 +42,13 @@ namespace App_DeliveryNow.Views
         protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
-        /// Control Panel1.
+        /// Control pStore.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
+        protected global::System.Web.UI.WebControls.Panel pStore;
 
         /// <summary>
         /// Control pBot.
