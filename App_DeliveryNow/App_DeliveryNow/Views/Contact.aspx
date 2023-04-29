@@ -7,6 +7,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>DeliveryNow</title>
     <link rel="stylesheet" href="../Design/style.css" type="text/css" />
+    <link rel="stylesheet" href="../Design/estilospopup.css" type="text/css" />
+
 
 </head>
 <body aria-sort="none">
@@ -18,7 +20,7 @@
                 <nav>
                     <ul>
                         <li><a href="MainPage.aspx">Inicio</a></li>
-                        <li><a href="#">Productos</a></li>
+                        <li><a href="Tienda.aspx">Tiendas</a></li>
                         <li><a href="AboutUs.aspx">Nosotros</a></li>
                         <li><a href="Contact.aspx">Contacto</a></li>
                     </ul>
