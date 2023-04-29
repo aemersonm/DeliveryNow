@@ -86,8 +86,20 @@
     <Content Include="Design\estilospopup.css" />
     <Content Include="Design\style.css" />
     <Content Include="Resources\AboutUs.png" />
+    <Content Include="Resources\AutomercadoLogo.png" />
     <Content Include="Resources\Contact.png" />
     <Content Include="Resources\ContactBlur.png" />
+    <Content Include="Resources\ExtremetechLogo.png" />
+    <Content Include="Resources\NewBalanceLogo.png" />
+    <Content Include="Resources\NikeLogo.png" />
+    <Content Include="Resources\WalmartLogo.png" />
+    <Content Include="Resources\XiaomiLogo.png" />
+    <Content Include="Views\NewBalanceShop.aspx" />
+    <Content Include="Views\ExtremetechShop.aspx" />
+    <Content Include="Views\XiaomiShop.aspx" />
+    <Content Include="Views\WalmartShop.aspx" />
+    <Content Include="Views\AutomercadoShop.aspx" />
+    <Content Include="Views\NikeShop.aspx" />
     <Content Include="Views\AboutUs.aspx" />
     <Content Include="Views\Contact.aspx" />
     <Content Include="Views\Login.aspx" />
@@ -110,6 +122,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Design\ColorPalette.cs" />
+    <Compile Include="Views\NewBalanceShop.aspx.cs">
+      <DependentUpon>NewBalanceShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ExtremetechShop.aspx.cs">
+      <DependentUpon>ExtremetechShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\XiaomiShop.aspx.cs">
+      <DependentUpon>XiaomiShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WalmartShop.aspx.cs">
+      <DependentUpon>WalmartShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\AutomercadoShop.aspx.cs">
+      <DependentUpon>AutomercadoShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\NikeShop.aspx.cs">
+      <DependentUpon>NikeShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Views\AboutUs.aspx.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
