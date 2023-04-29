@@ -27,7 +27,7 @@
                 </nav>
             </header>
         </asp:Panel>
-
+        
         <asp:Panel ID="pStore" runat="server">
             <section class="tiendas">
                 <div class="tienda">

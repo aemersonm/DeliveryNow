@@ -110,6 +110,7 @@
     <Content Include="Views\Carrito.aspx" />
     <Content Include="Views\NewBalanceShop.aspx" />
     <Content Include="Views\ExtremetechShop.aspx" />
+    <Content Include="Views\Prueba.aspx" />
     <Content Include="Views\Tienda.aspx" />
     <Content Include="Views\XiaomiShop.aspx" />
     <Content Include="Views\WalmartShop.aspx" />
@@ -151,6 +152,13 @@
     <Compile Include="Views\ExtremetechShop.aspx.cs">
       <DependentUpon>ExtremetechShop.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Prueba.aspx.cs">
+      <DependentUpon>Prueba.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Prueba.aspx.designer.cs">
+      <DependentUpon>Prueba.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Tienda.aspx.cs">
       <DependentUpon>Tienda.aspx</DependentUpon>
