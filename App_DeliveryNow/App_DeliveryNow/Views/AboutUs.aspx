@@ -22,7 +22,7 @@
                         <li><a href="Tienda.aspx">Tiendas</a></li>
                         <li><a href="AboutUs.aspx">Nosotros</a></li>
                         <li><a href="Contact.aspx">Contacto</a></li>
-                        <li><a style="color: #2e4f4f;" href="MainPage.aspx"><b>Cerrar Sesión</b></a></li>
+                        <asp:Button ID="btnLogOut" class="btn_logOut" runat="server" Text="Cerrar Sesión" OnClick="btnLogOut_Click" />
 
                     </ul>
                 </nav>

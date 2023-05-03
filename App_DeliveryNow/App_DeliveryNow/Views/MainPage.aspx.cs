@@ -30,6 +30,7 @@ namespace App_DeliveryNow.Views
         int counter = 0;
         public void Page_Load(object sender, EventArgs e)
         {
+            
             design_management();
             if (!IsPostBack)
             {
@@ -156,8 +157,9 @@ namespace App_DeliveryNow.Views
         }
         protected void btnRegister_Click(object sender, EventArgs e)
         {
+            string password = hdnPassword.Value;
             byte[] seed;
-            string hashedPassword = refWS.hash_password(txtConfirmPassword.Text, out seed);
+            string hashedPassword = refWS.hash_password(password, out seed);
             if (!cbTC.Checked)
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "ALERTA", "window.alert('¡ERROR! SI DESEA CONTINUAR, POR FAVOR ACEPTE NUESTROS TÉRMINOS Y CONDICIONES.')", true);
@@ -169,7 +171,7 @@ namespace App_DeliveryNow.Views
             else if (!string.IsNullOrEmpty(txtUsername.Text) ||
                      !string.IsNullOrEmpty(txtName.Text) ||
                      !string.IsNullOrEmpty(txtLastName.Text) ||
-                     !string.IsNullOrEmpty(txtPassword.Text) ||
+                     !string.IsNullOrEmpty(TextBoxPassword.Text) ||
                      !string.IsNullOrEmpty(txtPhNumber.Text))
             {
                 refWS.insert_data(TextBoxUsername.Text, txtName.Text, txtLastName.Text, hashedPassword, seed,
@@ -192,6 +194,7 @@ namespace App_DeliveryNow.Views
         }
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            string username = txtUsername.Text;
 
             if (string.IsNullOrEmpty(txtUsername.Text) ||
                 string.IsNullOrEmpty(txtPassword.Text))
@@ -206,32 +209,19 @@ namespace App_DeliveryNow.Views
                     if (counter == 0)
                     {
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "AVISO", "window.alert('SESIÓN INICIADA CORRECTAMENTE.')", true);
+                        Session["username"] = username;
+                        Response.Redirect("Tienda.aspx");
                     }
                 }
                 else
                 {
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "AVISO", "window.alert('SE HA PRESENTADO UN ERROR DURANTE EL INICIO DE SESIÓN.')", true);
                 }
-
-                string name = get_customer_name(txtUsername.Text);
-                welcome_label();
-                Response.Redirect("Tienda.aspx");
             }
         }
-
         protected void btnLoginOpt_Click(object sender, EventArgs e)
         {
             change_login_page();
-        }
-
-        //Este evento controla que el contenido de txtPassword se muestre en asteriscos. 
-        protected void txtPassword_OnTextChanged(object sender, EventArgs e)
-        {
-            // Se obtiene el texto ingresado por el usuario.
-            string password = txtPassword.Text;
-
-            // Se reemplaza el texto con asteriscos.
-            txtPassword.Text = new string('*', password.Length);
         }
     }
 }

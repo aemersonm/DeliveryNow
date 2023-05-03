@@ -112,7 +112,7 @@ namespace WS_DeliveryNow
                 return false;
             }
         }
-
+        // ----------------------------------------------------- CUSTOMERS METHODS ------------------------------------------------------------------------------------
         [WebMethod]
         public bool is_logged_in(string username)
         {
@@ -377,14 +377,593 @@ namespace WS_DeliveryNow
             return payMethod;  
         }
 
+
+        // ----------------------------------------------------- SHOPS METHODS ------------------------------------------------------------------------------------
+
+        // ---------------------------------------------------------  NIKE ---------------------------------------------------------------
+
         [WebMethod]
-        public DataSet displayProd(string prodID, string prodID2)
+        public String get_nike_name()
+        {
+            string name = "";
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+
+            cmd.CommandText = "SELECT company_name, company_description FROM Companies WHERE company_id = 'NK101'";
+            cmd.CommandType = CommandType.Text;
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        name = reader["company_name"].ToString();
+                    }
+                }
+            }
+            conn.Close();
+            return (name);
+        }
+
+        [WebMethod]
+        public String get_nike_description()
+        {
+            string description = "";
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+
+            cmd.CommandText = "SELECT company_description FROM Companies WHERE company_id = 'NK101'";
+            cmd.CommandType = CommandType.Text;
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        description = reader["company_description"].ToString();
+                    }
+                }
+            }
+            conn.Close();
+            return description;
+        }
+
+        [WebMethod]
+        public byte[] get_nike_image()
+        {
+            byte[] image = null;
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+           string query = "SELECT company_image FROM Companies WHERE company_id = 'NK101'";
+
+            using (SqlCommand command = new SqlCommand(query, conn))
+            {
+                object result = command.ExecuteScalar();
+                if(result != null && result != DBNull.Value)
+                {
+                    image = (byte[])result;
+                }
+            }
+            conn.Close();
+            return image;
+        }
+
+        // ---------------------------------------------------------  NEW BALANCE ---------------------------------------------------------------
+
+        [WebMethod]
+        public String get_NB_name()
+        {
+            string name = "";
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+
+            cmd.CommandText = "SELECT company_name FROM Companies WHERE company_id = 'NB102'";
+            cmd.CommandType = CommandType.Text;
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        name = reader["company_name"].ToString();
+                    }
+                }
+            }
+            conn.Close();
+            return name;
+        }
+
+        [WebMethod]
+        public String get_NB_description()
+        {
+            string description = "";
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+
+            cmd.CommandText = "SELECT company_description FROM Companies WHERE company_id = 'NB102'";
+            cmd.CommandType = CommandType.Text;
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        description = reader["company_description"].ToString();
+                    }
+                }
+            }
+            conn.Close();
+            return description;
+        }
+
+        [WebMethod]
+        public byte[] get_NB_image()
+        {
+            byte[] image = null;
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+
+
+            string query = "SELECT company_image FROM Companies WHERE company_id = 'NB102'";
+
+            using (SqlCommand command = new SqlCommand(query, conn))
+            {
+                object result = command.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    image = (byte[])result;
+                }
+            }
+            conn.Close();
+            return image;
+        }
+
+        // ---------------------------------------------------------  XIAOMI ---------------------------------------------------------------
+
+        [WebMethod]
+        public String get_xiaomi_name()
+        {
+            string name = "";
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+
+            cmd.CommandText = "SELECT company_name FROM Companies WHERE company_id = 'MI103'";
+            cmd.CommandType = CommandType.Text;
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        name = reader["company_name"].ToString();
+                    }
+                }
+            }
+            conn.Close();
+            return name;
+        }
+
+        [WebMethod]
+        public String get_xiaomi_description()
+        {
+            string description = "";
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+
+            cmd.CommandText = "SELECT company_description FROM Companies WHERE company_id = 'MI103'";
+            cmd.CommandType = CommandType.Text;
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        description = reader["company_description"].ToString();
+                    }
+                }
+            }
+            conn.Close();
+            return description;
+        }
+
+        [WebMethod]
+        public byte[] get_xiaomi_image()
+        {
+            byte[] image = null;
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+
+
+            string query = "SELECT company_image FROM Companies WHERE company_id = 'MI103'";
+
+            using (SqlCommand command = new SqlCommand(query, conn))
+            {
+                object result = command.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    image = (byte[])result;
+                }
+            }
+            conn.Close();
+            return image;
+        }
+
+        // ---------------------------------------------------------  EXTREME TECH ---------------------------------------------------------------
+
+        [WebMethod]
+        public String get_ET_name()
+        {
+            string name = "";
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+
+            cmd.CommandText = "SELECT company_name FROM Companies WHERE company_id = 'ET104'";
+            cmd.CommandType = CommandType.Text;
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        name = reader["company_name"].ToString();
+                    }
+                }
+            }
+            conn.Close();
+            return name;
+        }
+
+        [WebMethod]
+        public String get_ET_description()
+        {
+            string description = "";
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+
+            cmd.CommandText = "SELECT company_description FROM Companies WHERE company_id = 'ET104'";
+            cmd.CommandType = CommandType.Text;
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        description = reader["company_description"].ToString();
+                    }
+                }
+            }
+            conn.Close();
+            return description;
+        }
+
+        [WebMethod]
+        public byte[] get_ET_image()
+        {
+            byte[] image = null;
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+
+
+            string query = "SELECT company_image FROM Companies WHERE company_id = 'ET104'";
+
+            using (SqlCommand command = new SqlCommand(query, conn))
+            {
+                object result = command.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    image = (byte[])result;
+                }
+            }
+            conn.Close();
+            return image;
+        }
+
+        // ---------------------------------------------------------  AUTO MERCADO ---------------------------------------------------------------
+
+        [WebMethod]
+        public String get_AM_name()
+        {
+            string name = "";
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+
+            cmd.CommandText = "SELECT company_name FROM Companies WHERE company_id = 'AM105'";
+            cmd.CommandType = CommandType.Text;
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        name = reader["company_name"].ToString();
+                    }
+                }
+            }
+            conn.Close();
+            return name;
+        }
+
+        [WebMethod]
+        public String get_AM_description()
+        {
+            string description = "";
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+
+            cmd.CommandText = "SELECT company_description FROM Companies WHERE company_id = 'AM105'";
+            cmd.CommandType = CommandType.Text;
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        description = reader["company_description"].ToString();
+                    }
+                }
+            }
+            conn.Close();
+            return description;
+        }
+
+        [WebMethod]
+        public byte[] get_AM_image()
+        {
+            byte[] image = null;
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+
+
+            string query = "SELECT company_image FROM Companies WHERE company_id = 'AM105'";
+
+            using (SqlCommand command = new SqlCommand(query, conn))
+            {
+                object result = command.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    image = (byte[])result;
+                }
+            }
+            conn.Close();
+            return image;
+        }
+
+        // ---------------------------------------------------------  WALMART ---------------------------------------------------------------
+
+        [WebMethod]
+        public String get_walmart_name()
+        {
+            string name = "";
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+
+            cmd.CommandText = "SELECT company_name FROM Companies WHERE company_id = 'WM106'";
+            cmd.CommandType = CommandType.Text;
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        name = reader["company_name"].ToString();
+                    }
+                }
+            }
+            conn.Close();
+            return name;
+        }
+
+        [WebMethod]
+        public String get_walmart_description()
+        {
+            string description = "";
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+
+            cmd.CommandText = "SELECT company_description FROM Companies WHERE company_id = 'WM106'";
+            cmd.CommandType = CommandType.Text;
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        description = reader["company_description"].ToString();
+                    }
+                }
+            }
+            conn.Close();
+            return description;
+        }
+
+        [WebMethod]
+        public byte[] get_walmart_image()
+        {
+            byte[] image = null;
+
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+
+
+            string query = "SELECT company_image FROM Companies WHERE company_id = 'WM106'";
+
+            using (SqlCommand command = new SqlCommand(query, conn))
+            {
+                object result = command.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    image = (byte[])result;
+                }
+            }
+            conn.Close();
+            return image;
+        }
+
+        // ----------------------------------------------------- PRODUCTS METHODS ------------------------------------------------------------------------------------
+
+        [WebMethod]
+        public DataSet insert_cart(string customer_username, string product_id, int quantity, int subtotal)
+
+        {
+            DataSet ds = new DataSet();
+            SqlConnection conn = new SqlConnection(); // Objeto de Conexión a la BD.
+
+            try
+            {
+                //Se realiza la conexión indicando el nombre del servidor (localhost = .), el nombre de la BD y el valor de Seguridad Integrada.
+                conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = conn;
+                cmd.CommandText = "sp_InsertCart";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@customer_username", customer_username);
+                cmd.Parameters.AddWithValue("@product_id", product_id);
+                cmd.Parameters.AddWithValue("@quantity", quantity);
+                cmd.Parameters.AddWithValue("@subtotal", subtotal);
+
+                try
+                {
+                    string message = (string)cmd.ExecuteScalar();
+                    Console.WriteLine(message);
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                cmd.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+                send_error();
+            }
+            conn.Close();
+            return ds;
+        }
+
+        [WebMethod]
+        public DataSet search_cart(string username)
         {
             SqlConnection conn = new SqlConnection();
 
             conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
 
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT product_id AS ID, product_name AS Nombre, product_price AS Precio$ FROM Products WHERE product_id = '" + prodID + "'OR product_id ='"+ prodID2 +"'", conn);
+            SqlCommand cmd = new SqlCommand("sp_SearchCart", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@customer_username", username);
+
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
 
             DataSet ds = new DataSet();
             adapter.Fill(ds);
@@ -394,7 +973,27 @@ namespace WS_DeliveryNow
         }
 
         [WebMethod]
-        public int displayPrice(string prodID)
+        public DataSet display_cart(string username)
+        {
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand("sp_DisplayCart", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@customer_username", username);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            conn.Close();
+
+            return ds;
+        }
+
+        [WebMethod]
+        public int display_prices(string prodID)
         {
             int total = 0;
             string tot = "";
@@ -425,12 +1024,51 @@ namespace WS_DeliveryNow
             return total;
         }
 
-        [WebMethod]
-        public int displayPrice2(string prodID2)
-        {
-            int total = 0;
-            string tot = "";
+        // ----------------------------------------------------- ORDERS METHODS ------------------------------------------------------------------------------------
 
+        [WebMethod]
+        public DataSet get_cart_info(string username)
+        {
+            //Definición del objeto que contiene el conjunto de datos.
+            DataSet ds = new DataSet();
+            SqlConnection conn = new SqlConnection(); // Objeto de Conexión a la BD.
+
+            try
+            {
+                //Se realiza la conexión indicando el nombre del servidor (localhost = .), el nombre de la BD y el valor de Seguridad Integrada.
+                conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = conn;
+                cmd.CommandText = "sp_GetCartDetails";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@customer_username", username);
+
+                //Objeto adaptador de los datos.
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+                //Comando ejecutado para que el adaptador utilice el conjunto de datos obtenidos y llene el DataSet.
+                adapter.Fill(ds);
+
+
+                conn.Close(); //Cierre de conexión.
+
+            } catch(Exception ex)
+            {
+                send_error();
+            }
+                //El método devuelve el DataSet con los datos adaptados. 
+                return ds;
+        }
+
+        [WebMethod]
+        public int get_cart_quantity(string product_id)
+        {
+            int quantity = 0;
+            string quantity_string = "";
             SqlConnection conn = new SqlConnection();
 
             conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
@@ -438,8 +1076,9 @@ namespace WS_DeliveryNow
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "SELECT product_price FROM Products WHERE product_id = '" + prodID2 + "'";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "sp_getQuantityCart";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@product_id", product_id);
 
             using (SqlDataReader reader = cmd.ExecuteReader())
             {
@@ -447,14 +1086,157 @@ namespace WS_DeliveryNow
                 {
                     while (reader.Read())
                     {
-                        tot = reader["product_price"].ToString();
-                        total = int.Parse(tot);
+                        quantity_string = reader["Cantidad"].ToString();
+                        quantity = int.Parse(quantity_string);
                     }
                 }
             }
             conn.Close();
 
-            return total;
+            return quantity;
+        }
+
+        [WebMethod]
+        public int get_cart_subtotal(string product_id)
+        {
+            int subtotal = 0;
+            string subtotal_string = "";
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "sp_getSubtotalCart";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@product_id", product_id);
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        subtotal_string = reader["Subtotal"].ToString();
+                        subtotal = int.Parse(subtotal_string);
+                    }
+                }
+            }
+            conn.Close();
+
+            return subtotal;
+        }
+
+
+        [WebMethod]
+        public DataSet insert_order(string order_id, string username, string company, string product_id, int product_units, DateTime order_time, bool order_status)
+
+        {
+            DataSet ds = new DataSet();
+            SqlConnection conn = new SqlConnection(); // Objeto de Conexión a la BD.
+
+            try
+            {
+                    //Se realiza la conexión indicando el nombre del servidor (localhost = .), el nombre de la BD y el valor de Seguridad Integrada.
+                    conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+                    conn.Open();
+
+                    SqlCommand cmd = new SqlCommand();
+
+                    cmd.Connection = conn;
+                    cmd.CommandText = "sp_InsertOrder";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@order_id", order_id);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@company_id", company);
+                    cmd.Parameters.AddWithValue("@product_id", product_id);
+                    cmd.Parameters.AddWithValue("product_units", product_units);
+                    cmd.Parameters.AddWithValue("@order_time", order_time);
+                    cmd.Parameters.AddWithValue("@order_status", order_status);
+
+                    try
+                    {
+                        string message = (string)cmd.ExecuteScalar();
+                        Console.WriteLine(message);
+                    }
+                    catch (SqlException ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                    cmd.Parameters.Clear();
+                }
+            catch (Exception ex)
+            {
+                send_error();
+            }
+            conn.Close();
+            return ds;
+        }
+
+        [WebMethod]
+        public DataSet insert_order_details(string order_id, string product_id, int product_units, int product_price, int order_price, bool order_status)
+
+        {
+            DataSet ds = new DataSet();
+            SqlConnection conn = new SqlConnection(); // Objeto de Conexión a la BD.
+
+            try
+            {
+                //Se realiza la conexión indicando el nombre del servidor (localhost = .), el nombre de la BD y el valor de Seguridad Integrada.
+                conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = conn;
+                cmd.CommandText = "sp_InsertOrderDetails";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@order_id", order_id);
+                cmd.Parameters.AddWithValue("@product_id", product_id);
+                cmd.Parameters.AddWithValue("product_units", product_units);
+                cmd.Parameters.AddWithValue("@product_price", product_price);
+                cmd.Parameters.AddWithValue("@order_price", order_price);
+                cmd.Parameters.AddWithValue("@order_status", order_status);
+
+                try
+                {
+                    string message = (string)cmd.ExecuteScalar();
+                    Console.WriteLine(message);
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                cmd.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+                send_error();
+            }
+            conn.Close();
+            return ds;
+        }
+
+        [WebMethod]
+        public void empty_cart(string username)
+        {
+            SqlConnection conn = new SqlConnection();
+
+            conn.ConnectionString = "Data Source=.; Initial Catalog=DeliveryNowDB; Integrated Security=True;";
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "sp_EmptyCart";
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@customer_username", username);
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
         }
     }
 }

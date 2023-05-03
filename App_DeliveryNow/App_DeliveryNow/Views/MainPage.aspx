@@ -16,10 +16,9 @@
 
         <asp:Panel ID="pHead" runat="server">
             <header>
-                <asp:Image ID="Image1" runat="server" ImageUrl="~/Resources/logonobg.png" Height="150px" Width="150px"></asp:Image>
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/Resources/logonobg.png" Height="150px" Width="150px">  </asp:Image>
                 <nav>
                     <ul>
-                        <li><a href="MainPage.aspx">Inicio</a></li>
                         <li><a href="AboutUs.aspx">Nosotros</a></li>
                         <li><a href="Contact.aspx">Contacto</a></li>
                     </ul>
@@ -45,6 +44,7 @@
             </div>
             <div id="bgSquare">
                 <div id="body0">
+                   <%-- ETIQUETAS Y TEXTOS DE INICIO DE SESIÓN--%>
                     <asp:Label ID="lblMainLogin" class="lblMain" runat="server" Text="INICIA SESIÓN EN TU CUENTA" Visible="False"></asp:Label>
                     <br />
                     <asp:Label ID="lblUsername" runat="server" CssClass="lbl" Text="USUARIO:" Visible="False"></asp:Label>
@@ -54,11 +54,12 @@
                     <br />
                     <asp:Label ID="LblPassword" runat="server" CssClass="lbl" Text="CONTRASEÑA:" Visible="False"></asp:Label>
                     <br />
-                    <asp:TextBox ID="txtPassword" runat="server" CssClass="txt" onkeyup="this.value=this.value.replace(/[^\*]/g,'*')" OnTextChanged="txtPassword_OnTextChanged" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" runat="server" CssClass="txt" TextMode="Password" Visible="False"></asp:TextBox>
                     <br />
                     <br />
                     <asp:Button ID="btnLogin" Text="INICIAR SESIÓN" runat="server" CssClass="btn" OnClick="btnLogin_Click" Visible="False" />
                 </div>
+                <%-- ETIQUETAS Y TEXTOS DE REGISTRO--%>
                 <div id="body1">
                     <asp:Label ID="lblName" runat="server" CssClass="lbl" Text="NOMBRE:" Visible="False"></asp:Label>
                     <br />
@@ -73,13 +74,14 @@
                     <asp:Label ID="LabelPassword" runat="server" CssClass="lbl" Text="CONTRASEÑA:" Visible="False"></asp:Label>
                     <br />
                     <br />
-                    <asp:TextBox ID="TextBoxPassword" runat="server" CssClass="txt" onkeyup="this.value=this.value.replace(/[^*]/g,'*')" OnTextChanged="txtPassword_OnTextChanged" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxPassword" runat="server" CssClass="txt" TextMode="Password" Visible="False"></asp:TextBox>
                     <br />
                     <br />
+                    <asp:HiddenField ID="hdnPassword" runat="server" />
                     <asp:Label ID="LblConfirmPassword" runat="server" CssClass="lbl" Text="CONFIRMAR CONTRASEÑA:" Visible="False"></asp:Label>
                     <br />
                     <br />
-                    <asp:TextBox ID="txtConfirmPassword" runat="server" CssClass="txt" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="txtConfirmPassword" runat="server" CssClass="txt" TextMode="Password" Visible="False"></asp:TextBox>
                 </div>
                 <div id="body2">
                     <br />
@@ -115,7 +117,14 @@
                     <br />
                 </div>
                 <div id="body4">
-                    <asp:Button ID="btnRegister" runat="server" CssClass="btn" Text="CREAR CUENTA" OnClick="btnRegister_Click" Visible="False" />
+                    <asp:Button ID="btnRegister" runat="server" CssClass="btn" Text="CREAR CUENTA" OnClick="btnRegister_Click" OnClientClick="setHiddenPassword()" Visible="False" />
+                    <script>
+                        function setHiddenPassword() {
+                            var passwordTextbox = document.getElementById('<%= TextBoxPassword.ClientID %>');
+                            var hiddenPassword = document.getElementById('<%= hdnPassword.ClientID %>');
+                            hiddenPassword.value = passwordTextbox.value;
+                        }
+                    </script>
                     <br />
                     <br />
                     <asp:Label ID="lblQuestion" runat="server" Text="¿Ya tienes una cuenta?" Visible="False"></asp:Label>
@@ -123,13 +132,12 @@
                 </div>
             </div>
         </asp:Panel>
-
         <asp:Panel ID="pBot" runat="server">
             <footer>
                 <nav>
                     <div>
                         <ul>
-                            <li><a href="#modal" class="btn-open-popup">Términos y condiciones</a>
+                            <li><a href="#modal" class="btn-open-popup">Términos y Condiciones</a>
                                 <div class="container-all" id="modal">
                                     <div class="popup">
                                         <div class="imagenpopup"></div>
@@ -140,36 +148,28 @@
                                                 y restaurantes locales ofrecer entregas rápidas y convenientes 
                                                 a sus clientes. Al utilizar DeliveryNow, las tiendas aceptan 
                                                 los siguientes términos y condiciones:
-                     
                                             </p>
                                             <p>
                                                 <b></b>
                                                 <b>1. Responsabilidades de los usuarios/tiendas:</b> Proporcionar información precisa y actualizada.
-                     
                                             </p>
                                             <p>
                                                 <b>2. Disponibilidad de los productos:</b> No podemos garantizar disponibilidad en todo momento.
-                     
                                             </p>
                                             <p>
                                                 <b>3. Precios y tarifas de entrega:</b> Pueden variar según la tienda/producto y serán informados antes del pedido.
-                     
                                             </p>
                                             <p>
                                                 <b>4. Política de cancelación:</b> Se puede proporcionar un reembolso según el momento de la cancelación.
-                     
                                             </p>
                                             <p>
                                                 <b>5. Entrega de pedidos:</b> Los tiempos pueden variar según factores externos y no nos hacemos responsables de retrasos.
-                     
                                             </p>
                                             <p>
                                                 <b>6. Responsabilidad limitada:</b> No somos responsables de los productos o servicios proporcionados por las tiendas asociadas.
-                     
                                             </p>
                                             <p>
                                                 <b>7. Privacidad y seguridad:</b> Nos comprometemos a proteger la privacidad y la información personal de nuestros clientes.
-                     
                                             </p>
 
                                             <p>
@@ -183,7 +183,7 @@
 
                                         <a href="#" class="btn-close-popup">X</a>
                                     </div>
-                                    </div>
+                                </div>
                             </li>
 
                             <li><a href="#modal2" class="btn-open-popup">Política de privacidad</a>

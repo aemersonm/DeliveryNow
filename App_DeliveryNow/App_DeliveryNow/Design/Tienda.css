@@ -16,8 +16,13 @@
     padding: 20px;
     text-align: center;
 }
+    .tienda .lbl_shopName {
+        margin-bottom: 5px;
+        font-size: 24px;
+        font-family: 'Poppins', sans-serif;
+    }
 
-    .tienda img {
+    .tienda img{
         width: 100%;
         height: 200px;
         object-fit: cover;
@@ -25,13 +30,15 @@
     }
 
     .tienda h2 {
-        margin-bottom: 5px;
+        
         font-size: 24px;
     }
 
-    .tienda p {
+    .tienda .lbl_shopDescription {
         color: #555;
         margin-bottom: 10px;
+        font-size: 15px;
+        font-family: 'Poppins', sans-serif;
     }
 
     .tienda button {
@@ -53,7 +60,10 @@
     color:white;
 }
 
-.btnStyle-1 {
+.tienda .btnStyle:hover {
+    background-color: #0E8388;
+}
+.btnStyle {
     background-color: #2E4F4F;
     color: #fff;
     border: none;

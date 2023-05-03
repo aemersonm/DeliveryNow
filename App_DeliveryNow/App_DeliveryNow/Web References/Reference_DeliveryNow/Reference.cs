@@ -24,7 +24,7 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="WS_AppSoap", Namespace="http://tempuri.org/")]
@@ -52,11 +52,61 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
         
         private System.Threading.SendOrPostCallback getUserPMOperationCompleted;
         
-        private System.Threading.SendOrPostCallback displayProdOperationCompleted;
+        private System.Threading.SendOrPostCallback get_nike_nameOperationCompleted;
         
-        private System.Threading.SendOrPostCallback displayPriceOperationCompleted;
+        private System.Threading.SendOrPostCallback get_nike_descriptionOperationCompleted;
         
-        private System.Threading.SendOrPostCallback displayPrice2OperationCompleted;
+        private System.Threading.SendOrPostCallback get_nike_imageOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback get_NB_nameOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback get_NB_descriptionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback get_NB_imageOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback get_xiaomi_nameOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback get_xiaomi_descriptionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback get_xiaomi_imageOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback get_ET_nameOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback get_ET_descriptionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback get_ET_imageOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback get_AM_nameOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback get_AM_descriptionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback get_AM_imageOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback get_walmart_nameOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback get_walmart_descriptionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback get_walmart_imageOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback insert_cartOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback search_cartOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback display_cartOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback display_pricesOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback get_cart_infoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback get_cart_quantityOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback get_cart_subtotalOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback insert_orderOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback insert_order_detailsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback empty_cartOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -130,13 +180,88 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
         public event getUserPMCompletedEventHandler getUserPMCompleted;
         
         /// <remarks/>
-        public event displayProdCompletedEventHandler displayProdCompleted;
+        public event get_nike_nameCompletedEventHandler get_nike_nameCompleted;
         
         /// <remarks/>
-        public event displayPriceCompletedEventHandler displayPriceCompleted;
+        public event get_nike_descriptionCompletedEventHandler get_nike_descriptionCompleted;
         
         /// <remarks/>
-        public event displayPrice2CompletedEventHandler displayPrice2Completed;
+        public event get_nike_imageCompletedEventHandler get_nike_imageCompleted;
+        
+        /// <remarks/>
+        public event get_NB_nameCompletedEventHandler get_NB_nameCompleted;
+        
+        /// <remarks/>
+        public event get_NB_descriptionCompletedEventHandler get_NB_descriptionCompleted;
+        
+        /// <remarks/>
+        public event get_NB_imageCompletedEventHandler get_NB_imageCompleted;
+        
+        /// <remarks/>
+        public event get_xiaomi_nameCompletedEventHandler get_xiaomi_nameCompleted;
+        
+        /// <remarks/>
+        public event get_xiaomi_descriptionCompletedEventHandler get_xiaomi_descriptionCompleted;
+        
+        /// <remarks/>
+        public event get_xiaomi_imageCompletedEventHandler get_xiaomi_imageCompleted;
+        
+        /// <remarks/>
+        public event get_ET_nameCompletedEventHandler get_ET_nameCompleted;
+        
+        /// <remarks/>
+        public event get_ET_descriptionCompletedEventHandler get_ET_descriptionCompleted;
+        
+        /// <remarks/>
+        public event get_ET_imageCompletedEventHandler get_ET_imageCompleted;
+        
+        /// <remarks/>
+        public event get_AM_nameCompletedEventHandler get_AM_nameCompleted;
+        
+        /// <remarks/>
+        public event get_AM_descriptionCompletedEventHandler get_AM_descriptionCompleted;
+        
+        /// <remarks/>
+        public event get_AM_imageCompletedEventHandler get_AM_imageCompleted;
+        
+        /// <remarks/>
+        public event get_walmart_nameCompletedEventHandler get_walmart_nameCompleted;
+        
+        /// <remarks/>
+        public event get_walmart_descriptionCompletedEventHandler get_walmart_descriptionCompleted;
+        
+        /// <remarks/>
+        public event get_walmart_imageCompletedEventHandler get_walmart_imageCompleted;
+        
+        /// <remarks/>
+        public event insert_cartCompletedEventHandler insert_cartCompleted;
+        
+        /// <remarks/>
+        public event search_cartCompletedEventHandler search_cartCompleted;
+        
+        /// <remarks/>
+        public event display_cartCompletedEventHandler display_cartCompleted;
+        
+        /// <remarks/>
+        public event display_pricesCompletedEventHandler display_pricesCompleted;
+        
+        /// <remarks/>
+        public event get_cart_infoCompletedEventHandler get_cart_infoCompleted;
+        
+        /// <remarks/>
+        public event get_cart_quantityCompletedEventHandler get_cart_quantityCompleted;
+        
+        /// <remarks/>
+        public event get_cart_subtotalCompletedEventHandler get_cart_subtotalCompleted;
+        
+        /// <remarks/>
+        public event insert_orderCompletedEventHandler insert_orderCompleted;
+        
+        /// <remarks/>
+        public event insert_order_detailsCompletedEventHandler insert_order_detailsCompleted;
+        
+        /// <remarks/>
+        public event empty_cartCompletedEventHandler empty_cartCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/send_error", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -471,91 +596,811 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/displayProd", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet displayProd(string prodID, string prodID2) {
-            object[] results = this.Invoke("displayProd", new object[] {
-                        prodID,
-                        prodID2});
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_nike_name", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string get_nike_name() {
+            object[] results = this.Invoke("get_nike_name", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_nike_nameAsync() {
+            this.get_nike_nameAsync(null);
+        }
+        
+        /// <remarks/>
+        public void get_nike_nameAsync(object userState) {
+            if ((this.get_nike_nameOperationCompleted == null)) {
+                this.get_nike_nameOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_nike_nameOperationCompleted);
+            }
+            this.InvokeAsync("get_nike_name", new object[0], this.get_nike_nameOperationCompleted, userState);
+        }
+        
+        private void Onget_nike_nameOperationCompleted(object arg) {
+            if ((this.get_nike_nameCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_nike_nameCompleted(this, new get_nike_nameCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_nike_description", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string get_nike_description() {
+            object[] results = this.Invoke("get_nike_description", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_nike_descriptionAsync() {
+            this.get_nike_descriptionAsync(null);
+        }
+        
+        /// <remarks/>
+        public void get_nike_descriptionAsync(object userState) {
+            if ((this.get_nike_descriptionOperationCompleted == null)) {
+                this.get_nike_descriptionOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_nike_descriptionOperationCompleted);
+            }
+            this.InvokeAsync("get_nike_description", new object[0], this.get_nike_descriptionOperationCompleted, userState);
+        }
+        
+        private void Onget_nike_descriptionOperationCompleted(object arg) {
+            if ((this.get_nike_descriptionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_nike_descriptionCompleted(this, new get_nike_descriptionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_nike_image", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] get_nike_image() {
+            object[] results = this.Invoke("get_nike_image", new object[0]);
+            return ((byte[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_nike_imageAsync() {
+            this.get_nike_imageAsync(null);
+        }
+        
+        /// <remarks/>
+        public void get_nike_imageAsync(object userState) {
+            if ((this.get_nike_imageOperationCompleted == null)) {
+                this.get_nike_imageOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_nike_imageOperationCompleted);
+            }
+            this.InvokeAsync("get_nike_image", new object[0], this.get_nike_imageOperationCompleted, userState);
+        }
+        
+        private void Onget_nike_imageOperationCompleted(object arg) {
+            if ((this.get_nike_imageCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_nike_imageCompleted(this, new get_nike_imageCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_NB_name", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string get_NB_name() {
+            object[] results = this.Invoke("get_NB_name", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_NB_nameAsync() {
+            this.get_NB_nameAsync(null);
+        }
+        
+        /// <remarks/>
+        public void get_NB_nameAsync(object userState) {
+            if ((this.get_NB_nameOperationCompleted == null)) {
+                this.get_NB_nameOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_NB_nameOperationCompleted);
+            }
+            this.InvokeAsync("get_NB_name", new object[0], this.get_NB_nameOperationCompleted, userState);
+        }
+        
+        private void Onget_NB_nameOperationCompleted(object arg) {
+            if ((this.get_NB_nameCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_NB_nameCompleted(this, new get_NB_nameCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_NB_description", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string get_NB_description() {
+            object[] results = this.Invoke("get_NB_description", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_NB_descriptionAsync() {
+            this.get_NB_descriptionAsync(null);
+        }
+        
+        /// <remarks/>
+        public void get_NB_descriptionAsync(object userState) {
+            if ((this.get_NB_descriptionOperationCompleted == null)) {
+                this.get_NB_descriptionOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_NB_descriptionOperationCompleted);
+            }
+            this.InvokeAsync("get_NB_description", new object[0], this.get_NB_descriptionOperationCompleted, userState);
+        }
+        
+        private void Onget_NB_descriptionOperationCompleted(object arg) {
+            if ((this.get_NB_descriptionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_NB_descriptionCompleted(this, new get_NB_descriptionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_NB_image", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] get_NB_image() {
+            object[] results = this.Invoke("get_NB_image", new object[0]);
+            return ((byte[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_NB_imageAsync() {
+            this.get_NB_imageAsync(null);
+        }
+        
+        /// <remarks/>
+        public void get_NB_imageAsync(object userState) {
+            if ((this.get_NB_imageOperationCompleted == null)) {
+                this.get_NB_imageOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_NB_imageOperationCompleted);
+            }
+            this.InvokeAsync("get_NB_image", new object[0], this.get_NB_imageOperationCompleted, userState);
+        }
+        
+        private void Onget_NB_imageOperationCompleted(object arg) {
+            if ((this.get_NB_imageCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_NB_imageCompleted(this, new get_NB_imageCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_xiaomi_name", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string get_xiaomi_name() {
+            object[] results = this.Invoke("get_xiaomi_name", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_xiaomi_nameAsync() {
+            this.get_xiaomi_nameAsync(null);
+        }
+        
+        /// <remarks/>
+        public void get_xiaomi_nameAsync(object userState) {
+            if ((this.get_xiaomi_nameOperationCompleted == null)) {
+                this.get_xiaomi_nameOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_xiaomi_nameOperationCompleted);
+            }
+            this.InvokeAsync("get_xiaomi_name", new object[0], this.get_xiaomi_nameOperationCompleted, userState);
+        }
+        
+        private void Onget_xiaomi_nameOperationCompleted(object arg) {
+            if ((this.get_xiaomi_nameCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_xiaomi_nameCompleted(this, new get_xiaomi_nameCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_xiaomi_description", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string get_xiaomi_description() {
+            object[] results = this.Invoke("get_xiaomi_description", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_xiaomi_descriptionAsync() {
+            this.get_xiaomi_descriptionAsync(null);
+        }
+        
+        /// <remarks/>
+        public void get_xiaomi_descriptionAsync(object userState) {
+            if ((this.get_xiaomi_descriptionOperationCompleted == null)) {
+                this.get_xiaomi_descriptionOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_xiaomi_descriptionOperationCompleted);
+            }
+            this.InvokeAsync("get_xiaomi_description", new object[0], this.get_xiaomi_descriptionOperationCompleted, userState);
+        }
+        
+        private void Onget_xiaomi_descriptionOperationCompleted(object arg) {
+            if ((this.get_xiaomi_descriptionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_xiaomi_descriptionCompleted(this, new get_xiaomi_descriptionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_xiaomi_image", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] get_xiaomi_image() {
+            object[] results = this.Invoke("get_xiaomi_image", new object[0]);
+            return ((byte[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_xiaomi_imageAsync() {
+            this.get_xiaomi_imageAsync(null);
+        }
+        
+        /// <remarks/>
+        public void get_xiaomi_imageAsync(object userState) {
+            if ((this.get_xiaomi_imageOperationCompleted == null)) {
+                this.get_xiaomi_imageOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_xiaomi_imageOperationCompleted);
+            }
+            this.InvokeAsync("get_xiaomi_image", new object[0], this.get_xiaomi_imageOperationCompleted, userState);
+        }
+        
+        private void Onget_xiaomi_imageOperationCompleted(object arg) {
+            if ((this.get_xiaomi_imageCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_xiaomi_imageCompleted(this, new get_xiaomi_imageCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_ET_name", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string get_ET_name() {
+            object[] results = this.Invoke("get_ET_name", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_ET_nameAsync() {
+            this.get_ET_nameAsync(null);
+        }
+        
+        /// <remarks/>
+        public void get_ET_nameAsync(object userState) {
+            if ((this.get_ET_nameOperationCompleted == null)) {
+                this.get_ET_nameOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_ET_nameOperationCompleted);
+            }
+            this.InvokeAsync("get_ET_name", new object[0], this.get_ET_nameOperationCompleted, userState);
+        }
+        
+        private void Onget_ET_nameOperationCompleted(object arg) {
+            if ((this.get_ET_nameCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_ET_nameCompleted(this, new get_ET_nameCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_ET_description", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string get_ET_description() {
+            object[] results = this.Invoke("get_ET_description", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_ET_descriptionAsync() {
+            this.get_ET_descriptionAsync(null);
+        }
+        
+        /// <remarks/>
+        public void get_ET_descriptionAsync(object userState) {
+            if ((this.get_ET_descriptionOperationCompleted == null)) {
+                this.get_ET_descriptionOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_ET_descriptionOperationCompleted);
+            }
+            this.InvokeAsync("get_ET_description", new object[0], this.get_ET_descriptionOperationCompleted, userState);
+        }
+        
+        private void Onget_ET_descriptionOperationCompleted(object arg) {
+            if ((this.get_ET_descriptionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_ET_descriptionCompleted(this, new get_ET_descriptionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_ET_image", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] get_ET_image() {
+            object[] results = this.Invoke("get_ET_image", new object[0]);
+            return ((byte[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_ET_imageAsync() {
+            this.get_ET_imageAsync(null);
+        }
+        
+        /// <remarks/>
+        public void get_ET_imageAsync(object userState) {
+            if ((this.get_ET_imageOperationCompleted == null)) {
+                this.get_ET_imageOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_ET_imageOperationCompleted);
+            }
+            this.InvokeAsync("get_ET_image", new object[0], this.get_ET_imageOperationCompleted, userState);
+        }
+        
+        private void Onget_ET_imageOperationCompleted(object arg) {
+            if ((this.get_ET_imageCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_ET_imageCompleted(this, new get_ET_imageCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_AM_name", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string get_AM_name() {
+            object[] results = this.Invoke("get_AM_name", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_AM_nameAsync() {
+            this.get_AM_nameAsync(null);
+        }
+        
+        /// <remarks/>
+        public void get_AM_nameAsync(object userState) {
+            if ((this.get_AM_nameOperationCompleted == null)) {
+                this.get_AM_nameOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_AM_nameOperationCompleted);
+            }
+            this.InvokeAsync("get_AM_name", new object[0], this.get_AM_nameOperationCompleted, userState);
+        }
+        
+        private void Onget_AM_nameOperationCompleted(object arg) {
+            if ((this.get_AM_nameCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_AM_nameCompleted(this, new get_AM_nameCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_AM_description", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string get_AM_description() {
+            object[] results = this.Invoke("get_AM_description", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_AM_descriptionAsync() {
+            this.get_AM_descriptionAsync(null);
+        }
+        
+        /// <remarks/>
+        public void get_AM_descriptionAsync(object userState) {
+            if ((this.get_AM_descriptionOperationCompleted == null)) {
+                this.get_AM_descriptionOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_AM_descriptionOperationCompleted);
+            }
+            this.InvokeAsync("get_AM_description", new object[0], this.get_AM_descriptionOperationCompleted, userState);
+        }
+        
+        private void Onget_AM_descriptionOperationCompleted(object arg) {
+            if ((this.get_AM_descriptionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_AM_descriptionCompleted(this, new get_AM_descriptionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_AM_image", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] get_AM_image() {
+            object[] results = this.Invoke("get_AM_image", new object[0]);
+            return ((byte[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_AM_imageAsync() {
+            this.get_AM_imageAsync(null);
+        }
+        
+        /// <remarks/>
+        public void get_AM_imageAsync(object userState) {
+            if ((this.get_AM_imageOperationCompleted == null)) {
+                this.get_AM_imageOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_AM_imageOperationCompleted);
+            }
+            this.InvokeAsync("get_AM_image", new object[0], this.get_AM_imageOperationCompleted, userState);
+        }
+        
+        private void Onget_AM_imageOperationCompleted(object arg) {
+            if ((this.get_AM_imageCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_AM_imageCompleted(this, new get_AM_imageCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_walmart_name", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string get_walmart_name() {
+            object[] results = this.Invoke("get_walmart_name", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_walmart_nameAsync() {
+            this.get_walmart_nameAsync(null);
+        }
+        
+        /// <remarks/>
+        public void get_walmart_nameAsync(object userState) {
+            if ((this.get_walmart_nameOperationCompleted == null)) {
+                this.get_walmart_nameOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_walmart_nameOperationCompleted);
+            }
+            this.InvokeAsync("get_walmart_name", new object[0], this.get_walmart_nameOperationCompleted, userState);
+        }
+        
+        private void Onget_walmart_nameOperationCompleted(object arg) {
+            if ((this.get_walmart_nameCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_walmart_nameCompleted(this, new get_walmart_nameCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_walmart_description", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string get_walmart_description() {
+            object[] results = this.Invoke("get_walmart_description", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_walmart_descriptionAsync() {
+            this.get_walmart_descriptionAsync(null);
+        }
+        
+        /// <remarks/>
+        public void get_walmart_descriptionAsync(object userState) {
+            if ((this.get_walmart_descriptionOperationCompleted == null)) {
+                this.get_walmart_descriptionOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_walmart_descriptionOperationCompleted);
+            }
+            this.InvokeAsync("get_walmart_description", new object[0], this.get_walmart_descriptionOperationCompleted, userState);
+        }
+        
+        private void Onget_walmart_descriptionOperationCompleted(object arg) {
+            if ((this.get_walmart_descriptionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_walmart_descriptionCompleted(this, new get_walmart_descriptionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_walmart_image", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] get_walmart_image() {
+            object[] results = this.Invoke("get_walmart_image", new object[0]);
+            return ((byte[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_walmart_imageAsync() {
+            this.get_walmart_imageAsync(null);
+        }
+        
+        /// <remarks/>
+        public void get_walmart_imageAsync(object userState) {
+            if ((this.get_walmart_imageOperationCompleted == null)) {
+                this.get_walmart_imageOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_walmart_imageOperationCompleted);
+            }
+            this.InvokeAsync("get_walmart_image", new object[0], this.get_walmart_imageOperationCompleted, userState);
+        }
+        
+        private void Onget_walmart_imageOperationCompleted(object arg) {
+            if ((this.get_walmart_imageCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_walmart_imageCompleted(this, new get_walmart_imageCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insert_cart", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet insert_cart(string customer_username, string product_id, int quantity, int subtotal) {
+            object[] results = this.Invoke("insert_cart", new object[] {
+                        customer_username,
+                        product_id,
+                        quantity,
+                        subtotal});
             return ((System.Data.DataSet)(results[0]));
         }
         
         /// <remarks/>
-        public void displayProdAsync(string prodID, string prodID2) {
-            this.displayProdAsync(prodID, prodID2, null);
+        public void insert_cartAsync(string customer_username, string product_id, int quantity, int subtotal) {
+            this.insert_cartAsync(customer_username, product_id, quantity, subtotal, null);
         }
         
         /// <remarks/>
-        public void displayProdAsync(string prodID, string prodID2, object userState) {
-            if ((this.displayProdOperationCompleted == null)) {
-                this.displayProdOperationCompleted = new System.Threading.SendOrPostCallback(this.OndisplayProdOperationCompleted);
+        public void insert_cartAsync(string customer_username, string product_id, int quantity, int subtotal, object userState) {
+            if ((this.insert_cartOperationCompleted == null)) {
+                this.insert_cartOperationCompleted = new System.Threading.SendOrPostCallback(this.Oninsert_cartOperationCompleted);
             }
-            this.InvokeAsync("displayProd", new object[] {
-                        prodID,
-                        prodID2}, this.displayProdOperationCompleted, userState);
+            this.InvokeAsync("insert_cart", new object[] {
+                        customer_username,
+                        product_id,
+                        quantity,
+                        subtotal}, this.insert_cartOperationCompleted, userState);
         }
         
-        private void OndisplayProdOperationCompleted(object arg) {
-            if ((this.displayProdCompleted != null)) {
+        private void Oninsert_cartOperationCompleted(object arg) {
+            if ((this.insert_cartCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.displayProdCompleted(this, new displayProdCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.insert_cartCompleted(this, new insert_cartCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/displayPrice", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public int displayPrice(string prodID) {
-            object[] results = this.Invoke("displayPrice", new object[] {
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/search_cart", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet search_cart(string username) {
+            object[] results = this.Invoke("search_cart", new object[] {
+                        username});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void search_cartAsync(string username) {
+            this.search_cartAsync(username, null);
+        }
+        
+        /// <remarks/>
+        public void search_cartAsync(string username, object userState) {
+            if ((this.search_cartOperationCompleted == null)) {
+                this.search_cartOperationCompleted = new System.Threading.SendOrPostCallback(this.Onsearch_cartOperationCompleted);
+            }
+            this.InvokeAsync("search_cart", new object[] {
+                        username}, this.search_cartOperationCompleted, userState);
+        }
+        
+        private void Onsearch_cartOperationCompleted(object arg) {
+            if ((this.search_cartCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.search_cartCompleted(this, new search_cartCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/display_cart", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet display_cart(string username) {
+            object[] results = this.Invoke("display_cart", new object[] {
+                        username});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void display_cartAsync(string username) {
+            this.display_cartAsync(username, null);
+        }
+        
+        /// <remarks/>
+        public void display_cartAsync(string username, object userState) {
+            if ((this.display_cartOperationCompleted == null)) {
+                this.display_cartOperationCompleted = new System.Threading.SendOrPostCallback(this.Ondisplay_cartOperationCompleted);
+            }
+            this.InvokeAsync("display_cart", new object[] {
+                        username}, this.display_cartOperationCompleted, userState);
+        }
+        
+        private void Ondisplay_cartOperationCompleted(object arg) {
+            if ((this.display_cartCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.display_cartCompleted(this, new display_cartCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/display_prices", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int display_prices(string prodID) {
+            object[] results = this.Invoke("display_prices", new object[] {
                         prodID});
             return ((int)(results[0]));
         }
         
         /// <remarks/>
-        public void displayPriceAsync(string prodID) {
-            this.displayPriceAsync(prodID, null);
+        public void display_pricesAsync(string prodID) {
+            this.display_pricesAsync(prodID, null);
         }
         
         /// <remarks/>
-        public void displayPriceAsync(string prodID, object userState) {
-            if ((this.displayPriceOperationCompleted == null)) {
-                this.displayPriceOperationCompleted = new System.Threading.SendOrPostCallback(this.OndisplayPriceOperationCompleted);
+        public void display_pricesAsync(string prodID, object userState) {
+            if ((this.display_pricesOperationCompleted == null)) {
+                this.display_pricesOperationCompleted = new System.Threading.SendOrPostCallback(this.Ondisplay_pricesOperationCompleted);
             }
-            this.InvokeAsync("displayPrice", new object[] {
-                        prodID}, this.displayPriceOperationCompleted, userState);
+            this.InvokeAsync("display_prices", new object[] {
+                        prodID}, this.display_pricesOperationCompleted, userState);
         }
         
-        private void OndisplayPriceOperationCompleted(object arg) {
-            if ((this.displayPriceCompleted != null)) {
+        private void Ondisplay_pricesOperationCompleted(object arg) {
+            if ((this.display_pricesCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.displayPriceCompleted(this, new displayPriceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.display_pricesCompleted(this, new display_pricesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/displayPrice2", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public int displayPrice2(string prodID2) {
-            object[] results = this.Invoke("displayPrice2", new object[] {
-                        prodID2});
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_cart_info", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet get_cart_info(string username) {
+            object[] results = this.Invoke("get_cart_info", new object[] {
+                        username});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_cart_infoAsync(string username) {
+            this.get_cart_infoAsync(username, null);
+        }
+        
+        /// <remarks/>
+        public void get_cart_infoAsync(string username, object userState) {
+            if ((this.get_cart_infoOperationCompleted == null)) {
+                this.get_cart_infoOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_cart_infoOperationCompleted);
+            }
+            this.InvokeAsync("get_cart_info", new object[] {
+                        username}, this.get_cart_infoOperationCompleted, userState);
+        }
+        
+        private void Onget_cart_infoOperationCompleted(object arg) {
+            if ((this.get_cart_infoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_cart_infoCompleted(this, new get_cart_infoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_cart_quantity", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int get_cart_quantity(string product_id) {
+            object[] results = this.Invoke("get_cart_quantity", new object[] {
+                        product_id});
             return ((int)(results[0]));
         }
         
         /// <remarks/>
-        public void displayPrice2Async(string prodID2) {
-            this.displayPrice2Async(prodID2, null);
+        public void get_cart_quantityAsync(string product_id) {
+            this.get_cart_quantityAsync(product_id, null);
         }
         
         /// <remarks/>
-        public void displayPrice2Async(string prodID2, object userState) {
-            if ((this.displayPrice2OperationCompleted == null)) {
-                this.displayPrice2OperationCompleted = new System.Threading.SendOrPostCallback(this.OndisplayPrice2OperationCompleted);
+        public void get_cart_quantityAsync(string product_id, object userState) {
+            if ((this.get_cart_quantityOperationCompleted == null)) {
+                this.get_cart_quantityOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_cart_quantityOperationCompleted);
             }
-            this.InvokeAsync("displayPrice2", new object[] {
-                        prodID2}, this.displayPrice2OperationCompleted, userState);
+            this.InvokeAsync("get_cart_quantity", new object[] {
+                        product_id}, this.get_cart_quantityOperationCompleted, userState);
         }
         
-        private void OndisplayPrice2OperationCompleted(object arg) {
-            if ((this.displayPrice2Completed != null)) {
+        private void Onget_cart_quantityOperationCompleted(object arg) {
+            if ((this.get_cart_quantityCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.displayPrice2Completed(this, new displayPrice2CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.get_cart_quantityCompleted(this, new get_cart_quantityCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/get_cart_subtotal", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int get_cart_subtotal(string product_id) {
+            object[] results = this.Invoke("get_cart_subtotal", new object[] {
+                        product_id});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void get_cart_subtotalAsync(string product_id) {
+            this.get_cart_subtotalAsync(product_id, null);
+        }
+        
+        /// <remarks/>
+        public void get_cart_subtotalAsync(string product_id, object userState) {
+            if ((this.get_cart_subtotalOperationCompleted == null)) {
+                this.get_cart_subtotalOperationCompleted = new System.Threading.SendOrPostCallback(this.Onget_cart_subtotalOperationCompleted);
+            }
+            this.InvokeAsync("get_cart_subtotal", new object[] {
+                        product_id}, this.get_cart_subtotalOperationCompleted, userState);
+        }
+        
+        private void Onget_cart_subtotalOperationCompleted(object arg) {
+            if ((this.get_cart_subtotalCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.get_cart_subtotalCompleted(this, new get_cart_subtotalCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insert_order", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet insert_order(string order_id, string username, string company, string product_id, int product_units, System.DateTime order_time, bool order_status) {
+            object[] results = this.Invoke("insert_order", new object[] {
+                        order_id,
+                        username,
+                        company,
+                        product_id,
+                        product_units,
+                        order_time,
+                        order_status});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void insert_orderAsync(string order_id, string username, string company, string product_id, int product_units, System.DateTime order_time, bool order_status) {
+            this.insert_orderAsync(order_id, username, company, product_id, product_units, order_time, order_status, null);
+        }
+        
+        /// <remarks/>
+        public void insert_orderAsync(string order_id, string username, string company, string product_id, int product_units, System.DateTime order_time, bool order_status, object userState) {
+            if ((this.insert_orderOperationCompleted == null)) {
+                this.insert_orderOperationCompleted = new System.Threading.SendOrPostCallback(this.Oninsert_orderOperationCompleted);
+            }
+            this.InvokeAsync("insert_order", new object[] {
+                        order_id,
+                        username,
+                        company,
+                        product_id,
+                        product_units,
+                        order_time,
+                        order_status}, this.insert_orderOperationCompleted, userState);
+        }
+        
+        private void Oninsert_orderOperationCompleted(object arg) {
+            if ((this.insert_orderCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.insert_orderCompleted(this, new insert_orderCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insert_order_details", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet insert_order_details(string order_id, string product_id, int product_units, int product_price, int order_price, bool order_status) {
+            object[] results = this.Invoke("insert_order_details", new object[] {
+                        order_id,
+                        product_id,
+                        product_units,
+                        product_price,
+                        order_price,
+                        order_status});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void insert_order_detailsAsync(string order_id, string product_id, int product_units, int product_price, int order_price, bool order_status) {
+            this.insert_order_detailsAsync(order_id, product_id, product_units, product_price, order_price, order_status, null);
+        }
+        
+        /// <remarks/>
+        public void insert_order_detailsAsync(string order_id, string product_id, int product_units, int product_price, int order_price, bool order_status, object userState) {
+            if ((this.insert_order_detailsOperationCompleted == null)) {
+                this.insert_order_detailsOperationCompleted = new System.Threading.SendOrPostCallback(this.Oninsert_order_detailsOperationCompleted);
+            }
+            this.InvokeAsync("insert_order_details", new object[] {
+                        order_id,
+                        product_id,
+                        product_units,
+                        product_price,
+                        order_price,
+                        order_status}, this.insert_order_detailsOperationCompleted, userState);
+        }
+        
+        private void Oninsert_order_detailsOperationCompleted(object arg) {
+            if ((this.insert_order_detailsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.insert_order_detailsCompleted(this, new insert_order_detailsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/empty_cart", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void empty_cart(string username) {
+            this.Invoke("empty_cart", new object[] {
+                        username});
+        }
+        
+        /// <remarks/>
+        public void empty_cartAsync(string username) {
+            this.empty_cartAsync(username, null);
+        }
+        
+        /// <remarks/>
+        public void empty_cartAsync(string username, object userState) {
+            if ((this.empty_cartOperationCompleted == null)) {
+                this.empty_cartOperationCompleted = new System.Threading.SendOrPostCallback(this.Onempty_cartOperationCompleted);
+            }
+            this.InvokeAsync("empty_cart", new object[] {
+                        username}, this.empty_cartOperationCompleted, userState);
+        }
+        
+        private void Onempty_cartOperationCompleted(object arg) {
+            if ((this.empty_cartCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.empty_cartCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -579,11 +1424,11 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     public delegate void send_errorCompletedEventHandler(object sender, send_errorCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class send_errorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -605,11 +1450,11 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     public delegate void send_register_sucessCompletedEventHandler(object sender, send_register_sucessCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class send_register_sucessCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -631,11 +1476,11 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     public delegate void send_login_successCompletedEventHandler(object sender, send_login_successCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class send_login_successCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -657,11 +1502,11 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     public delegate void hash_passwordCompletedEventHandler(object sender, hash_passwordCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class hash_passwordCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -691,11 +1536,11 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     public delegate void verify_hashCompletedEventHandler(object sender, verify_hashCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class verify_hashCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -717,11 +1562,11 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     public delegate void is_logged_inCompletedEventHandler(object sender, is_logged_inCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class is_logged_inCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -743,11 +1588,11 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     public delegate void insert_dataCompletedEventHandler(object sender, insert_dataCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class insert_dataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -769,11 +1614,11 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     public delegate void login_verifyCompletedEventHandler(object sender, login_verifyCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class login_verifyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -795,11 +1640,11 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     public delegate void show_customer_nameCompletedEventHandler(object sender, show_customer_nameCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class show_customer_nameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -821,11 +1666,11 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     public delegate void getUserAddCompletedEventHandler(object sender, getUserAddCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getUserAddCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -847,11 +1692,11 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     public delegate void getUserPMCompletedEventHandler(object sender, getUserPMCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getUserPMCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -873,18 +1718,486 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
-    public delegate void displayProdCompletedEventHandler(object sender, displayProdCompletedEventArgs e);
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_nike_nameCompletedEventHandler(object sender, get_nike_nameCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class displayProdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class get_nike_nameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal displayProdCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal get_nike_nameCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_nike_descriptionCompletedEventHandler(object sender, get_nike_descriptionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_nike_descriptionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_nike_descriptionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_nike_imageCompletedEventHandler(object sender, get_nike_imageCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_nike_imageCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_nike_imageCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public byte[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((byte[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_NB_nameCompletedEventHandler(object sender, get_NB_nameCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_NB_nameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_NB_nameCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_NB_descriptionCompletedEventHandler(object sender, get_NB_descriptionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_NB_descriptionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_NB_descriptionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_NB_imageCompletedEventHandler(object sender, get_NB_imageCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_NB_imageCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_NB_imageCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public byte[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((byte[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_xiaomi_nameCompletedEventHandler(object sender, get_xiaomi_nameCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_xiaomi_nameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_xiaomi_nameCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_xiaomi_descriptionCompletedEventHandler(object sender, get_xiaomi_descriptionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_xiaomi_descriptionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_xiaomi_descriptionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_xiaomi_imageCompletedEventHandler(object sender, get_xiaomi_imageCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_xiaomi_imageCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_xiaomi_imageCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public byte[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((byte[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_ET_nameCompletedEventHandler(object sender, get_ET_nameCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_ET_nameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_ET_nameCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_ET_descriptionCompletedEventHandler(object sender, get_ET_descriptionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_ET_descriptionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_ET_descriptionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_ET_imageCompletedEventHandler(object sender, get_ET_imageCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_ET_imageCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_ET_imageCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public byte[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((byte[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_AM_nameCompletedEventHandler(object sender, get_AM_nameCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_AM_nameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_AM_nameCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_AM_descriptionCompletedEventHandler(object sender, get_AM_descriptionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_AM_descriptionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_AM_descriptionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_AM_imageCompletedEventHandler(object sender, get_AM_imageCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_AM_imageCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_AM_imageCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public byte[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((byte[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_walmart_nameCompletedEventHandler(object sender, get_walmart_nameCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_walmart_nameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_walmart_nameCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_walmart_descriptionCompletedEventHandler(object sender, get_walmart_descriptionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_walmart_descriptionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_walmart_descriptionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_walmart_imageCompletedEventHandler(object sender, get_walmart_imageCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_walmart_imageCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_walmart_imageCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public byte[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((byte[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void insert_cartCompletedEventHandler(object sender, insert_cartCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class insert_cartCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal insert_cartCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -899,18 +2212,70 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
-    public delegate void displayPriceCompletedEventHandler(object sender, displayPriceCompletedEventArgs e);
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void search_cartCompletedEventHandler(object sender, search_cartCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class displayPriceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class search_cartCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal displayPriceCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal search_cartCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void display_cartCompletedEventHandler(object sender, display_cartCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class display_cartCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal display_cartCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void display_pricesCompletedEventHandler(object sender, display_pricesCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class display_pricesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal display_pricesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -925,18 +2290,44 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
-    public delegate void displayPrice2CompletedEventHandler(object sender, displayPrice2CompletedEventArgs e);
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_cart_infoCompletedEventHandler(object sender, get_cart_infoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class displayPrice2CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class get_cart_infoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal displayPrice2CompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal get_cart_infoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_cart_quantityCompletedEventHandler(object sender, get_cart_quantityCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_cart_quantityCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_cart_quantityCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -949,6 +2340,88 @@ namespace App_DeliveryNow.Reference_DeliveryNow {
             }
         }
     }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void get_cart_subtotalCompletedEventHandler(object sender, get_cart_subtotalCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class get_cart_subtotalCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal get_cart_subtotalCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void insert_orderCompletedEventHandler(object sender, insert_orderCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class insert_orderCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal insert_orderCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void insert_order_detailsCompletedEventHandler(object sender, insert_order_detailsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class insert_order_detailsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal insert_order_detailsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void empty_cartCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 
 #pragma warning restore 1591

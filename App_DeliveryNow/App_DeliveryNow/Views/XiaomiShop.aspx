@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="XiaomiShop.aspx.cs" Inherits="App_DeliveryNow.Views.AboutUs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="XiaomiShop.aspx.cs" Inherits="App_DeliveryNow.Views.XiaomiShop" %>
 
 <!DOCTYPE html>
 
@@ -22,7 +22,7 @@
                         <li><a href="AboutUs.aspx">Nosotros</a></li>
                         <li><a href="Contact.aspx">Contacto</a></li>
                         <li><a href="Carrito.aspx">Carrito</a></li>
-                        <li><a style="color: #2e4f4f;" href="MainPage.aspx"><b>Cerrar Sesión</b></a></li>
+                        <asp:Button ID="btnLogOut" class="btn_logOut" runat="server" Text="Cerrar Sesión" OnClick="btnLogOut_Click" />
                     </ul>
                 </nav>
             </header>

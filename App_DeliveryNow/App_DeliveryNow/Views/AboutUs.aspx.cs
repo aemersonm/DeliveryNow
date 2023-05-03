@@ -11,7 +11,33 @@ namespace App_DeliveryNow.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            show_btnLogOut();
+        }
 
+        public void show_btnLogOut()
+        {
+            if (Session["username"] != null)
+            {
+                btnLogOut.Visible = true;
+            }
+            else
+            {
+                btnLogOut.Visible = true;
+                btnLogOut.Text = "Iniciar Sesión";
+            }
+        }
+
+        protected void btnLogOut_Click(object sender, EventArgs e)
+        {
+            if (Session["username"] != null)
+            {
+                Session["username"] = null;
+                Response.Redirect("MainPage.aspx");
+            }
+            else
+            {
+                Response.Redirect("MainPage.aspx");
+            }
         }
     }
 }

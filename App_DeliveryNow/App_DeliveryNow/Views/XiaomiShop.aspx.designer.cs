@@ -11,7 +11,7 @@ namespace App_DeliveryNow.Views
 {
 
 
-    public partial class Contact
+    public partial class XiaomiShop
     {
 
         /// <summary>
@@ -51,13 +51,13 @@ namespace App_DeliveryNow.Views
         protected global::System.Web.UI.WebControls.Button btnLogOut;
 
         /// <summary>
-        /// Control pContact.
+        /// Control pShop.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pContact;
+        protected global::System.Web.UI.WebControls.Panel pShop;
 
         /// <summary>
         /// Control pBot.

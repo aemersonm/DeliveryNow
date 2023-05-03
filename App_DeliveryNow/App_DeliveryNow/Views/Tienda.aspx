@@ -22,52 +22,79 @@
                         <li><a href="Tienda.aspx">Tiendas</a></li>
                         <li><a href="AboutUs.aspx">Nosotros</a></li>
                         <li><a href="Contact.aspx">Contacto</a></li>
-                        <li><a style="color:#2e4f4f;" href="MainPage.aspx"><b>Cerrar Sesión</b></a></li>
+                        <li><a href="Carrito.aspx">Carrito</a></li>
+                        <asp:Button ID="btnLogOut" class="btn_logOut" runat="server" Text="Cerrar Sesión" OnClick="btnLogOut_Click" />
                     </ul>
                 </nav>
             </header>
         </asp:Panel>
-        
+
         <asp:Panel ID="pStore" runat="server">
             <section class="tiendas">
                 <div class="tienda">
-                    <img src="../Resources/nike.png" alt="Tienda" />
-                    <h2>Nike </h2>
-                    <p><b>Ropa/Calzado</b></p>
-                    <asp:Button CssClass="btnStyle-1" ID="btnStore1" runat="server" Text="Ver productos" OnClick="btnStore1_Click"></asp:Button>
+                    <asp:Image ID="nike_image" runat="server" alt="Tienda"></asp:Image>
+                    <asp:Label ID="nike_name" CssClass="lbl_shopName" runat="server"> </asp:Label>
+                    <br />
+                    <br />
+                    <asp:Label ID="nike_description" CssClass="lbl_shopDescription" runat="server"> </asp:Label>
+                    <br />
+                    <br />
+                    <asp:Button CssClass="btnStyle" ID="btnNike" runat="server" Text="Ver productos" OnClick="btnNike_Click"></asp:Button>
                 </div>
 
                 <div class="tienda">
-                    <img src="../Resources/newbalance.png" alt="Tienda" />
-                    <h2>New Balance</h2>
-                    <p><b>Ropa/Calzado</b></p>
-                    <button class="btnStyle"> <a href="NewBalanceShop.aspx">Ver productos</a></button>
+                    <asp:Image ID="NB_image" runat="server" alt="Tienda"></asp:Image>
+                    <asp:Label ID="NB_name" CssClass="lbl_shopName" runat="server"> </asp:Label>
+                    <br />
+                    <br />
+                    <asp:Label ID="NB_description" CssClass="lbl_shopDescription" runat="server"> </asp:Label>
+                    <br />
+                    <br />
+                    <asp:Button CssClass="btnStyle" ID="btnNB" runat="server" Text="Ver productos" OnClick="btnNB_Click"></asp:Button>
                 </div>
                 <div class="tienda">
-                    <img src="../Resources/xiaomi.png" alt="Tienda" />
-                    <h2>Xiaomi</h2>
-                    <p><b>Tecnología</b></p>
-                    <button class="btnStyle"> <a href="XiaomiShop.aspx">Ver productos</a></button>
-                </div>
-
-                <div class="tienda">
-                    <img src="../Resources/xtremetch.png" alt="Tienda" />
-                    <h2>ExtremeTech</h2>
-                    <p><b>Tecnología</b></p>
-                    <button class="btnStyle"> <a href="ExtremetechShop.aspx">Ver productos</a></button>
-                </div>
-                <div class="tienda">
-                    <img src="../Resources/automercado.png" alt="Tienda" />
-                    <h2>Automercado</h2>
-                    <p><b>Supermercado</b></p>
-                    <button class="btnStyle"> <a href="AutomercadoShop.aspx">Ver productos</a></button>
+                    <asp:Image ID="xiaomi_image" runat="server" alt="Tienda"></asp:Image>
+                    <asp:Label ID="xiaomi_name" CssClass="lbl_shopName" runat="server"> </asp:Label>
+                    <br />
+                    <br />
+                    <asp:Label ID="xiaomi_description" CssClass="lbl_shopDescription" runat="server"> </asp:Label>
+                    <br />
+                    <br />
+                    <asp:Button CssClass="btnStyle" ID="btnXiaomi" runat="server" Text="Ver productos" OnClick="btnXiaomi_Click"></asp:Button>
                 </div>
 
                 <div class="tienda">
-                    <img src="../Resources/walmart.png" alt="Tienda" />
-                    <h2>Walmart</h2>
-                    <p><b>Supermercado</b></p>
-                    <button class="btnStyle"> <a href="WalmartShop.aspx">Ver productos</a></button>
+                    <asp:Image ID="ET_image" runat="server" alt="Tienda"></asp:Image>
+                    <asp:Label ID="ET_name" CssClass="lbl_shopName" runat="server"> </asp:Label>
+                    <br />
+                    <br />
+                    <asp:Label ID="ET_description" CssClass="lbl_shopDescription" runat="server"> </asp:Label>
+                    <br />
+                    <br />
+                    <asp:Button CssClass="btnStyle" ID="btnET" runat="server" Text="Ver productos" OnClick="btnET_Click"></asp:Button>
+                </div>
+                <div class="tienda">
+                    <asp:Image ID="AM_image" runat="server" alt="Tienda"></asp:Image>
+                    <asp:Label ID="AM_name" CssClass="lbl_shopName" runat="server"> </asp:Label>
+                    <br />
+                    <br />
+                    <asp:Label ID="AM_description" CssClass="lbl_shopDescription" runat="server"> </asp:Label>
+                    <br />
+                    <br />
+                    <br />
+                    <asp:Button CssClass="btnStyle" ID="btnAM" runat="server" Text="Ver productos" OnClick="btnAM_Click"></asp:Button>
+                </div>
+
+                <div class="tienda">
+                    <asp:Image ID="walmart_image" runat="server" alt="Tienda"></asp:Image>
+                    <asp:Label ID="walmart_name" CssClass="lbl_shopName" runat="server"> </asp:Label>
+                    <br />
+                    <br />
+                    <asp:Label ID="walmart_description" CssClass="lbl_shopDescription" runat="server"> </asp:Label>
+                    <br />
+                    <br />
+                    <br />
+                    <asp:Button CssClass="btnStyle" ID="btnWalmart" runat="server" Text="Ver productos" OnClick="btnWalmart_Click"></asp:Button>
                 </div>
 
                 <div class="tienda">
@@ -113,14 +140,12 @@
                 </div>
             </section>
         </asp:Panel>
-
-
         <asp:Panel ID="pBot" runat="server">
             <footer>
                 <nav>
                     <div>
                         <ul>
-                            <li><a href="#modal" class="btn-open-popup">Términos y condiciones</a>
+                            <li><a href="#modal" class="btn-open-popup">Términos y Condiciones</a>
                                 <div class="container-all" id="modal">
                                     <div class="popup">
                                         <div class="imagenpopup"></div>

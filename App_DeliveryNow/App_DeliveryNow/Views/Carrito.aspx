@@ -21,47 +21,46 @@
                         <li><a href="AboutUs.aspx">Nosotros</a></li>
                         <li><a href="Contact.aspx">Contacto</a></li>
                         <li><a href="Carrito.aspx">Carrito</a></li>
-                        <li><a style="color: #2e4f4f;" href="MainPage.aspx"><b>Cerrar Sesión</b></a></li>
+                        <asp:Button ID="btnLogOut" class="btn_logOut" runat="server" Text="Cerrar Sesión" OnClick="btnLogOut_Click" />
                     </ul>
                 </nav>
             </header>
         </asp:Panel>
-
         <asp:Panel ID="pCarrito" runat="server" Visible="true">
 
             <div class="containercarrito">
                 <h2>Información de envío</h2>
                 <asp:Label runat="server" for="username">Nombre de Usuario:</asp:Label>
-                <asp:TextBox runat="server" type="text" ID="usertxt" name="username" />
-                <asp:Button ID="btnValidateUsr" runat="server" Text="Aceptar" OnClick="btnValidateUsr_Click"></asp:Button>
-
+                <asp:TextBox runat="server" type="text" ID="txtUser" name="username" Enabled="false" />
 
                 <label for="direccion">Dirección:</label>
-                <asp:TextBox runat="server" type="text" ID="direcciontxt" name="direccion" Enabled="false" />
+                <asp:TextBox runat="server" type="text" ID="txtAddress" name="direccion" Enabled="false" />
 
-                <h2>Resumen de compras</h2>
+                <h2>Resumen del Carrito</h2>
                 <div class="cart">
-                    <asp:GridView ID="GdProducts" runat="server" Height="120px" Width="346px">
+                    <asp:GridView ID="GdCart" runat="server" Visible="false"></asp:GridView>
+                    <asp:GridView ID="GdProducts" runat="server" Height="84px" Width="761px">
                     </asp:GridView>
-                    <div class="total">Total:
+                    <div class="total">
+                        Total:
                         <asp:Label ID="lblTotal" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
 
                 <h2>Método de pago</h2>
                 <asp:Label runat="server" for="metodo-pago">Método de pago:</asp:Label>
-                <asp:TextBox runat="server" type="text" ID="paymentTxt" name="paymentMethod" Enabled="false" />
+                <asp:TextBox runat="server" type="text" ID="txtPayment" name="paymentMethod" Enabled="false" />
 
                 <div>
                     <h2>Información de pago</h2>
                     <asp:Label runat="server" for="tarjeta">Número de tarjeta:</asp:Label>
-                    <asp:TextBox runat="server" type="text" ID="tarjetaTxt" name="tarjeta" Enabled="false" />
+                    <asp:TextBox runat="server" type="text" ID="txtCard" name="tarjeta" Enabled="false" />
 
                     <asp:Label runat="server" for="vencimiento">Fecha de vencimiento:</asp:Label>
-                    <asp:TextBox runat="server" type="text" ID="vencimientoTxt" name="vencimiento" Enabled="false" />
+                    <asp:TextBox runat="server" type="text" ID="txtExpiration" name="vencimiento" Enabled="false" />
 
                     <asp:Label runat="server" for="cvv">CVV:</asp:Label>
-                    <asp:TextBox runat="server" type="text" ID="cvvTxt" name="cvv" Enabled="false" />
+                    <asp:TextBox runat="server" type="text" ID="txtCVV" name="cvv" Enabled="false" />
                 </div>
 
 

@@ -161,18 +161,200 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="displayProd">
+      <s:element name="get_nike_name">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_nike_nameResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="prodID" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="prodID2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="get_nike_nameResult" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="displayProdResponse">
+      <s:element name="get_nike_description">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_nike_descriptionResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="displayProdResult">
+            <s:element minOccurs="0" maxOccurs="1" name="get_nike_descriptionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_nike_image">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_nike_imageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_nike_imageResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_NB_name">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_NB_nameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_NB_nameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_NB_description">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_NB_descriptionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_NB_descriptionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_NB_image">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_NB_imageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_NB_imageResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_xiaomi_name">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_xiaomi_nameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_xiaomi_nameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_xiaomi_description">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_xiaomi_descriptionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_xiaomi_descriptionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_xiaomi_image">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_xiaomi_imageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_xiaomi_imageResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ET_name">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ET_nameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ET_nameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ET_description">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ET_descriptionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ET_descriptionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ET_image">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ET_imageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ET_imageResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_AM_name">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_AM_nameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_AM_nameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_AM_description">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_AM_descriptionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_AM_descriptionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_AM_image">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_AM_imageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_AM_imageResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_walmart_name">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_walmart_nameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_walmart_nameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_walmart_description">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_walmart_descriptionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_walmart_descriptionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_walmart_image">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_walmart_imageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_walmart_imageResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insert_cart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customer_username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="product_id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantity" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="subtotal" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insert_cartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insert_cartResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -183,33 +365,173 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="displayPrice">
+      <s:element name="search_cart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="search_cartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="search_cartResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="display_cart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="display_cartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="display_cartResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="display_prices">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="prodID" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="displayPriceResponse">
+      <s:element name="display_pricesResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="displayPriceResult" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="display_pricesResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="displayPrice2">
+      <s:element name="get_cart_info">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="prodID2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="displayPrice2Response">
+      <s:element name="get_cart_infoResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="displayPrice2Result" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="get_cart_infoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
           </s:sequence>
         </s:complexType>
+      </s:element>
+      <s:element name="get_cart_quantity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="product_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_cart_quantityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_cart_quantityResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_cart_subtotal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="product_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_cart_subtotalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_cart_subtotalResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insert_order">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="order_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="product_id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="product_units" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="order_time" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="order_status" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insert_orderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insert_orderResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insert_order_details">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="order_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="product_id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="product_units" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="product_price" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="order_price" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="order_status" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insert_order_detailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insert_order_detailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="empty_cart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="empty_cartResponse">
+        <s:complexType />
       </s:element>
     </s:schema>
   </wsdl:types>
@@ -279,23 +601,173 @@
   <wsdl:message name="getUserPMSoapOut">
     <wsdl:part name="parameters" element="tns:getUserPMResponse" />
   </wsdl:message>
-  <wsdl:message name="displayProdSoapIn">
-    <wsdl:part name="parameters" element="tns:displayProd" />
+  <wsdl:message name="get_nike_nameSoapIn">
+    <wsdl:part name="parameters" element="tns:get_nike_name" />
   </wsdl:message>
-  <wsdl:message name="displayProdSoapOut">
-    <wsdl:part name="parameters" element="tns:displayProdResponse" />
+  <wsdl:message name="get_nike_nameSoapOut">
+    <wsdl:part name="parameters" element="tns:get_nike_nameResponse" />
   </wsdl:message>
-  <wsdl:message name="displayPriceSoapIn">
-    <wsdl:part name="parameters" element="tns:displayPrice" />
+  <wsdl:message name="get_nike_descriptionSoapIn">
+    <wsdl:part name="parameters" element="tns:get_nike_description" />
   </wsdl:message>
-  <wsdl:message name="displayPriceSoapOut">
-    <wsdl:part name="parameters" element="tns:displayPriceResponse" />
+  <wsdl:message name="get_nike_descriptionSoapOut">
+    <wsdl:part name="parameters" element="tns:get_nike_descriptionResponse" />
   </wsdl:message>
-  <wsdl:message name="displayPrice2SoapIn">
-    <wsdl:part name="parameters" element="tns:displayPrice2" />
+  <wsdl:message name="get_nike_imageSoapIn">
+    <wsdl:part name="parameters" element="tns:get_nike_image" />
   </wsdl:message>
-  <wsdl:message name="displayPrice2SoapOut">
-    <wsdl:part name="parameters" element="tns:displayPrice2Response" />
+  <wsdl:message name="get_nike_imageSoapOut">
+    <wsdl:part name="parameters" element="tns:get_nike_imageResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_NB_nameSoapIn">
+    <wsdl:part name="parameters" element="tns:get_NB_name" />
+  </wsdl:message>
+  <wsdl:message name="get_NB_nameSoapOut">
+    <wsdl:part name="parameters" element="tns:get_NB_nameResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_NB_descriptionSoapIn">
+    <wsdl:part name="parameters" element="tns:get_NB_description" />
+  </wsdl:message>
+  <wsdl:message name="get_NB_descriptionSoapOut">
+    <wsdl:part name="parameters" element="tns:get_NB_descriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_NB_imageSoapIn">
+    <wsdl:part name="parameters" element="tns:get_NB_image" />
+  </wsdl:message>
+  <wsdl:message name="get_NB_imageSoapOut">
+    <wsdl:part name="parameters" element="tns:get_NB_imageResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_xiaomi_nameSoapIn">
+    <wsdl:part name="parameters" element="tns:get_xiaomi_name" />
+  </wsdl:message>
+  <wsdl:message name="get_xiaomi_nameSoapOut">
+    <wsdl:part name="parameters" element="tns:get_xiaomi_nameResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_xiaomi_descriptionSoapIn">
+    <wsdl:part name="parameters" element="tns:get_xiaomi_description" />
+  </wsdl:message>
+  <wsdl:message name="get_xiaomi_descriptionSoapOut">
+    <wsdl:part name="parameters" element="tns:get_xiaomi_descriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_xiaomi_imageSoapIn">
+    <wsdl:part name="parameters" element="tns:get_xiaomi_image" />
+  </wsdl:message>
+  <wsdl:message name="get_xiaomi_imageSoapOut">
+    <wsdl:part name="parameters" element="tns:get_xiaomi_imageResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ET_nameSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ET_name" />
+  </wsdl:message>
+  <wsdl:message name="get_ET_nameSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ET_nameResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ET_descriptionSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ET_description" />
+  </wsdl:message>
+  <wsdl:message name="get_ET_descriptionSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ET_descriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ET_imageSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ET_image" />
+  </wsdl:message>
+  <wsdl:message name="get_ET_imageSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ET_imageResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_AM_nameSoapIn">
+    <wsdl:part name="parameters" element="tns:get_AM_name" />
+  </wsdl:message>
+  <wsdl:message name="get_AM_nameSoapOut">
+    <wsdl:part name="parameters" element="tns:get_AM_nameResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_AM_descriptionSoapIn">
+    <wsdl:part name="parameters" element="tns:get_AM_description" />
+  </wsdl:message>
+  <wsdl:message name="get_AM_descriptionSoapOut">
+    <wsdl:part name="parameters" element="tns:get_AM_descriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_AM_imageSoapIn">
+    <wsdl:part name="parameters" element="tns:get_AM_image" />
+  </wsdl:message>
+  <wsdl:message name="get_AM_imageSoapOut">
+    <wsdl:part name="parameters" element="tns:get_AM_imageResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_walmart_nameSoapIn">
+    <wsdl:part name="parameters" element="tns:get_walmart_name" />
+  </wsdl:message>
+  <wsdl:message name="get_walmart_nameSoapOut">
+    <wsdl:part name="parameters" element="tns:get_walmart_nameResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_walmart_descriptionSoapIn">
+    <wsdl:part name="parameters" element="tns:get_walmart_description" />
+  </wsdl:message>
+  <wsdl:message name="get_walmart_descriptionSoapOut">
+    <wsdl:part name="parameters" element="tns:get_walmart_descriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_walmart_imageSoapIn">
+    <wsdl:part name="parameters" element="tns:get_walmart_image" />
+  </wsdl:message>
+  <wsdl:message name="get_walmart_imageSoapOut">
+    <wsdl:part name="parameters" element="tns:get_walmart_imageResponse" />
+  </wsdl:message>
+  <wsdl:message name="insert_cartSoapIn">
+    <wsdl:part name="parameters" element="tns:insert_cart" />
+  </wsdl:message>
+  <wsdl:message name="insert_cartSoapOut">
+    <wsdl:part name="parameters" element="tns:insert_cartResponse" />
+  </wsdl:message>
+  <wsdl:message name="search_cartSoapIn">
+    <wsdl:part name="parameters" element="tns:search_cart" />
+  </wsdl:message>
+  <wsdl:message name="search_cartSoapOut">
+    <wsdl:part name="parameters" element="tns:search_cartResponse" />
+  </wsdl:message>
+  <wsdl:message name="display_cartSoapIn">
+    <wsdl:part name="parameters" element="tns:display_cart" />
+  </wsdl:message>
+  <wsdl:message name="display_cartSoapOut">
+    <wsdl:part name="parameters" element="tns:display_cartResponse" />
+  </wsdl:message>
+  <wsdl:message name="display_pricesSoapIn">
+    <wsdl:part name="parameters" element="tns:display_prices" />
+  </wsdl:message>
+  <wsdl:message name="display_pricesSoapOut">
+    <wsdl:part name="parameters" element="tns:display_pricesResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_cart_infoSoapIn">
+    <wsdl:part name="parameters" element="tns:get_cart_info" />
+  </wsdl:message>
+  <wsdl:message name="get_cart_infoSoapOut">
+    <wsdl:part name="parameters" element="tns:get_cart_infoResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_cart_quantitySoapIn">
+    <wsdl:part name="parameters" element="tns:get_cart_quantity" />
+  </wsdl:message>
+  <wsdl:message name="get_cart_quantitySoapOut">
+    <wsdl:part name="parameters" element="tns:get_cart_quantityResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_cart_subtotalSoapIn">
+    <wsdl:part name="parameters" element="tns:get_cart_subtotal" />
+  </wsdl:message>
+  <wsdl:message name="get_cart_subtotalSoapOut">
+    <wsdl:part name="parameters" element="tns:get_cart_subtotalResponse" />
+  </wsdl:message>
+  <wsdl:message name="insert_orderSoapIn">
+    <wsdl:part name="parameters" element="tns:insert_order" />
+  </wsdl:message>
+  <wsdl:message name="insert_orderSoapOut">
+    <wsdl:part name="parameters" element="tns:insert_orderResponse" />
+  </wsdl:message>
+  <wsdl:message name="insert_order_detailsSoapIn">
+    <wsdl:part name="parameters" element="tns:insert_order_details" />
+  </wsdl:message>
+  <wsdl:message name="insert_order_detailsSoapOut">
+    <wsdl:part name="parameters" element="tns:insert_order_detailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="empty_cartSoapIn">
+    <wsdl:part name="parameters" element="tns:empty_cart" />
+  </wsdl:message>
+  <wsdl:message name="empty_cartSoapOut">
+    <wsdl:part name="parameters" element="tns:empty_cartResponse" />
   </wsdl:message>
   <wsdl:portType name="WS_AppSoap">
     <wsdl:operation name="send_error">
@@ -342,17 +814,117 @@
       <wsdl:input message="tns:getUserPMSoapIn" />
       <wsdl:output message="tns:getUserPMSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="displayProd">
-      <wsdl:input message="tns:displayProdSoapIn" />
-      <wsdl:output message="tns:displayProdSoapOut" />
+    <wsdl:operation name="get_nike_name">
+      <wsdl:input message="tns:get_nike_nameSoapIn" />
+      <wsdl:output message="tns:get_nike_nameSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="displayPrice">
-      <wsdl:input message="tns:displayPriceSoapIn" />
-      <wsdl:output message="tns:displayPriceSoapOut" />
+    <wsdl:operation name="get_nike_description">
+      <wsdl:input message="tns:get_nike_descriptionSoapIn" />
+      <wsdl:output message="tns:get_nike_descriptionSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="displayPrice2">
-      <wsdl:input message="tns:displayPrice2SoapIn" />
-      <wsdl:output message="tns:displayPrice2SoapOut" />
+    <wsdl:operation name="get_nike_image">
+      <wsdl:input message="tns:get_nike_imageSoapIn" />
+      <wsdl:output message="tns:get_nike_imageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_NB_name">
+      <wsdl:input message="tns:get_NB_nameSoapIn" />
+      <wsdl:output message="tns:get_NB_nameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_NB_description">
+      <wsdl:input message="tns:get_NB_descriptionSoapIn" />
+      <wsdl:output message="tns:get_NB_descriptionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_NB_image">
+      <wsdl:input message="tns:get_NB_imageSoapIn" />
+      <wsdl:output message="tns:get_NB_imageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_xiaomi_name">
+      <wsdl:input message="tns:get_xiaomi_nameSoapIn" />
+      <wsdl:output message="tns:get_xiaomi_nameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_xiaomi_description">
+      <wsdl:input message="tns:get_xiaomi_descriptionSoapIn" />
+      <wsdl:output message="tns:get_xiaomi_descriptionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_xiaomi_image">
+      <wsdl:input message="tns:get_xiaomi_imageSoapIn" />
+      <wsdl:output message="tns:get_xiaomi_imageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ET_name">
+      <wsdl:input message="tns:get_ET_nameSoapIn" />
+      <wsdl:output message="tns:get_ET_nameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ET_description">
+      <wsdl:input message="tns:get_ET_descriptionSoapIn" />
+      <wsdl:output message="tns:get_ET_descriptionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ET_image">
+      <wsdl:input message="tns:get_ET_imageSoapIn" />
+      <wsdl:output message="tns:get_ET_imageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_AM_name">
+      <wsdl:input message="tns:get_AM_nameSoapIn" />
+      <wsdl:output message="tns:get_AM_nameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_AM_description">
+      <wsdl:input message="tns:get_AM_descriptionSoapIn" />
+      <wsdl:output message="tns:get_AM_descriptionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_AM_image">
+      <wsdl:input message="tns:get_AM_imageSoapIn" />
+      <wsdl:output message="tns:get_AM_imageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_walmart_name">
+      <wsdl:input message="tns:get_walmart_nameSoapIn" />
+      <wsdl:output message="tns:get_walmart_nameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_walmart_description">
+      <wsdl:input message="tns:get_walmart_descriptionSoapIn" />
+      <wsdl:output message="tns:get_walmart_descriptionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_walmart_image">
+      <wsdl:input message="tns:get_walmart_imageSoapIn" />
+      <wsdl:output message="tns:get_walmart_imageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insert_cart">
+      <wsdl:input message="tns:insert_cartSoapIn" />
+      <wsdl:output message="tns:insert_cartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="search_cart">
+      <wsdl:input message="tns:search_cartSoapIn" />
+      <wsdl:output message="tns:search_cartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="display_cart">
+      <wsdl:input message="tns:display_cartSoapIn" />
+      <wsdl:output message="tns:display_cartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="display_prices">
+      <wsdl:input message="tns:display_pricesSoapIn" />
+      <wsdl:output message="tns:display_pricesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_cart_info">
+      <wsdl:input message="tns:get_cart_infoSoapIn" />
+      <wsdl:output message="tns:get_cart_infoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_cart_quantity">
+      <wsdl:input message="tns:get_cart_quantitySoapIn" />
+      <wsdl:output message="tns:get_cart_quantitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_cart_subtotal">
+      <wsdl:input message="tns:get_cart_subtotalSoapIn" />
+      <wsdl:output message="tns:get_cart_subtotalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insert_order">
+      <wsdl:input message="tns:insert_orderSoapIn" />
+      <wsdl:output message="tns:insert_orderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insert_order_details">
+      <wsdl:input message="tns:insert_order_detailsSoapIn" />
+      <wsdl:output message="tns:insert_order_detailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="empty_cart">
+      <wsdl:input message="tns:empty_cartSoapIn" />
+      <wsdl:output message="tns:empty_cartSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WS_AppSoap" type="tns:WS_AppSoap">
@@ -456,8 +1028,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="displayProd">
-      <soap:operation soapAction="http://tempuri.org/displayProd" style="document" />
+    <wsdl:operation name="get_nike_name">
+      <soap:operation soapAction="http://tempuri.org/get_nike_name" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -465,8 +1037,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="displayPrice">
-      <soap:operation soapAction="http://tempuri.org/displayPrice" style="document" />
+    <wsdl:operation name="get_nike_description">
+      <soap:operation soapAction="http://tempuri.org/get_nike_description" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -474,8 +1046,233 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="displayPrice2">
-      <soap:operation soapAction="http://tempuri.org/displayPrice2" style="document" />
+    <wsdl:operation name="get_nike_image">
+      <soap:operation soapAction="http://tempuri.org/get_nike_image" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_NB_name">
+      <soap:operation soapAction="http://tempuri.org/get_NB_name" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_NB_description">
+      <soap:operation soapAction="http://tempuri.org/get_NB_description" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_NB_image">
+      <soap:operation soapAction="http://tempuri.org/get_NB_image" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_xiaomi_name">
+      <soap:operation soapAction="http://tempuri.org/get_xiaomi_name" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_xiaomi_description">
+      <soap:operation soapAction="http://tempuri.org/get_xiaomi_description" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_xiaomi_image">
+      <soap:operation soapAction="http://tempuri.org/get_xiaomi_image" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ET_name">
+      <soap:operation soapAction="http://tempuri.org/get_ET_name" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ET_description">
+      <soap:operation soapAction="http://tempuri.org/get_ET_description" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ET_image">
+      <soap:operation soapAction="http://tempuri.org/get_ET_image" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_AM_name">
+      <soap:operation soapAction="http://tempuri.org/get_AM_name" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_AM_description">
+      <soap:operation soapAction="http://tempuri.org/get_AM_description" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_AM_image">
+      <soap:operation soapAction="http://tempuri.org/get_AM_image" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_walmart_name">
+      <soap:operation soapAction="http://tempuri.org/get_walmart_name" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_walmart_description">
+      <soap:operation soapAction="http://tempuri.org/get_walmart_description" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_walmart_image">
+      <soap:operation soapAction="http://tempuri.org/get_walmart_image" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_cart">
+      <soap:operation soapAction="http://tempuri.org/insert_cart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="search_cart">
+      <soap:operation soapAction="http://tempuri.org/search_cart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="display_cart">
+      <soap:operation soapAction="http://tempuri.org/display_cart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="display_prices">
+      <soap:operation soapAction="http://tempuri.org/display_prices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_cart_info">
+      <soap:operation soapAction="http://tempuri.org/get_cart_info" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_cart_quantity">
+      <soap:operation soapAction="http://tempuri.org/get_cart_quantity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_cart_subtotal">
+      <soap:operation soapAction="http://tempuri.org/get_cart_subtotal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_order">
+      <soap:operation soapAction="http://tempuri.org/insert_order" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_order_details">
+      <soap:operation soapAction="http://tempuri.org/insert_order_details" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="empty_cart">
+      <soap:operation soapAction="http://tempuri.org/empty_cart" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -585,8 +1382,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="displayProd">
-      <soap12:operation soapAction="http://tempuri.org/displayProd" style="document" />
+    <wsdl:operation name="get_nike_name">
+      <soap12:operation soapAction="http://tempuri.org/get_nike_name" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -594,8 +1391,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="displayPrice">
-      <soap12:operation soapAction="http://tempuri.org/displayPrice" style="document" />
+    <wsdl:operation name="get_nike_description">
+      <soap12:operation soapAction="http://tempuri.org/get_nike_description" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -603,8 +1400,233 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="displayPrice2">
-      <soap12:operation soapAction="http://tempuri.org/displayPrice2" style="document" />
+    <wsdl:operation name="get_nike_image">
+      <soap12:operation soapAction="http://tempuri.org/get_nike_image" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_NB_name">
+      <soap12:operation soapAction="http://tempuri.org/get_NB_name" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_NB_description">
+      <soap12:operation soapAction="http://tempuri.org/get_NB_description" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_NB_image">
+      <soap12:operation soapAction="http://tempuri.org/get_NB_image" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_xiaomi_name">
+      <soap12:operation soapAction="http://tempuri.org/get_xiaomi_name" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_xiaomi_description">
+      <soap12:operation soapAction="http://tempuri.org/get_xiaomi_description" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_xiaomi_image">
+      <soap12:operation soapAction="http://tempuri.org/get_xiaomi_image" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ET_name">
+      <soap12:operation soapAction="http://tempuri.org/get_ET_name" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ET_description">
+      <soap12:operation soapAction="http://tempuri.org/get_ET_description" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ET_image">
+      <soap12:operation soapAction="http://tempuri.org/get_ET_image" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_AM_name">
+      <soap12:operation soapAction="http://tempuri.org/get_AM_name" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_AM_description">
+      <soap12:operation soapAction="http://tempuri.org/get_AM_description" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_AM_image">
+      <soap12:operation soapAction="http://tempuri.org/get_AM_image" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_walmart_name">
+      <soap12:operation soapAction="http://tempuri.org/get_walmart_name" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_walmart_description">
+      <soap12:operation soapAction="http://tempuri.org/get_walmart_description" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_walmart_image">
+      <soap12:operation soapAction="http://tempuri.org/get_walmart_image" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_cart">
+      <soap12:operation soapAction="http://tempuri.org/insert_cart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="search_cart">
+      <soap12:operation soapAction="http://tempuri.org/search_cart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="display_cart">
+      <soap12:operation soapAction="http://tempuri.org/display_cart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="display_prices">
+      <soap12:operation soapAction="http://tempuri.org/display_prices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_cart_info">
+      <soap12:operation soapAction="http://tempuri.org/get_cart_info" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_cart_quantity">
+      <soap12:operation soapAction="http://tempuri.org/get_cart_quantity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_cart_subtotal">
+      <soap12:operation soapAction="http://tempuri.org/get_cart_subtotal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_order">
+      <soap12:operation soapAction="http://tempuri.org/insert_order" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_order_details">
+      <soap12:operation soapAction="http://tempuri.org/insert_order_details" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="empty_cart">
+      <soap12:operation soapAction="http://tempuri.org/empty_cart" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

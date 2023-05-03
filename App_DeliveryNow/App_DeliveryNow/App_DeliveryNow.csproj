@@ -108,18 +108,15 @@
     <Content Include="Resources\xiaomi.png" />
     <Content Include="Resources\XiaomiLogo.png" />
     <Content Include="Resources\xtremetch.png" />
-    <Content Include="Views\Carrito.aspx" />
-    <Content Include="Views\NewBalanceShop.aspx" />
-    <Content Include="Views\ExtremetechShop.aspx" />
-    <Content Include="Views\Prueba.aspx" />
-    <Content Include="Views\Tienda.aspx" />
-    <Content Include="Views\XiaomiShop.aspx" />
-    <Content Include="Views\WalmartShop.aspx" />
     <Content Include="Views\AutomercadoShop.aspx" />
+    <Content Include="Views\Carrito.aspx" />
+    <Content Include="Views\ExtremetechShop.aspx" />
+    <Content Include="Views\NewBalanceShop.aspx" />
     <Content Include="Views\NikeShop.aspx" />
+    <Content Include="Views\Tienda.aspx" />
+    <Content Include="Views\WalmartShop.aspx" />
     <Content Include="Views\AboutUs.aspx" />
     <Content Include="Views\Contact.aspx" />
-    <Content Include="Views\Login.aspx" />
     <Content Include="Views\MainPage.aspx" />
     <Content Include="Fonts\Megante.ttf" />
     <Content Include="Fonts\Prototype.ttf" />
@@ -129,16 +126,27 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Content Include="Resources\logo.png" />
-    <Content Include="Views\Register.aspx" />
     <None Include="Web References\Reference_DeliveryNow\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\Reference_DeliveryNow\WS_App.disco" />
+    <Content Include="Views\XiaomiShop.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Company.cs" />
+    <Compile Include="Class\Arrays.cs" />
+    <Compile Include="Class\Product.cs" />
+    <Compile Include="Class\ProductUnits.cs" />
     <Compile Include="Design\ColorPalette.cs" />
+    <Compile Include="Views\AutomercadoShop.aspx.cs">
+      <DependentUpon>AutomercadoShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\AutomercadoShop.aspx.designer.cs">
+      <DependentUpon>AutomercadoShop.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Carrito.aspx.cs">
       <DependentUpon>Carrito.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -146,20 +154,26 @@
     <Compile Include="Views\Carrito.aspx.designer.cs">
       <DependentUpon>Carrito.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\NewBalanceShop.aspx.cs">
-      <DependentUpon>NewBalanceShop.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Views\ExtremetechShop.aspx.cs">
       <DependentUpon>ExtremetechShop.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Prueba.aspx.cs">
-      <DependentUpon>Prueba.aspx</DependentUpon>
+    <Compile Include="Views\ExtremetechShop.aspx.designer.cs">
+      <DependentUpon>ExtremetechShop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewBalanceShop.aspx.cs">
+      <DependentUpon>NewBalanceShop.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Prueba.aspx.designer.cs">
-      <DependentUpon>Prueba.aspx</DependentUpon>
+    <Compile Include="Views\NewBalanceShop.aspx.designer.cs">
+      <DependentUpon>NewBalanceShop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NikeShop.aspx.cs">
+      <DependentUpon>NikeShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\NikeShop.aspx.designer.cs">
+      <DependentUpon>NikeShop.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Tienda.aspx.cs">
       <DependentUpon>Tienda.aspx</DependentUpon>
@@ -168,21 +182,12 @@
     <Compile Include="Views\Tienda.aspx.designer.cs">
       <DependentUpon>Tienda.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\XiaomiShop.aspx.cs">
-      <DependentUpon>XiaomiShop.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Views\WalmartShop.aspx.cs">
       <DependentUpon>WalmartShop.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\AutomercadoShop.aspx.cs">
-      <DependentUpon>AutomercadoShop.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\NikeShop.aspx.cs">
-      <DependentUpon>NikeShop.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+    <Compile Include="Views\WalmartShop.aspx.designer.cs">
+      <DependentUpon>WalmartShop.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\AboutUs.aspx.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
@@ -198,13 +203,6 @@
     <Compile Include="Views\Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Views\MainPage.aspx.cs">
       <DependentUpon>MainPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -218,12 +216,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Views\Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
+    <Compile Include="Views\XiaomiShop.aspx.cs">
+      <DependentUpon>XiaomiShop.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
+    <Compile Include="Views\XiaomiShop.aspx.designer.cs">
+      <DependentUpon>XiaomiShop.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web References\Reference_DeliveryNow\Reference.cs">
       <AutoGen>True</AutoGen>

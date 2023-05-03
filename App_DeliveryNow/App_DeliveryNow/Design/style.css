@@ -102,6 +102,21 @@ header {
     font-family: 'Poppins', sans-serif;
 }
 
+.btn_logOut {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+    .btn_logOut:hover {
+        background-color: rgba(0, 137, 151, 0.5);
+    }
+
 /* STYLESHEET - Register.aspx */
 
 /*ID pBody: Representa a los páneles que se encuentran en el cuerpo de las páginas de la aplicación. */
@@ -214,7 +229,9 @@ header {
 /*--------------------------------------FOOTER------------------------------------------*/
 
 #pBot {
-    position: relative;
+    position: static;
+    width:100%;
+    height:100%;
 }
 
 footer {
@@ -455,17 +472,32 @@ footer {
         width: 100%;
     }
 
+    .product .lbl_productName {
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: bold; 
+    }
     .product h3 {
         margin-top: 10px;
         font-size: 20px;
     }
 
+    .product .lbl_productDescription {
+        margin-top: 5px;
+        font-size: 16px;
+    }
+
+    .product .lbl_productDetails {
+        margin-top: 5px;
+        font-size: 16px;
+        font-weight: bold;
+    }
     .product p {
         margin-top: 5px;
         font-size: 16px;
     }
 
-    .product button {
+    .product .btn_products {
         margin-top: 10px;
         background-color: #007bff;
         color: #fff;

@@ -42,6 +42,15 @@ namespace App_DeliveryNow.Views
         protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
+        /// Control btnLogOut.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnLogOut;
+
+        /// <summary>
         /// Control pCarrito.
         /// </summary>
         /// <remarks>
@@ -51,31 +60,31 @@ namespace App_DeliveryNow.Views
         protected global::System.Web.UI.WebControls.Panel pCarrito;
 
         /// <summary>
-        /// Control usertxt.
+        /// Control txtUser.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox usertxt;
+        protected global::System.Web.UI.WebControls.TextBox txtUser;
 
         /// <summary>
-        /// Control btnValidateUsr.
+        /// Control txtAddress.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnValidateUsr;
+        protected global::System.Web.UI.WebControls.TextBox txtAddress;
 
         /// <summary>
-        /// Control direcciontxt.
+        /// Control GdCart.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox direcciontxt;
+        protected global::System.Web.UI.WebControls.GridView GdCart;
 
         /// <summary>
         /// Control GdProducts.
@@ -96,40 +105,40 @@ namespace App_DeliveryNow.Views
         protected global::System.Web.UI.WebControls.Label lblTotal;
 
         /// <summary>
-        /// Control paymentTxt.
+        /// Control txtPayment.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox paymentTxt;
+        protected global::System.Web.UI.WebControls.TextBox txtPayment;
 
         /// <summary>
-        /// Control tarjetaTxt.
+        /// Control txtCard.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tarjetaTxt;
+        protected global::System.Web.UI.WebControls.TextBox txtCard;
 
         /// <summary>
-        /// Control vencimientoTxt.
+        /// Control txtExpiration.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox vencimientoTxt;
+        protected global::System.Web.UI.WebControls.TextBox txtExpiration;
 
         /// <summary>
-        /// Control cvvTxt.
+        /// Control txtCVV.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cvvTxt;
+        protected global::System.Web.UI.WebControls.TextBox txtCVV;
 
         /// <summary>
         /// Control btnConfirm.

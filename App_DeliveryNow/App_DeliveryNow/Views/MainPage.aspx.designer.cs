@@ -204,6 +204,15 @@ namespace App_DeliveryNow.Views
         protected global::System.Web.UI.WebControls.TextBox TextBoxPassword;
 
         /// <summary>
+        /// Control hdnPassword.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdnPassword;
+
+        /// <summary>
         /// Control LblConfirmPassword.
         /// </summary>
         /// <remarks>
